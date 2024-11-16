@@ -1,0 +1,1 @@
+2024-10-26 22:24:54.262 ytochart.py[12] <module> -> Find Control Timeout(10s): {Name: '微信', ControlType: WindowControl}

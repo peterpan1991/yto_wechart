@@ -1,0 +1,20 @@
+2024-11-16 21:48:23,201 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-11-16 21:48:23,201 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-11-16 21:48:23,388 - ERROR - 初始化微信窗口失败: type object 'auto' has no attribute 'WindowControl'
+2024-11-16 21:48:23,388 - ERROR - 初始化失败，程序退出
+2024-11-16 21:48:45,219 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-11-16 21:48:45,224 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-11-16 21:48:45,292 - ERROR - 初始化微信窗口失败: type object 'auto' has no attribute 'WindowControl'
+2024-11-16 21:48:45,292 - ERROR - 初始化失败，程序退出
+2024-11-16 21:50:34,111 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-11-16 21:50:34,111 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-11-16 21:50:34,172 - ERROR - 初始化微信窗口失败: type object 'auto' has no attribute 'WindowControl'
+2024-11-16 21:50:34,172 - ERROR - 初始化失败，程序退出
+2024-11-16 21:53:28,366 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-11-16 21:53:28,367 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-11-16 21:53:28,436 - ERROR - 初始化微信窗口失败: type object 'auto' has no attribute 'WindowControl'
+2024-11-16 21:53:28,436 - ERROR - 初始化失败，程序退出
+2024-11-16 21:54:10,940 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-11-16 21:54:10,940 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-11-16 21:54:11,005 - ERROR - 初始化微信窗口失败: type object 'auto' has no attribute 'WindowControl'
+2024-11-16 21:54:11,005 - ERROR - 初始化失败，程序退出

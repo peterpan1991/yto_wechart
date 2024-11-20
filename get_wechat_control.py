@@ -147,25 +147,25 @@ text = lastItem.TextControl(searchDepth=2)
 # print(f"第一条：{firstItem.Name}")
 # firstItem.DoubleClick(simulateMove=False)
 
-button = wechat_window.ButtonControl(RegexName=r".*")
-if button.Exists(maxSearchSeconds=1, searchIntervalSeconds=0.3):
-    print(f"button: {button.Name}")
-else:
-    print("Button not found after retries")
+# button = wechat_window.ButtonControl(RegexName=r".*")
+# if button.Exists(maxSearchSeconds=1, searchIntervalSeconds=0.3):
+#     print(f"button: {button.Name}")
+# else:
+#     print("Button not found after retries")
 
-edit = wechat_window.EditControl(RegexName=r"^(?!.*搜索).*")
-if edit.Exists(maxSearchSeconds=1, searchIntervalSeconds=0.3):
-    print(f"edit: {edit.Name}")
-else:
-    print("edit not found after retries")
+# edit = wechat_window.EditControl(RegexName=r"^(?!.*搜索).*")
+# if edit.Exists(maxSearchSeconds=1, searchIntervalSeconds=0.3):
+#     print(f"edit: {edit.Name}")
+# else:
+#     print("edit not found after retries")
 
-text = wechat_window.TextControl(RegexName=r".*\(\d+\)", searchDepth=15)
+# text = wechat_window.TextControl(RegexName=r".*\(\d+\)", searchDepth=15)
 # for text in wechat_window.TextControl().GetChildren():
 #     print(f"控件类型: {text.ControlType}, Name: {text.Name}")
-if text.Exists(maxSearchSeconds=1, searchIntervalSeconds=0.3):
-    print(f"text: {text.Name}")
-else:
-    print("text not found after retries")
+# if text.Exists(maxSearchSeconds=1, searchIntervalSeconds=0.3):
+#     print(f"text: {text.Name}")
+# else:
+#     print("text not found after retries")
 
 # # 点击搜索结果中的群
 # group_item = wechat_window.ListItemControl(Name="5gzy31dm")
@@ -197,17 +197,21 @@ else:
 # print(f"第三条：{thirdItem.Name}")
 # thirdItem.Click(simulateMove=False)
 
-# hw = wechat_window.ListControl(Name="会话")
+hw = wechat_window.ListControl(Name="会话")
 
-# while True:
-#     we = hw.TextControl(searchDepth=3)
-#     while not we.Exists():
-#         pass
-#     print(f"we: {we.Name}")
-#     wechat_window.SetActive()
-#     we.Click(simulateMove=False)
-#     # 读取最后一条消息
-#     last_msg = wechat_window.ListControl(Name='消息').GetChildren()[-1].Name
-#     print(f"last msg: {last_msg}")
-#     # firstItem.Click(simulateMove=False)
-#     time.sleep(2)
+child =  wechat_window.ListControl(Name='消息').GetChildren()
+print(f"child: {len(child)}")
+exit()
+
+while True:
+    we = hw.TextControl(searchDepth=3)
+    while not we.Exists():
+        pass
+    print(f"we: {we.Name}")
+    wechat_window.SetActive()
+    we.Click(simulateMove=False)
+    # 读取最后一条消息
+    last_msg = wechat_window.ListControl(Name='消息').GetChildren()[-1].Name
+    print(f"last msg: {last_msg}")
+    # firstItem.Click(simulateMove=False)
+    time.sleep(2)

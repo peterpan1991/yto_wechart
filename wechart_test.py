@@ -236,7 +236,7 @@ class WeChatHandler:
                                             msg_content = msg_item.Name
                                             # 如果消息未处理过，添加到缓冲区
                                             if msg_content and msg_content not in self.processed_messages[group_id]:
-                                                self.buffer.append(msg_content)
+                                                self.buffer[group_id].append(msg_content)
                                                 self.processed_messages[group_id].append(msg_content)
                                                 self.current_group_id = group_id
                                                 logger.info(f"获取到群 {group_id} 的消息: {msg_content}")
@@ -256,7 +256,10 @@ class WeChatHandler:
     
     def get_next_message(self) -> Optional[str]:
         """从缓冲区获取下一条要处理的消息"""
-        return self.buffer.popleft() if self.buffer else None
+        if self.current_group_id in self.buffer and self.buffer[self.current_group_id]:
+            return self.buffer[self.current_group_id].popleft()
+        else:
+            return None
         
     def get_messages(self) -> List[Message]:
         """获取新消息"""
@@ -341,12 +344,12 @@ class MessageBridge:
                     # 提取订单号并注册关联
                     order_number = self.order_manager.extract_order_number(msg.content)
                     if order_number:
-                        self.order_manager.register_order(order_number, self.wechat.current_group_id)
-                        logger.info(f"从群 {self.wechat.current_group_id} 提取到订单号: {order_number}")
+                        self.order_manager.register_order(order_number, msg.group_id)
+                        logger.info(f"从群 {msg.group_id} 提取到订单号: {order_number}")
                     
                     # 将消息发送到圆通
                     if msg.content:
-                        self.redis_queue.put_wechat_message(msg)        
+                        self.redis_queue.put_wechat_message(msg)
                                 
                 time.sleep(1)
             except Exception as e:

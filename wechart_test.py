@@ -221,11 +221,9 @@ class WeChatHandler:
                         if group_id is not None and group_id in self.group_cache:
                             
                             if group_id not in self.processed_messages:
-                                print("come2")
                                 self.processed_messages[group_id] = deque(maxlen=self.max_processed_count)  # 设置最大长度为
                             
                             if group_id not in self.buffer:
-                                print("come")
                                 self.buffer[group_id] = deque(maxlen=self.max_processed_count)  # 确保 buffer 中存在 group_id
 
                             msg_list = self.wx.ListControl(Name='消息')

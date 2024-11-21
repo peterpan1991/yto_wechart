@@ -115,6 +115,49 @@ class RedisQueue:
             logger.error(f"从队列获取圆通消息失败: {e}")
             return None
 
+class OrderManager:
+    def __init__(self):
+        # 订单号与群ID的映射关系
+        self.order_group_map: Dict[str, str] = {}
+        # 群ID与订单号的反向映射
+        self.group_orders_map: Dict[str, List[str]] = {}
+        
+    def extract_order_number(self, text: str) -> Optional[str]:
+        """从文本中提取订单号"""
+        # 支持多种订单号格式
+        patterns = [
+            r'YT\d{13-15}',  # 圆通订单号格式
+            # 可以添加更多格式
+        ]
+        
+        for pattern in patterns:
+            match = re.search(pattern, text)
+            if match:
+                return match.group()
+        return None
+    
+    def register_order(self, order_number: str, group_id: str):
+        """注册订单号与群的关联"""
+        if not order_number or not group_id:
+            return
+            
+        self.order_group_map[order_number] = group_id
+        
+        if group_id not in self.group_orders_map:
+            self.group_orders_map[group_id] = []
+        if order_number not in self.group_orders_map[group_id]:
+            self.group_orders_map[group_id].append(order_number)
+            
+        logger.info(f"注册订单 {order_number} 到群 {group_id}")
+    
+    def get_group_id(self, order_number: str) -> Optional[str]:
+        """获取订单号对应的群ID"""
+        return self.order_group_map.get(order_number)
+    
+    def get_group_orders(self, group_id: str) -> List[str]:
+        """获取群对应的所有订单号"""
+        return self.group_orders_map.get(group_id, [])
+
 
 class WeChatHandler:
     def __init__(self):
@@ -278,6 +321,7 @@ class WeChatHandler:
             # 处理缓冲区中的所有消息
             while True:
                 msg = self.get_next_message()
+                print(f"缓冲区消息: {msg}")
                 if msg is None:
                     break
                 print(f"处理消息: {msg}")
@@ -323,6 +367,7 @@ class MessageBridge:
     def __init__(self, redis_config=None):
         self.redis_queue = RedisQueue(**(redis_config or {}))
         self.wechat = WeChatHandler()
+        self.order_manager = OrderManager()
         self.is_running = True
         
         # 重试配置

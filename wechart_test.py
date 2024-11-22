@@ -89,14 +89,6 @@ class RedisQueue:
         except Exception as e:
             logger.error(f"添加微信消息到队列失败: {e}")
 
-    def put_yunda_message(self, message: Message):
-        """将圆通消息放入队列"""
-        try:
-            self.redis_client.rpush(self.yunda_queue, json.dumps(message.to_dict()))
-            logger.info(f"消息已加入圆通队列: {message.content}")
-        except Exception as e:
-            logger.error(f"添加圆通消息到队列失败: {e}")
-
     def get_wechat_message(self) -> Optional[dict]:
         """从队列获取微信消息"""
         try:
@@ -104,15 +96,6 @@ class RedisQueue:
             return json.loads(data) if data else None
         except Exception as e:
             logger.error(f"从队列获取微信消息失败: {e}")
-            return None
-
-    def get_yunda_message(self) -> Optional[dict]:
-        """从队列获取圆通消息"""
-        try:
-            data = self.redis_client.lpop(self.yunda_queue)
-            return json.loads(data) if data else None
-        except Exception as e:
-            logger.error(f"从队列获取圆通消息失败: {e}")
             return None
 
 class OrderManager:
@@ -402,32 +385,6 @@ class MessageBridge:
                 logger.error(f"处理微信消息时出错: {e}")
                 time.sleep(1)
 
-    # def forward_messages(self):
-    #     """转发消息的线程"""
-    #     while self.is_running:
-    #         try:
-    #             # 处理微信到圆通的消息
-    #             wechat_message = self.redis_queue.get_wechat_message()
-    #             if wechat_message:
-    #                 retry_count = 0
-    #                 while retry_count < self.max_retries:
-    #                     if self.yunda.send_message(wechat_message['content']):
-    #                         break
-    #                     retry_count += 1
-    #                     if retry_count < self.max_retries:
-    #                         time.sleep(self.retry_delay)
-    #                 else:
-    #                     logger.error("发送消息到圆通失败，已达到最大重试次数")
-
-    #             # 处理圆通到微信的消息
-    #             yunda_messages = self.yunda.get_messages()
-    #             for msg in yunda_messages:
-    #                 self.process_yunda_response(msg.content)
-
-    #             time.sleep(0.5)
-    #         except Exception as e:
-    #             logger.error(f"转发消息时出错: {e}")
-    #             time.sleep(1)
 
     def run(self):
         """运行消息桥接服务"""
@@ -437,10 +394,8 @@ class MessageBridge:
 
         # 启动处理线程
         wechat_thread = Thread(target=self.process_wechat_messages)
-        # forward_thread = Thread(target=self.forward_messages)
 
         wechat_thread.start()
-        # forward_thread.start()
 
         try:
             while self.is_running:

@@ -1,5 +1,4 @@
 import re
-import uiautomation as auto
 import time
 import logging
 import redis
@@ -13,6 +12,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.chrome.service import Service
+
+#pip install undetected-chromedriver 绕过饭自动化监测
+#pip install selenium
 
 # 配置日志
 logging.basicConfig(
@@ -27,7 +30,7 @@ logger = logging.getLogger(__name__)
 
 class MessageSource(Enum):
     WECHAT = "wechat"
-    YUNDA = "yunda"
+    YTO = "yto"
 
 class MessageType(Enum):
     TEXT = "text"
@@ -73,20 +76,12 @@ class RedisQueue:
             decode_responses=True
         )
         self.wechat_queue = 'wechat_messages'
-        self.yunda_queue = 'yunda_messages'
+        self.yto_queue = 'yto_messages'
 
-    def put_wechat_message(self, message: Message):
-        """将微信消息放入队列"""
-        try:
-            self.redis_client.rpush(self.wechat_queue, json.dumps(message.to_dict()))
-            logger.info(f"消息已加入微信队列: {message.content}")
-        except Exception as e:
-            logger.error(f"添加微信消息到队列失败: {e}")
-
-    def put_yunda_message(self, message: Message):
+    def put_yto_message(self, message: Message):
         """将圆通消息放入队列"""
         try:
-            self.redis_client.rpush(self.yunda_queue, json.dumps(message.to_dict()))
+            self.redis_client.rpush(self.yto_queue, json.dumps(message.to_dict()))
             logger.info(f"消息已加入圆通队列: {message.content}")
         except Exception as e:
             logger.error(f"添加圆通消息到队列失败: {e}")
@@ -100,10 +95,10 @@ class RedisQueue:
             logger.error(f"从队列获取微信消息失败: {e}")
             return None
 
-    def get_yunda_message(self) -> Optional[dict]:
+    def get_yto_message(self) -> Optional[dict]:
         """从队列获取圆通消息"""
         try:
-            data = self.redis_client.lpop(self.yunda_queue)
+            data = self.redis_client.lpop(self.yto_queue)
             return json.loads(data) if data else None
         except Exception as e:
             logger.error(f"从队列获取圆通消息失败: {e}")
@@ -121,8 +116,6 @@ class OrderManager:
         # 支持多种订单号格式
         patterns = [
             r'YT\d{12}',  # 圆通订单号格式
-            r'YD\d{12}',  # 韵达订单号格式
-            r'SF\d{12}',  # 顺丰订单号格式
             # 可以添加更多格式
         ]
         
@@ -154,122 +147,7 @@ class OrderManager:
         """获取群对应的所有订单号"""
         return self.group_orders_map.get(group_id, [])
 
-class WeChatHandler:
-    def __init__(self):
-        self.wx = None
-        self.last_messages: Dict[str, str] = {}
-        self.current_group_id = None
-        self.group_cache: Dict[str, auto.WindowControl] = {}
-        
-    def init_wx(self) -> bool:
-        """初始化微信窗口"""
-        try:
-            self.wx = auto.WindowControl(Name="微信", ClassName="WeChatMainWndForPC")
-            if not self.wx.Exists():
-                logger.error("请先打开微信!")
-                return False
-            logger.info("微信窗口初始化成功")
-            return True
-        except Exception as e:
-            logger.error(f"初始化微信窗口失败: {e}")
-            return False
-
-    def switch_to_group(self, group_id: str) -> bool:
-        """切换到指定的群聊"""
-        try:
-            if self.current_group_id == group_id:
-                return True
-                
-            if group_id in self.group_cache:
-                group_item = self.group_cache[group_id]
-                if not group_item.Exists():
-                    del self.group_cache[group_id]
-                else:
-                    group_item.Click()
-                    self.current_group_id = group_id
-                    time.sleep(0.2)
-                    return True
-            
-            # 点击搜索框
-            search = self.wx.EditControl(Name="搜索")
-            if not search.Exists():
-                logger.error("找不到搜索框")
-                return False
-                
-            search.Click()
-            time.sleep(0.1)
-            search.SendKeys(group_id, waitTime=0.1)
-            time.sleep(0.5)
-            
-            # 点击搜索结果中的群
-            group_item = self.wx.ListItemControl(Name=group_id)
-            if not group_item.Exists():
-                logger.error(f"找不到群: {group_id}")
-                return False
-                
-            self.group_cache[group_id] = group_item
-            group_item.Click()
-            self.current_group_id = group_id
-            time.sleep(0.2)
-            return True
-            
-        except Exception as e:
-            logger.error(f"切换群聊失败: {e}")
-            return False
-
-    def get_messages(self) -> List[Message]:
-        """获取当前群的新消息"""
-        messages = []
-        try:
-            message_list = self.wx.ListControl(Name="消息")
-            if message_list.Exists():
-                items = message_list.GetChildren()
-                for item in items:
-                    content = item.Name
-                    if content and content != self.last_messages.get(self.current_group_id):
-                        message = Message(
-                            content=content,
-                            source=MessageSource.WECHAT,
-                            group_id=self.current_group_id
-                        )
-                        messages.append(message)
-                        
-                if messages:
-                    self.last_messages[self.current_group_id] = messages[-1].content
-                    
-        except Exception as e:
-            logger.error(f"获取微信消息失败: {e}")
-            
-        return messages
-
-    def send_message(self, message: str, group_id: str) -> bool:
-        """向指定群发送消息"""
-        try:
-            if not self.switch_to_group(group_id):
-                return False
-                
-            edit_box = self.wx.EditControl(Name="输入")
-            if not edit_box.Exists():
-                logger.error("找不到输入框")
-                return False
-                
-            edit_box.SetValue(message)
-            time.sleep(0.1)
-            
-            send_button = self.wx.ButtonControl(Name="发送(S)")
-            if not send_button.Exists():
-                logger.error("找不到发送按钮")
-                return False
-                
-            send_button.Click()
-            logger.info(f"微信消息已发送到群 {group_id}: {message}")
-            return True
-            
-        except Exception as e:
-            logger.error(f"发送微信消息失败: {e}")
-            return False
-
-class YundaHandler:
+class YtoHandler:
     def __init__(self):
         self.driver = None
         self.is_logged_in = False
@@ -277,9 +155,16 @@ class YundaHandler:
     def init_browser(self):
         """初始化浏览器"""
         try:
-            options = webdriver.ChromeOptions()
-            options.add_argument('--headless')  # 无头模式
-            self.driver = webdriver.Chrome(options=options)
+            # chrome driver下载地址
+            # https://googlechromelabs.github.io/chrome-for-testing/
+            print("初始化浏览器...")
+
+            chromedriver_path = "/usr/local/bin/chromedriver"
+            service = Service(executable_path=chromedriver_path)
+            # options = webdriver.ChromeOptions()
+            # options.add_argument('--headless')  # 无头模式
+            self.driver = webdriver.Chrome(service=service)                        
+                                    
             logger.info("浏览器初始化成功")
             return True
         except Exception as e:
@@ -289,28 +174,31 @@ class YundaHandler:
     def login(self):
         """登录圆通系统"""
         try:
-            self.driver.get("https://yunda-login-url")  # 替换为实际登录地址
+            # self.driver.get("https://kh.yto.net.cn/new/home")  # 替换为实际登录地址
+            self.driver.get("https://online.yto.net.cn/#/")
             
+            print(f"页面加载中...")
+
             # 等待登录页面加载
-            WebDriverWait(self.driver, 10).until(
-                EC.presence_of_element_located((By.ID, "username"))
-            )
+            # WebDriverWait(self.driver, 10).until(
+            #     EC.presence_of_element_located((By.ID, "username"))
+            # )
             
-            # 输入用户名密码
-            username = self.driver.find_element(By.ID, "username")
-            password = self.driver.find_element(By.ID, "password")
+            # # 输入用户名密码
+            # username = self.driver.find_element(By.ID, "username")
+            # password = self.driver.find_element(By.ID, "password")
             
-            username.send_keys("your_username")  # 替换为实际用户名
-            password.send_keys("your_password")  # 替换为实际密码
+            # username.send_keys("your_username")  # 替换为实际用户名
+            # password.send_keys("your_password")  # 替换为实际密码
             
-            # 点击登录按钮
-            login_button = self.driver.find_element(By.ID, "login-button")
-            login_button.click()
+            # # 点击登录按钮
+            # login_button = self.driver.find_element(By.ID, "login-button")
+            # login_button.click()
             
-            # 等待登录成功
-            WebDriverWait(self.driver, 10).until(
-                EC.presence_of_element_located((By.ID, "dashboard"))
-            )
+            # # 等待登录成功
+            # WebDriverWait(self.driver, 10).until(
+            #     EC.presence_of_element_located((By.ID, "dashboard"))
+            # )
             
             self.is_logged_in = True
             logger.info("圆通系统登录成功")
@@ -327,17 +215,17 @@ class YundaHandler:
                 if not self.login():
                     return False
             
-            # 找到消息输入框
-            message_input = self.driver.find_element(By.ID, "message-input")
-            message_input.clear()
-            message_input.send_keys(message)
+            # # 找到消息输入框
+            # message_input = self.driver.find_element(By.ID, "message-input")
+            # message_input.clear()
+            # message_input.send_keys(message)
             
-            # 点击发送按钮
-            send_button = self.driver.find_element(By.ID, "send-button")
-            send_button.click()
+            # # 点击发送按钮
+            # send_button = self.driver.find_element(By.ID, "send-button")
+            # send_button.click()
             
-            logger.info(f"消息已发送到圆通系统: {message}")
-            return True
+            # logger.info(f"消息已发送到圆通系统: {message}")
+            # return True
             
         except Exception as e:
             logger.error(f"发送消息到圆通系统失败: {e}")
@@ -352,6 +240,8 @@ class YundaHandler:
                 if not self.login():
                     return messages
             
+            print(f"获取圆通消息中...")
+
             # 等待消息列表加载
             message_elements = WebDriverWait(self.driver, 5).until(
                 EC.presence_of_all_elements_located((By.CLASS_NAME, "message-item"))
@@ -362,7 +252,7 @@ class YundaHandler:
                 if content:
                     message = Message(
                         content=content,
-                        source=MessageSource.YUNDA
+                        source=MessageSource.YTO
                     )
                     messages.append(message)
                     
@@ -377,8 +267,7 @@ class YundaHandler:
 class MessageBridge:
     def __init__(self, redis_config=None):
         self.redis_queue = RedisQueue(**(redis_config or {}))
-        self.wechat = WeChatHandler()
-        self.yunda = YundaHandler()
+        self.yto = YtoHandler()
         self.order_manager = OrderManager()
         self.is_running = True
         
@@ -395,36 +284,11 @@ class MessageBridge:
 
     def init(self) -> bool:
         """初始化所有组件"""
-        if not self.wechat.init_wx():
-            return False
-        if not self.yunda.init_browser():
+        if not self.yto.init_browser():
             return False
         return True
 
-    def process_wechat_messages(self):
-        """处理微信消息的线程"""
-        while self.is_running:
-            try:
-                for group_id in self.monitored_groups:
-                    if self.wechat.switch_to_group(group_id):
-                        messages = self.wechat.get_messages()
-                        for msg in messages:
-                            # 提取订单号并注册关联
-                            order_number = self.order_manager.extract_order_number(msg.content)
-                            if order_number:
-                                self.order_manager.register_order(order_number, group_id)
-                                logger.info(f"从群 {group_id} 提取到订单号: {order_number}")
-                            
-                            # 将消息发送到圆通
-                            if msg.content:
-                                self.redis_queue.put_wechat_message(msg)
-                                
-                time.sleep(1)
-            except Exception as e:
-                logger.error(f"处理微信消息时出错: {e}")
-                time.sleep(1)
-
-    def process_yunda_response(self, response_text: str):
+    def process_yto_response(self, response_text: str):
         """处理圆通的回复消息"""
         try:
             # 从回复中提取订单号
@@ -455,23 +319,23 @@ class MessageBridge:
         """转发消息的线程"""
         while self.is_running:
             try:
-                # 处理微信到圆通的消息
-                wechat_message = self.redis_queue.get_wechat_message()
-                if wechat_message:
-                    retry_count = 0
-                    while retry_count < self.max_retries:
-                        if self.yunda.send_message(wechat_message['content']):
-                            break
-                        retry_count += 1
-                        if retry_count < self.max_retries:
-                            time.sleep(self.retry_delay)
-                    else:
-                        logger.error("发送消息到圆通失败，已达到最大重试次数")
+                # # 处理微信到圆通的消息
+                # wechat_message = self.redis_queue.get_wechat_message()
+                # if wechat_message:
+                #     retry_count = 0
+                #     while retry_count < self.max_retries:
+                #         if self.yto.send_message(wechat_message['content']):
+                #             break
+                #         retry_count += 1
+                #         if retry_count < self.max_retries:
+                #             time.sleep(self.retry_delay)
+                #     else:
+                #         logger.error("发送消息到圆通失败，已达到最大重试次数")
 
                 # 处理圆通到微信的消息
-                yunda_messages = self.yunda.get_messages()
-                for msg in yunda_messages:
-                    self.process_yunda_response(msg.content)
+                yto_messages = self.yto.get_messages()
+                for msg in yto_messages:
+                    self.process_yto_response(msg.content)
 
                 time.sleep(0.5)
             except Exception as e:
@@ -485,10 +349,8 @@ class MessageBridge:
             return
 
         # 启动处理线程
-        wechat_thread = Thread(target=self.process_wechat_messages)
         forward_thread = Thread(target=self.forward_messages)
 
-        wechat_thread.start()
         forward_thread.start()
 
         try:
@@ -498,7 +360,6 @@ class MessageBridge:
             logger.info("接收到退出信号，正在关闭...")
             self.is_running = False
 
-        wechat_thread.join()
         forward_thread.join()
         logger.info("程序已退出")
 
@@ -511,8 +372,31 @@ def main():
         'password': None
     }
     
-    bridge = MessageBridge(redis_config)
-    bridge.run()
+    # bridge = MessageBridge(redis_config)
+    # bridge.run()
+    try:
+        
+        chromedriver_path = "/usr/local/bin/chromedriver"
+        service = Service(executable_path=chromedriver_path)
+        driver = webdriver.Chrome(service=service)
+
+        driver.get("https://kh.yto.net.cn/new/home")
+
+        # 等待扫码完成
+
+        # 等待页面加载完成
+        WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.ID, "imLayout"))
+        )
+        
+    except Exception as e:
+        logger.error(f"chromedriver启动失败: {e}")
+        return False
+
+    print("页面加载完成...")
+    
+
+
 
 if __name__ == "__main__":
     main()

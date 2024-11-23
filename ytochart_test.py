@@ -13,6 +13,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
 
 #pip install undetected-chromedriver 绕过饭自动化监测
 #pip install selenium
@@ -376,19 +377,100 @@ def main():
     # bridge.run()
     try:
         
-        chromedriver_path = "/usr/local/bin/chromedriver"
-        service = Service(executable_path=chromedriver_path)
-        driver = webdriver.Chrome(service=service)
+        # mac
+        # chromedriver_path = "/usr/local/bin/chromedriver"
+        # service = Service(executable_path=chromedriver_path)
+        # driver = webdriver.Chrome(service=service)
 
-        driver.get("https://kh.yto.net.cn/new/home")
+        # windows
+        # driver = webdriver.Chrome()
+        # driver.get("https://kh.yto.net.cn/new/home")
+        # time.sleep(10)
+
+        # 打开浏览器的调试端口
+        # chrome --remote-debugging-port=9222
+
+        # 连接到已打开的浏览器
+        options = Options()
+        options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
+        driver = webdriver.Chrome(options=options)
+
+        message_elements = driver.find_elements(By.CSS_SELECTOR, ".news-box")
+        messages = []
+        for elem in message_elements:
+            try:
+
+                # 获取消息信息
+                # msg_type = "service" if "service-message" in elem.get_attribute("class") else "user"
+                # name = elem.find_element(By.XPATH, "//*[text()='小圆-总公司']")
+                first_div = elem.find_element(By.XPATH, "./div[1]")
+                first_span = first_div.find_element(By.XPATH, "./span[1]") # 获取发送者
+                second_span = first_div.find_element(By.XPATH, "./span[2]") # 获取时间
+
+                script = "return arguments[0].innerText;"
+                span_text = driver.execute_script(script, second_span)
+
+                print("name:", first_span.text, span_text)
+                text = elem.find_element(By.CSS_SELECTOR, ".text-content").text
+                time_str = elem.find_element(By.CSS_SELECTOR, ".send-time").text
+                
+                if text:
+                    messages.append({
+                        "name": first_span.text,
+                        "text": text,
+                        "time": span_text
+                    })
+            except Exception as e:
+                logger.error(f"获取消息失败: {e}")
+                continue
+        
+        # 打印最后一条消息
+        if messages:
+            last_message = messages[-3]
+            print(f"最后一条消息：{last_message['name']}, {last_message['text']}, 时间: {last_message['time']}")
+        else:
+            print("没有获取到任何消息")
+
+        exit()
+
+        while True:
+            # 获取消息元素
+            print("get message...")
+            message_elements = driver.find_elements(By.CSS_SELECTOR, ".news-box")
+
+            print("message_elements", message_elements)
+            
+            messages = []
+            for elem in message_elements:
+                try:
+                    # 获取消息信息
+                    # msg_type = "service" if "service-message" in elem.get_attribute("class") else "user"
+                    text = elem.find_element(By.CSS_SELECTOR, ".text-content").text
+                    time_str = elem.find_element(By.CSS_SELECTOR, ".send-time").text
+                    
+                    print("获取到的消息：", text, time_str, text.script())
+                    # if text.strip():
+                    #     messages.append({
+                    #         "type": msg_type,
+                    #         "text": text,
+                    #         "time": time_str,
+                    #         "timestamp": datetime.now().timestamp()
+                    #     })
+                except Exception:
+                    continue
+            time.sleep(10)
 
         # 等待扫码完成
 
         # 等待页面加载完成
-        WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.ID, "imLayout"))
-        )
-        
+        # WebDriverWait(driver, 10).until(
+        #     EC.presence_of_element_located((By.ID, "imLayout"))
+        # )
+        # while True:
+        #     time.sleep(5)
+
+
+
     except Exception as e:
         logger.error(f"chromedriver启动失败: {e}")
         return False

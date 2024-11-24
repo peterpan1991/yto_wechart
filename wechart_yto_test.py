@@ -387,7 +387,9 @@ class WeChatHandler:
 class YtoHandler:
     def __init__(self):
         self.driver = None
-        self.is_logged_in = False
+        self.buffer = {}
+        self.processed_messages = {}
+        self.current_session_id = None
         
     def init_browser(self):
         """初始化浏览器"""
@@ -428,35 +430,43 @@ class YtoHandler:
             logger.error(f"发送消息到圆通系统失败: {e}")
             self.is_logged_in = False  # 标记需要重新登录
             return False
-            
-    def get_messages(self) -> List[Message]:
-        """获取圆通系统的新消息"""
+    
+    def try_get_message(self) -> Optional[str]:
+        """尝试获取并处理消息，带重试机制"""
         messages = []
         try:
             
             message_elements = self.driver.find_elements(By.CSS_SELECTOR, ".news-box")
+
+            #获取最后10条，避免数据过多
+            last_news_message_elements = message_elements[-10:]
+
             messages = []
-            for elem in message_elements:
+            for msg_item in last_news_message_elements:
                 try:
 
                     # 获取消息信息
-                    first_div = elem.find_element(By.XPATH, "./div[1]")
+                    first_div = msg_item.find_element(By.XPATH, "./div[1]")
                     sender_span = first_div.find_element(By.XPATH, "./span[1]") # 获取发送者
                     send_time_span = first_div.find_element(By.XPATH, "./span[2]") # 获取时间
                     script = "return arguments[0].innerText;"
                     send_time = self.driver.execute_script(script, send_time_span)
-                    content = elem.find_element(By.CSS_SELECTOR, ".text-content").text
+                    msg_content = msg_item.find_element(By.CSS_SELECTOR, ".text-content").text
 
                     if(sender_span.text != "小圆-总公司"):
-                        logger.info(f"收到来自 {sender_span.text} 的消息: {content}")
+                        logger.info(f"收到来自 {sender_span.text} 的消息: {msg_content}")
                         continue
                     
-                    if content:
-                        message = Message(
-                            content=content,
-                            source=MessageSource.YTO
-                        )
-                        messages.append(message)
+                    if self.is_valid_message(msg_content):
+                        # 如果消息未处理过，添加到缓冲区
+                        if msg_content and msg_content not in self.processed_messages:
+                            self.buffer.append(msg_content)
+                            self.processed_messages.append(msg_content)
+                            # self.current_session_id = session_id
+                            logger.info(f"获取到消息: {msg_content}")
+                            return True
+                    
+
                 except Exception as e:
                     logger.error(f"获取消息失败: {e}")
                     continue
@@ -464,6 +474,37 @@ class YtoHandler:
         except Exception as e:
             logger.error(f"获取圆通消息失败: {e}")
             self.is_logged_in = False
+            
+        return messages
+    
+    def get_next_message(self) -> Optional[str]:
+        """从缓冲区获取下一条要处理的消息"""
+        if self.buffer:
+            return self.buffer.popleft()
+        else:
+            return None
+        
+    def get_messages(self) -> List[Message]:
+        """获取新消息"""
+        messages = []
+        
+        # 尝试获取新消息
+        if self.try_get_message():
+            # 处理缓冲区中的所有消息
+            while True:
+                msg = self.get_next_message()
+                print(f"缓冲区消息: {msg}")
+                if msg is None:
+                    break
+                print(f"处理消息: {msg}")
+                message = Message(
+                    content=msg,
+                    source=MessageSource.YTO,
+                    # session_id=self.current_session_id
+                )
+                messages.append(message)
+        
+        time.sleep(0.5)  # 适当的循环间隔
             
         return messages
 

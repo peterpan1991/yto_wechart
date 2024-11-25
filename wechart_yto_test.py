@@ -128,10 +128,9 @@ class OrderManager:
         """从文本中提取订单号"""
         # 支持多种订单号格式
         patterns = [
-            r'YT\d{13-15}',  # 圆通订单号格式
+            r'YT\d{13,15}',  # 圆通订单号格式
             # 可以添加更多格式
         ]
-        
         for pattern in patterns:
             match = re.search(pattern, text)
             if match:
@@ -238,15 +237,15 @@ class WeChatHandler:
     def switch_to_session(self, session_id: str) -> bool:
         """切换到指定的会话"""
         try:
-            if self.current_session_id == session_id:
-                return True
+            # if self.current_session_id == session_id:
+            #     return True
                 
             if session_id in self.group_cache:
                 group_item = self.group_cache[session_id]
                 if not group_item.Exists():
                     del self.group_cache[session_id]
                 else:
-                    group_item.Click()
+                    group_item.Click(simulateMove=False)
                     self.current_session_id = session_id
                     time.sleep(0.2)
                     return True
@@ -342,10 +341,10 @@ class WeChatHandler:
             # 处理缓冲区中的所有消息
             while True:
                 msg = self.get_next_message()
-                print(f"缓冲区消息: {msg}")
+                print(f"yto缓冲区消息: {msg}")
                 if msg is None:
                     break
-                print(f"处理消息: {msg}")
+                print(f"处理yto消息: {msg}")
                 message = Message(
                     content=msg,
                     source=MessageSource.WECHAT,
@@ -360,23 +359,25 @@ class WeChatHandler:
     def send_message(self, message: str, session_id: str) -> bool:
         """向指定群发送消息"""
         try:
-            if not self.switch_to_group(session_id):
+            if not self.switch_to_session(session_id):
                 return False
+            
+            self.wx.SendKeys(message+'{Enter}', waitTime=1)
+
+            # edit_box = self.wx.EditControl(Name="输入")
+            # if not edit_box.Exists():
+            #     logger.error("找不到输入框")
+            #     return False
                 
-            edit_box = self.wx.EditControl(Name="输入")
-            if not edit_box.Exists():
-                logger.error("找不到输入框")
-                return False
-                
-            edit_box.SetValue(message)
+            # edit_box.SetValue(message)
             time.sleep(0.1)
             
-            send_button = self.wx.ButtonControl(Name="发送(S)")
-            if not send_button.Exists():
-                logger.error("找不到发送按钮")
-                return False
+            # send_button = self.wx.ButtonControl(Name="发送(S)")
+            # if not send_button.Exists():
+            #     logger.error("找不到发送按钮")
+            #     return False
                 
-            send_button.Click()
+            # send_button.Click()
             logger.info(f"微信消息已发送到群 {session_id}: {message}")
             return True
             
@@ -387,8 +388,9 @@ class WeChatHandler:
 class YtoHandler:
     def __init__(self):
         self.driver = None
-        self.buffer = {}
-        self.processed_messages = {}
+        self.max_processed_count = 10
+        self.buffer = deque(maxlen=self.max_processed_count)
+        self.processed_messages = deque(maxlen=self.max_processed_count)
         self.current_session_id = None
         
     def init_browser(self):
@@ -400,13 +402,17 @@ class YtoHandler:
             # 连接到已打开的浏览器
             options = Options()
             options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
-            driver = webdriver.Chrome(options=options)
+            self.driver = webdriver.Chrome(options=options)
             logger.info("浏览器初始化成功")
             return True
         except Exception as e:
             logger.error(f"初始化浏览器失败: {e}")
             return False
-            
+    def is_valid_message(self, msg: str) -> bool:
+        """过滤消息"""
+        # 过滤掉不符合规则的消息
+        pattern = r".*YT\d{13,15}\s*(test).*"
+        return re.match(pattern, msg) is not None
     def send_message(self, message: str) -> bool:
         """发送消息到圆通系统"""
         try:
@@ -420,8 +426,8 @@ class YtoHandler:
             message_input.send_keys(message)
             
             # # 点击发送按钮
-            send_button = self.driver.find_element(By.ID, "button-violet")
-            send_button.click()
+            # send_button = self.driver.find_element(By.ID, "button-violet")
+            # send_button.click()
             
             logger.info(f"消息已发送到圆通系统: {message}")
             return True
@@ -433,7 +439,6 @@ class YtoHandler:
     
     def try_get_message(self) -> Optional[str]:
         """尝试获取并处理消息，带重试机制"""
-        messages = []
         try:
             
             message_elements = self.driver.find_elements(By.CSS_SELECTOR, ".news-box")
@@ -441,7 +446,6 @@ class YtoHandler:
             #获取最后10条，避免数据过多
             last_news_message_elements = message_elements[-10:]
 
-            messages = []
             for msg_item in last_news_message_elements:
                 try:
 
@@ -453,9 +457,9 @@ class YtoHandler:
                     send_time = self.driver.execute_script(script, send_time_span)
                     msg_content = msg_item.find_element(By.CSS_SELECTOR, ".text-content").text
 
-                    if(sender_span.text != "小圆-总公司"):
-                        logger.info(f"收到来自 {sender_span.text} 的消息: {msg_content}")
-                        continue
+                    # if(sender_span.text != "小圆-总公司"):
+                        # logger.info(f"收到来自 {sender_span.text} 的消息: {msg_content}")
+                        # continue
                     
                     if self.is_valid_message(msg_content):
                         # 如果消息未处理过，添加到缓冲区
@@ -463,7 +467,7 @@ class YtoHandler:
                             self.buffer.append(msg_content)
                             self.processed_messages.append(msg_content)
                             # self.current_session_id = session_id
-                            logger.info(f"获取到消息: {msg_content}")
+                            logger.info(f"获取到yto消息: {msg_content}")
                             return True
                     
 
@@ -475,8 +479,6 @@ class YtoHandler:
             logger.error(f"获取圆通消息失败: {e}")
             self.is_logged_in = False
             
-        return messages
-    
     def get_next_message(self) -> Optional[str]:
         """从缓冲区获取下一条要处理的消息"""
         if self.buffer:
@@ -504,8 +506,8 @@ class YtoHandler:
                 )
                 messages.append(message)
         
-        time.sleep(0.5)  # 适当的循环间隔
-            
+        time.sleep(5)  # 适当的循环间隔
+
         return messages
 
 
@@ -605,6 +607,7 @@ class MessageBridge:
                 time.sleep(1)
 
     def run(self):
+
         """运行消息桥接服务"""
         if not self.init():
             logger.error("初始化失败，程序退出")
@@ -639,6 +642,9 @@ def main():
         'db': 0,
         'password': None
     }
+
+    # 打开浏览器的调试端口
+    # chrome --remote-debugging-port=9222
     
     bridge = MessageBridge(redis_config)
     bridge.run()

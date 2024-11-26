@@ -157,7 +157,6 @@ class WeChatHandler:
                                                 self.redis_queue.put_wechat_processed_message(msg_content, redis_key)
                                                 self.current_session_id = session_id
                                                 is_processed = True
-                                                logger.info(f"获取到群 {session_id} 的消息: {msg_content}")
                                     
                                     if is_processed:
                                         return True

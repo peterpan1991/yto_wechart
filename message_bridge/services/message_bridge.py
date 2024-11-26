@@ -61,7 +61,6 @@ class MessageBridge:
                     retry_count = 0
                     while retry_count < self.max_retries:
                         if self.wechat.send_message(response_text, session_id):
-                            logger.info(f"圆通回复已转发到群 {session_id}")
                             break
                         retry_count += 1
                         if retry_count < self.max_retries:
@@ -85,7 +84,6 @@ class MessageBridge:
                     retry_count = 0
                     while retry_count < self.max_retries:
                         if self.yto.send_message(wechat_message['content']):
-                            logger.info(f"微信消息已转发到圆通: {wechat_message['content']}")
                             break
                         retry_count += 1
                         if retry_count < self.max_retries:

@@ -33,8 +33,6 @@ class OrderManager:
             self.session_orders_map[session_id] = []
         if order_number not in self.session_orders_map[session_id]:
             self.session_orders_map[session_id].append(order_number)
-            
-        logger.info(f"注册订单 {order_number} 到群 {session_id}")
     
     def get_session_id(self, order_number: str) -> Optional[str]:
         """获取订单号对应的会话ID"""

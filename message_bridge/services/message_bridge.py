@@ -3,7 +3,7 @@ from config import REDIS_CONFIG, MONITORED_GROUPS
 from logger import logger
 from models.redis_queue import RedisQueue
 from handlers.wechat_handler import WeChatHandler
-from handlers.ytoHandler import YtoHandler
+from handlers.yto_handler import YtoHandler
 from models.order_manager import OrderManager
 import time
 

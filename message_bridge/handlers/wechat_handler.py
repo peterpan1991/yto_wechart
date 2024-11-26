@@ -6,6 +6,9 @@ import time
 from typing import Any, Optional, Dict, List
 from models.message import Message
 from models.message import MessageSource
+from models.redis_queue import RedisQueue
+from collections import deque
+import re
 
 class WeChatHandler:
     def __init__(self):

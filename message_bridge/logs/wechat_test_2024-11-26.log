@@ -1,0 +1,69 @@
+2024-11-26 19:55:47,755 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-11-26 19:55:47,755 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-11-26 19:55:48,327 - INFO - 微信窗口初始化成功
+2024-11-26 19:55:48,353 - INFO - 会话列表初始化成功
+2024-11-26 19:55:49,087 - INFO - 浏览器初始化成功
+2024-11-26 19:55:49,167 - ERROR - 判断消息是否在已处理队列中失败: 'str' object has no attribute 'to_dict'
+2024-11-26 19:55:49,167 - ERROR - 添加圆通消息到已处理队列失败: 'str' object has no attribute 'to_dict'
+2024-11-26 19:55:49,167 - INFO - 获取到yto消息: YT1900126038131 test
+2024-11-26 19:55:54,169 - WARNING - 找不到订单 YT1900126038131 对应的群
+2024-11-26 19:55:54,723 - ERROR - 判断消息是否在已处理队列中失败: 'str' object has no attribute 'to_dict'
+2024-11-26 19:55:54,723 - ERROR - 添加圆通消息到已处理队列失败: 'str' object has no attribute 'to_dict'
+2024-11-26 19:55:54,724 - INFO - 获取到yto消息: YT1900126038131 test
+2024-11-26 19:55:59,724 - WARNING - 找不到订单 YT1900126038131 对应的群
+2024-11-26 19:56:00,275 - ERROR - 判断消息是否在已处理队列中失败: 'str' object has no attribute 'to_dict'
+2024-11-26 19:56:00,275 - ERROR - 添加圆通消息到已处理队列失败: 'str' object has no attribute 'to_dict'
+2024-11-26 19:56:00,276 - INFO - 获取到yto消息: YT1900126038131 test
+2024-11-26 19:56:05,276 - WARNING - 找不到订单 YT1900126038131 对应的群
+2024-11-26 19:56:05,825 - ERROR - 判断消息是否在已处理队列中失败: 'str' object has no attribute 'to_dict'
+2024-11-26 19:56:05,827 - ERROR - 添加圆通消息到已处理队列失败: 'str' object has no attribute 'to_dict'
+2024-11-26 19:56:05,827 - INFO - 获取到yto消息: YT1900126038131 test
+2024-11-26 19:56:10,828 - WARNING - 找不到订单 YT1900126038131 对应的群
+2024-11-26 19:56:11,387 - ERROR - 判断消息是否在已处理队列中失败: 'str' object has no attribute 'to_dict'
+2024-11-26 19:56:11,388 - ERROR - 添加圆通消息到已处理队列失败: 'str' object has no attribute 'to_dict'
+2024-11-26 19:56:11,388 - INFO - 获取到yto消息: YT1900126038131 test
+2024-11-26 19:56:16,389 - WARNING - 找不到订单 YT1900126038131 对应的群
+2024-11-26 19:56:16,947 - ERROR - 判断消息是否在已处理队列中失败: 'str' object has no attribute 'to_dict'
+2024-11-26 19:56:16,947 - ERROR - 添加圆通消息到已处理队列失败: 'str' object has no attribute 'to_dict'
+2024-11-26 19:56:16,948 - INFO - 获取到yto消息: YT1900126038131 test
+2024-11-26 19:56:18,652 - INFO - 接收到退出信号，正在关闭...
+2024-11-26 19:56:21,948 - WARNING - 找不到订单 YT1900126038131 对应的群
+2024-11-26 19:56:45,434 - INFO - 程序已退出
+2024-11-26 20:09:04,234 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-11-26 20:09:04,234 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-11-26 20:09:04,857 - INFO - 微信窗口初始化成功
+2024-11-26 20:09:04,884 - INFO - 会话列表初始化成功
+2024-11-26 20:09:05,464 - INFO - 浏览器初始化成功
+2024-11-26 20:09:05,546 - INFO - 获取到yto消息: YT1900126038131 test
+2024-11-26 20:09:10,547 - WARNING - 找不到订单 YT1900126038131 对应的群
+2024-11-26 20:09:11,128 - INFO - 获取到yto消息: YT1900126038132 test
+2024-11-26 20:09:16,129 - WARNING - 找不到订单 YT1900126038132 对应的群
+2024-11-26 20:09:16,726 - INFO - 获取到yto消息: YT1900126038133 test
+2024-11-26 20:09:21,727 - WARNING - 找不到订单 YT1900126038133 对应的群
+2024-11-26 20:09:22,338 - INFO - 获取到yto消息: YT1900126038134 test
+2024-11-26 20:09:27,340 - WARNING - 找不到订单 YT1900126038134 对应的群
+2024-11-26 20:09:28,007 - INFO - 获取到yto消息: YT1900126038135 test
+2024-11-26 20:09:33,008 - WARNING - 找不到订单 YT1900126038135 对应的群
+2024-11-26 20:09:33,690 - INFO - 获取到yto消息: YT1900126038136 test
+2024-11-26 20:09:38,691 - WARNING - 找不到订单 YT1900126038136 对应的群
+2024-11-26 20:13:03,235 - ERROR - 找不到当前会话ID
+2024-11-26 20:13:04,306 - ERROR - 找不到当前会话ID
+2024-11-26 20:13:05,378 - ERROR - 找不到当前会话ID
+2024-11-26 20:13:35,287 - INFO - 接收到退出信号，正在关闭...
+2024-11-26 20:13:39,296 - INFO - 程序已退出
+2024-11-26 20:20:44,403 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-11-26 20:20:44,403 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-11-26 20:20:45,057 - INFO - 微信窗口初始化成功
+2024-11-26 20:20:45,079 - INFO - 会话列表初始化成功
+2024-11-26 20:20:45,667 - INFO - 浏览器初始化成功
+2024-11-26 20:21:18,783 - INFO - 获取到群 1 的消息: YT1900126038137 拦截
+2024-11-26 20:21:19,284 - INFO - 注册订单 YT1900126038137 到群 1
+2024-11-26 20:21:19,284 - INFO - 从群 1 提取到订单号: YT1900126038137
+2024-11-26 20:21:19,285 - INFO - 消息已加入微信队列: YT1900126038137 拦截
+2024-11-26 20:21:19,849 - INFO - 消息已发送到圆通系统: YT1900126038137 拦截
+2024-11-26 20:21:19,850 - INFO - 微信消息已转发到圆通: YT1900126038137 拦截
+2024-11-26 20:21:31,333 - INFO - 获取到yto消息: YT1900126038137 test
+2024-11-26 20:21:38,428 - INFO - 微信消息已发送到群 1: YT1900126038137 test
+2024-11-26 20:21:38,428 - INFO - 圆通回复已转发到群 1
+2024-11-26 20:21:51,217 - INFO - 接收到退出信号，正在关闭...
+2024-11-26 20:22:16,636 - INFO - 程序已退出

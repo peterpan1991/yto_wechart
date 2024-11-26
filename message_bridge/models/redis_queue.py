@@ -3,6 +3,7 @@ import json
 from logger import logger
 from models.message import Message
 from typing import Any, Optional, Dict, List
+import time
 
 class RedisQueue:
     def __init__(self, host='localhost', port=6379, db=0, password=None):
@@ -27,11 +28,11 @@ class RedisQueue:
         except Exception as e:
             logger.error(f"添加微信消息到队列失败: {e}")
             
-    def put_wechat_processed_message(self, message: Message, name: str):
+    def put_wechat_processed_message(self, message: str, name: str):
         """将微信消息放入已处理队列"""
         try:
             timestamp = time.time()
-            self.redis_client.zadd(name, {json.dumps(message.to_dict()): timestamp})
+            self.redis_client.zadd(name, {message: timestamp})
             
             # 检查当前有序集合的大小
             if self.redis_client.zcard(name) > self.max_processed_limit:
@@ -49,11 +50,10 @@ class RedisQueue:
             logger.error(f"从队列获取微信消息失败: {e}")
             return None
     
-    def is_message_in_wechat_processed_queue(self, message: Message, name: str) -> bool:
+    def is_message_in_wechat_processed_queue(self, message: str, name: str) -> bool:
         """判断消息是否在已处理队列中"""
         try:
-            message_json = json.dumps(message.to_dict())  # 将消息序列化为 JSON 字符串
-            score = self.redis_client.zscore(name, message_json)  # 获取消息的分数
+            score = self.redis_client.zscore(name, message)  # 获取消息的分数
             
             return score is not None  # 如果分数不为 None，则表示消息在有序集合中
         except Exception as e:
@@ -68,11 +68,11 @@ class RedisQueue:
         except Exception as e:
             logger.error(f"添加圆通消息到队列失败: {e}")
     
-    def put_yto_processed_message(self, message: Message):
+    def put_yto_processed_message(self, message: str):
         """将圆通消息放入已处理队列"""
         try:
             timestamp = time.time()
-            self.redis_client.zadd(self.yto_processed_queue, {json.dumps(message.to_dict()): timestamp})
+            self.redis_client.zadd(self.yto_processed_queue, {message: timestamp})
             
             # 检查当前有序集合的大小
             if self.redis_client.zcard(self.yto_processed_queue) > self.max_processed_limit:
@@ -90,11 +90,10 @@ class RedisQueue:
             logger.error(f"从队列获取圆通消息失败: {e}")
             return None
     
-    def is_message_in_yto_processed_queue(self, message: Message) -> bool:
+    def is_message_in_yto_processed_queue(self, message: str) -> bool:
         """判断消息是否在已处理队列中"""
         try:
-            message_json = json.dumps(message.to_dict())  # 将消息序列化为 JSON 字符串
-            score = self.redis_client.zscore(self.yto_processed_queue, message_json)  # 获取消息的分数
+            score = self.redis_client.zscore(self.yto_processed_queue, message)  # 获取消息的分数
             
             return score is not None  # 如果分数不为 None，则表示消息在有序集合中
         except Exception as e:

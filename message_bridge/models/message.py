@@ -3,17 +3,18 @@ from datetime import datetime
 
 class MessageSource(Enum):
     WECHAT = "wechat"
-    YUNDA = "yunda"
+    YTO = "yto"
 
 class MessageType(Enum):
     TEXT = "text"
     IMAGE = "image"
 
 class Message:
-    def __init__(self, content, source, group_id=None, order_number=None, msg_type=MessageType.TEXT):
+    def __init__(self, content: str, source: MessageSource, session_id: str = None, 
+                 order_number: str = None, msg_type: MessageType = MessageType.TEXT):
         self.content = content
         self.source = source
-        self.group_id = group_id
+        self.session_id = session_id
         self.order_number = order_number
         self.type = msg_type
         self.timestamp = datetime.now()
@@ -22,18 +23,18 @@ class Message:
         return {
             'content': self.content,
             'source': self.source.value,
-            'group_id': self.group_id,
+            'session_id': self.session_id,
             'order_number': self.order_number,
             'type': self.type.value,
             'timestamp': self.timestamp.isoformat()
         }
 
     @classmethod
-    def from_dict(cls, data):
+    def from_dict(cls, data: dict):
         return cls(
             content=data['content'],
             source=MessageSource(data['source']),
-            group_id=data.get('group_id'),
-            order_number=data.get('order_number'),
+            session_id=data['session_id'],
+            order_number=data['order_number'],
             msg_type=MessageType(data['type'])
         )

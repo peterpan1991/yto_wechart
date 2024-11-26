@@ -11,8 +11,16 @@ class WeChatHandler:
     def __init__(self):
         self.wx = None
         self.last_messages: Dict[str, str] = {}
-        self.current_group_id = None
+        self.current_session_id = None
         self.group_cache: Dict[str, auto.WindowControl] = {}
+        self.max_retries = 3
+        self.retry_delay = 0.5
+        self.buffer = {}
+        self.max_processed_count = 10
+        self.new_message = None
+        self.last_message_count = 3
+        self.monitoring_groups: Dict[str, str] = {}
+        self.redis_queue = RedisQueue()
         
     def init_wx(self) -> bool:
         """初始化微信窗口"""
@@ -22,122 +30,200 @@ class WeChatHandler:
                 logger.error("请先打开微信!")
                 return False
             logger.info("微信窗口初始化成功")
+
+            """初始化会话列表"""
+            if not self.init_groups():
+                return False
             return True
         except Exception as e:
             logger.error(f"初始化微信窗口失败: {e}")
             return False
-
-    def switch_to_group(self, group_id: str) -> bool:
-        """切换到指定的群聊"""
+        
+    def init_groups(self) -> bool:
+        """初始化会话列表"""
         try:
-            if self.current_group_id == group_id:
-                return True
-                
-            if group_id in self.group_cache:
-                group_item = self.group_cache[group_id]
-                if not group_item.Exists():
-                    del self.group_cache[group_id]
-                else:
-                    group_item.Click()
-                    self.current_group_id = group_id
-                    time.sleep(0.2)
-                    return True
-            
-            # 点击搜索框
-            search = self.wx.EditControl(Name="搜索")
-            if not search.Exists():
-                logger.error("找不到搜索框")
+            monitored_groups = {
+                1: 'yto-test'
+            }
+            self.monitoring_groups = monitored_groups
+
+            group_list = self.wx.ListControl(Name="会话")
+            if not group_list.Exists():
+                logger.error("找不到会话列表")
                 return False
                 
-            search.Click()
-            time.sleep(0.1)
-            search.SendKeys(group_id, waitTime=0.1)
-            time.sleep(0.5)
-            
-            # 点击搜索结果中的群
-            group_item = self.wx.ListItemControl(Name=group_id)
-            if not group_item.Exists():
-                logger.error(f"找不到群: {group_id}")
-                return False
-                
-            self.group_cache[group_id] = group_item
-            group_item.Click()
-            self.current_group_id = group_id
-            time.sleep(0.2)
+            self.group_cache = {}
+            for item in group_list.GetChildren():
+                group_name = item.Name
+                session_id = next((k for k, v in self.monitoring_groups.items() if v == group_name), None)
+                if group_name and session_id is not None:
+                    self.group_cache[session_id] = item
+                    
+            logger.info(f"会话列表初始化成功")
             return True
             
         except Exception as e:
-            logger.error(f"切换群聊失败: {e}")
+            logger.error(f"初始化会话列表失败: {e}")
+            return False
+        
+    def get_session_id(self) -> str:
+        """获取当前会话的ID"""
+        try:
+            edit = self.wx.EditControl(RegexName=r"^(?!.*搜索).*")
+            if edit.Exists(maxSearchSeconds=1, searchIntervalSeconds=0.3):
+                session_id = edit.Name
+            else:
+                logger.error("找不到当前会话ID")
+                return None
+                
+            return session_id
+        except Exception as e: 
+            logger.error(f"获取当前会话ID失败: {e}")
+            return None
+
+    def switch_to_session(self, session_id: str) -> bool:
+        """切换到指定的会话"""
+        try:
+            # if self.current_session_id == session_id:
+            #     return True
+                
+            if session_id in self.group_cache:
+                group_item = self.group_cache[session_id]
+                if not group_item.Exists():
+                    del self.group_cache[session_id]
+                else:
+                    group_item.Click(simulateMove=False)
+                    self.current_session_id = session_id
+                    time.sleep(0.2)
+                    return True
+            
+        except Exception as e:
+            logger.error(f"切换会话失败: {e}")
             return False
 
-    def get_messages(self) -> List[Message]:
-        """获取当前群的新消息"""
+    def is_valid_message(self, msg: str) -> bool:
+        """过滤消息"""
+        # 过滤掉不符合规则的消息
+        pattern = r".*YT\d{13,15}\s*(催件|拦截).*"
+        return re.match(pattern, msg) is not None
 
-        hw = self.wx.ListControl(Name='会话')
-        we = hw.TextControl(searchDepth=4)
+    def try_get_message(self) -> Optional[str]:
+        """尝试获取并处理消息，带重试机制"""
+        try:
+            self.wx.SetActive()  # 激活微信窗口
+            session = self.wx.ListControl(Name="会话")
+            self.new_message = session.TextControl(searchDepth=3)
 
-        # 死循环维持，没有超时报错
-        while not we.Exists():
-            pass
-        
-        messages = []
-        # 存在未读消息
-        if we.Name:
-            # 点击未读消息
-            we.Click(simulateMove=False)
-            try:
-                message_list = self.wx.ListControl(Name="消息")
-                
-                if message_list.Exists():
-                    items = message_list.GetChildren()
-                    # 只获取最后一条消息
-                    if items:
-                        last_item = items[-1]
-                        print(last_item)
-                        content = last_item.Name
-                        if content:
-                            try:
-                                message = Message(
-                                    content=content,
-                                    source=MessageSource.WECHAT,
-                                    group_id=self.current_group_id
-                                )
-                                messages.append(message)
-                            except Exception as e:
-                                # 如果无法获取时间信息，则直接添加消息
-                                message = Message(
-                                    content=content,
-                                    source=MessageSource.WECHAT,
-                                    group_id=self.current_group_id
-                                )
-                                messages.append(message)
+            retry_count = 0
+            
+            while not self.new_message.Exists() and retry_count < self.max_retries:
+                time.sleep(0.2)
+                retry_count += 1
+            
+            if self.new_message.Exists():
+                self.new_message.Click(simulateMove=False)
+                for _ in range(self.max_retries):
+                    try:
+                        group_name = self.get_session_id()
                         
-            except Exception as e:
-                logger.error(f"获取微信消息失败: {e}")
+                        session_id = next((k for k, v in self.monitoring_groups.items() if v == group_name), None)
+                        # 判断group在监控群里面 且 在拿到的会话列表里面
+                        if session_id is not None and session_id in self.group_cache:                                                        
+                            
+                            if session_id not in self.buffer:
+                                self.buffer[session_id] = deque(maxlen=self.max_processed_count)  # 确保 buffer 中存在 session_id
+
+                            msg_list = self.wx.ListControl(Name='消息')
+                            if msg_list.Exists():
+                                children = msg_list.GetChildren()
+                                if children:
+                                    # 判断需要获取的消息数量
+                                    get_message_count = len(children) if len(children) < self.last_message_count else self.last_message_count
+                                    # 判断当前群是否处理过消息，如果没处理过，get_message_count = 1
+                                    # 获取最后几条消息
+                                    latest_messages = children[-get_message_count:]  # 可以调整获取的消息数量
+                                    is_processed = False
+                                    for msg_item in latest_messages:
+                                        print(f"收到消息: {msg_item.Name}")
+                                        if self.is_valid_message(msg_item.Name):
+                                            msg_content = msg_item.Name
+                                            # 如果消息未处理过，添加到缓冲区
+                                            redis_key = f"wechat_processed_messages_{session_id}"
+                                            if msg_content and self.redis_queue.is_message_in_wechat_processed_queue(msg_content, redis_key) is False:
+                                                self.buffer[session_id].append(msg_content)
+                                                self.redis_queue.put_wechat_processed_message(msg_content, redis_key)
+                                                self.current_session_id = session_id
+                                                is_processed = True
+                                                logger.info(f"获取到群 {session_id} 的消息: {msg_content}")
+                                    
+                                    if is_processed:
+                                        return True
+                    except Exception as e:
+                        print(f"获取消息失败，重试中: {e}")
+                        time.sleep(self.retry_delay)
+            else:
+                print("控件未找到，继续下一次循环")
+        
+            time.sleep(0.5)  # 适当的循环间隔
+        
+        except Exception as e:
+            print(f"发生错误: {e}")
+            time.sleep(1)
+    
+    def get_next_message(self) -> Optional[str]:
+        """从缓冲区获取下一条要处理的消息"""
+        if self.current_session_id in self.buffer and self.buffer[self.current_session_id]:
+            return self.buffer[self.current_session_id].popleft()
+        else:
+            return None
+        
+    def get_messages(self) -> List[Message]:
+        """获取新消息"""
+        messages = []
+        
+        # 尝试获取新消息
+        if self.try_get_message():
+            # 处理缓冲区中的所有消息
+            while True:
+                msg = self.get_next_message()
+                print(f"yto缓冲区消息: {msg}")
+                if msg is None:
+                    break
+                print(f"处理yto消息: {msg}")
+                message = Message(
+                    content=msg,
+                    source=MessageSource.WECHAT,
+                    session_id=self.current_session_id
+                )
+                messages.append(message)
+        
+        time.sleep(0.5)  # 适当的循环间隔        
             
         return messages
 
-    def send_message(self, message: str, group_id: str) -> bool:
+    def send_message(self, message: str, session_id: str) -> bool:
         """向指定群发送消息"""
         try:
-            if not self.switch_to_group(group_id):
+            if not self.switch_to_session(session_id):
                 return False
+            
+            self.wx.SendKeys(message+'{Enter}', waitTime=1)
+
+            # edit_box = self.wx.EditControl(Name="输入")
+            # if not edit_box.Exists():
+            #     logger.error("找不到输入框")
+            #     return False
                 
-            edit_box = self.wx.EditControl(Name="输入")
-            if not edit_box.Exists():
-                logger.error("找不到输入框")
-                return False
-                
-            edit_box.SetValue(message)
+            # edit_box.SetValue(message)
             time.sleep(0.1)
             
-            send_button = self.wx.ButtonControl(Name="发送(S)")
-            if not send_button.Exists():
-                logger.error("找不到发送按钮")
-                return False
+            # send_button = self.wx.ButtonControl(Name="发送(S)")
+            # if not send_button.Exists():
+            #     logger.error("找不到发送按钮")
+            #     return False
                 
-            send_button.Click()
-            logger.info(f"微信消息已发送到群 {group_id}: {message}")
+            # send_button.Click()
+            logger.info(f"微信消息已发送到群 {session_id}: {message}")
             return True
             
         except Exception as e:

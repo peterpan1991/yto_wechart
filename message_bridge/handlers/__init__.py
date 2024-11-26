@@ -1,4 +1,4 @@
 from .wechat_handler import WeChatHandler
-from .yunda_handler import YundaHandler
+from .yto_handler import YtoHandler
 
 __all__ = ['WeChatHandler', 'YundaHandler']

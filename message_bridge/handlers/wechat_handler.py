@@ -46,7 +46,7 @@ class WeChatHandler:
         """初始化会话列表"""
         try:
             monitored_groups = {
-                1: 'yto-test'
+                "1": 'yto-test'
             }
             self.monitoring_groups = monitored_groups
 
@@ -89,7 +89,7 @@ class WeChatHandler:
         try:
             # if self.current_session_id == session_id:
             #     return True
-                
+
             if session_id in self.group_cache:
                 group_item = self.group_cache[session_id]
                 if not group_item.Exists():
@@ -151,10 +151,9 @@ class WeChatHandler:
                                         if self.is_valid_message(msg_item.Name):
                                             msg_content = msg_item.Name
                                             # 如果消息未处理过，添加到缓冲区
-                                            redis_key = f"wechat_processed_messages_{session_id}"
-                                            if msg_content and self.redis_queue.is_message_in_wechat_processed_queue(msg_content, redis_key) is False:
+                                            if msg_content and self.redis_queue.is_message_in_wechat_processed_queue(msg_content, session_id) is False:
                                                 self.buffer[session_id].append(msg_content)
-                                                self.redis_queue.put_wechat_processed_message(msg_content, redis_key)
+                                                self.redis_queue.put_wechat_processed_message(msg_content, session_id)
                                                 self.current_session_id = session_id
                                                 is_processed = True
                                     
@@ -188,7 +187,6 @@ class WeChatHandler:
             # 处理缓冲区中的所有消息
             while True:
                 msg = self.get_next_message()
-                print(f"yto缓冲区消息: {msg}")
                 if msg is None:
                     break
                 print(f"处理yto消息: {msg}")

@@ -34,10 +34,10 @@ class MessageBridge:
                 messages = self.wechat.get_messages()
                 for msg in messages:
                     # 提取订单号并注册关联
-                    order_number = self.order_manager.extract_order_number(msg.content)
-                    if order_number:
-                        self.order_manager.register_order(order_number, msg.session_id)
-                        logger.info(f"从群 {msg.session_id} 提取到订单号: {order_number}")
+                    order_numbers = self.order_manager.extract_order_number(msg.content)
+                    if order_numbers:
+                        self.order_manager.register_order(order_numbers, msg.session_id)
+                        logger.info(f"从群 {msg.session_id} 提取到订单号: {order_numbers}")
                     
                     # 将消息发送到圆通
                     if msg.content:
@@ -52,10 +52,10 @@ class MessageBridge:
         """处理圆通的回复消息"""
         try:
             # 从回复中提取订单号
-            order_number = self.order_manager.extract_order_number(response_text)
-            if order_number:
+            order_numbers = self.order_manager.extract_order_number(response_text)
+            if order_numbers:
                 # 查找对应的群
-                session_id = self.order_manager.get_session_id(order_number)
+                session_id = self.order_manager.get_session_id(order_numbers[0])
                 if session_id:
                     # 发送到对应的群
                     retry_count = 0
@@ -68,7 +68,7 @@ class MessageBridge:
                     else:
                         logger.error(f"发送消息到群 {session_id} 失败，已达到最大重试次数")
                 else:
-                    logger.warning(f"找不到订单 {order_number} 对应的群")
+                    logger.warning(f"找不到订单 {order_numbers[0]} 对应的群")
             else:
                 logger.warning(f"圆通回复中没有找到订单号: {response_text}")
         except Exception as e:

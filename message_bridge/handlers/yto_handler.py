@@ -124,7 +124,6 @@ class YtoHandler:
             # 处理缓冲区中的所有消息
             while True:
                 msg = self.get_next_message()
-                print(f"缓冲区消息: {msg}")
                 if msg is None:
                     break
                 print(f"处理消息: {msg}")

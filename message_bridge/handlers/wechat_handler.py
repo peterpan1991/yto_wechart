@@ -9,6 +9,7 @@ from models.message import MessageSource
 from models.redis_queue import RedisQueue
 from collections import deque
 import re
+from config import CUSTOME_SERVICE_PATTERNS, WECHAT_MESSAGE_FORMATS, MONITORED_GROUPS
 
 class WeChatHandler:
     def __init__(self):
@@ -45,9 +46,7 @@ class WeChatHandler:
     def init_groups(self) -> bool:
         """初始化会话列表"""
         try:
-            monitored_groups = {
-                "1": 'yto-test'
-            }
+            monitored_groups = MONITORED_GROUPS
             self.monitoring_groups = monitored_groups
 
             group_list = self.wx.ListControl(Name="会话")
@@ -107,8 +106,25 @@ class WeChatHandler:
     def is_valid_message(self, msg: str) -> bool:
         """过滤消息"""
         # 过滤掉不符合规则的消息
-        pattern = r".*YT\d{13,15}\s*(催件|拦截).*"
-        return re.match(pattern, msg) is not None
+        patterns = WECHAT_MESSAGE_FORMATS
+        for pattern in patterns:
+            match = re.search(pattern, msg, re.DOTALL)
+            if match:
+                return True
+        return False
+
+    def is_customer(self, name: str) -> bool:
+        """判断是否自己"""
+        if not name:
+            return False
+
+        """判断是否是客服"""
+        patterns = CUSTOME_SERVICE_PATTERNS
+        for pattern in patterns:
+            match = re.search(pattern, name, re.DOTALL)
+            if match:
+                return False
+        return True
 
     def try_get_message(self) -> Optional[str]:
         """尝试获取并处理消息，带重试机制"""
@@ -147,8 +163,11 @@ class WeChatHandler:
                                     latest_messages = children[-get_message_count:]  # 可以调整获取的消息数量
                                     is_processed = False
                                     for msg_item in latest_messages:
+                                        sender_name = msg_item.TextControl().Name
+                                        # 过滤圆通客服
+                                        print(f"发送人: {msg_item.TextControl().Name}")
                                         print(f"收到消息: {msg_item.Name}")
-                                        if self.is_valid_message(msg_item.Name):
+                                        if self.is_valid_message(msg_item.Name) and self.is_customer(sender_name):
                                             msg_content = msg_item.Name
                                             # 如果消息未处理过，添加到缓冲区
                                             if msg_content and self.redis_queue.is_message_in_wechat_processed_queue(msg_content, session_id) is False:

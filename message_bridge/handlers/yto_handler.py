@@ -13,6 +13,7 @@ from models.redis_queue import RedisQueue
 from collections import deque
 import time
 import re
+from config import YTO_MESSAGE_FORMATS
 
 class YtoHandler:
     def __init__(self):
@@ -40,8 +41,13 @@ class YtoHandler:
     def is_valid_message(self, msg: str) -> bool:
         """过滤消息"""
         # 过滤掉不符合规则的消息
-        pattern = r".*YT\d{13,15}\s*(test).*"
-        return re.match(pattern, msg) is not None
+        patterns = YTO_MESSAGE_FORMATS
+        for pattern in patterns:
+            match = re.search(pattern, msg, re.DOTALL)
+            if match:
+                return True
+        return False
+    
     def send_message(self, message: str) -> bool:
         """发送消息到圆通系统"""
         try:

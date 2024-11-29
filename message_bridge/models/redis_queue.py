@@ -4,16 +4,11 @@ from logger import logger
 from models.message import Message
 from typing import Any, Optional, Dict, List
 import time
-
+from config import REDIS_CONFIG
 class RedisQueue:
-    def __init__(self, host='localhost', port=6379, db=0, password=None):
-        self.redis_client = redis.Redis(
-            host=host,
-            port=port,
-            db=db,
-            password=password,
-            decode_responses=True
-        )
+    def __init__(self):
+        redis_config = REDIS_CONFIG
+        self.redis_client = redis.Redis(**redis_config)
         self.wechat_queue = 'wechat_messages'
         self.wechat_processed_queue = f"{self.wechat_queue}_processed"
         self.yto_queue = 'yto_messages'

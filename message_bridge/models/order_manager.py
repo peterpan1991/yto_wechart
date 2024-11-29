@@ -2,6 +2,7 @@ import re
 from logger import logger
 from typing import Any, Optional, Dict, List
 from models.redis_queue import RedisQueue
+from config import ORDER_FORMAT
 
 class OrderManager:
     def __init__(self):
@@ -12,10 +13,7 @@ class OrderManager:
     def extract_order_number(self, text: str) -> Optional[List[str]]:
         """从文本中提取订单号"""
         # 支持多种订单号格式
-        patterns = [
-            r'YT\d{13,15}',  # 圆通订单号格式
-            # 可以添加更多格式
-        ]
+        patterns = ORDER_FORMAT
         order_numbers = []
         for pattern in patterns:
             match = re.findall(pattern, text)

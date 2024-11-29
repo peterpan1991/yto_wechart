@@ -8,8 +8,8 @@ from models.order_manager import OrderManager
 import time
 
 class MessageBridge:
-    def __init__(self, redis_config=None):
-        self.redis_queue = RedisQueue(**(redis_config or {}))
+    def __init__(self):
+        self.redis_queue = RedisQueue()
         self.wechat = WeChatHandler()
         self.yto = YtoHandler()
         self.order_manager = OrderManager()

@@ -1,3 +1,4 @@
+import random
 from threading import Thread
 from config import REDIS_CONFIG, MONITORED_GROUPS
 from logger import logger
@@ -43,10 +44,10 @@ class MessageBridge:
                     if msg.content:
                         self.redis_queue.put_wechat_message(msg)
                                 
-                time.sleep(1)
+                time.sleep(0.5)
             except Exception as e:
                 logger.error(f"处理微信消息时出错: {e}")
-                time.sleep(1)
+                time.sleep(0.5)
 
     def process_yto_response(self, response_text: str):
         """处理圆通的回复消息"""
@@ -58,15 +59,7 @@ class MessageBridge:
                 session_id = self.order_manager.get_session_id(order_numbers[0])
                 if session_id:
                     # 发送到对应的群
-                    retry_count = 0
-                    while retry_count < self.max_retries:
-                        if self.wechat.send_message(response_text, session_id):
-                            break
-                        retry_count += 1
-                        if retry_count < self.max_retries:
-                            time.sleep(self.retry_delay)
-                    else:
-                        logger.error(f"发送消息到群 {session_id} 失败，已达到最大重试次数")
+                    self.wechat.send_message(response_text, session_id)
                 else:
                     logger.warning(f"找不到订单 {order_numbers[0]} 对应的群")
             else:
@@ -81,22 +74,17 @@ class MessageBridge:
                 # 处理微信到圆通的消息
                 wechat_message = self.redis_queue.get_wechat_message()
                 if wechat_message:
-                    retry_count = 0
-                    while retry_count < self.max_retries:
-                        if self.yto.send_message(wechat_message['content']):
-                            break
-                        retry_count += 1
-                        if retry_count < self.max_retries:
-                            time.sleep(self.retry_delay)
-                    else:
-                        logger.error("发送消息到圆通失败，已达到最大重试次数")
-
+                    self.yto.send_message(wechat_message['content'])
+                
+                time.sleep(random.uniform(0.5, 1.5))
+                
                 # 处理圆通到微信的消息
                 yto_messages = self.yto.get_messages()
                 for msg in yto_messages:
                     self.process_yto_response(msg.content)
+                    time.sleep(random.uniform(0.5, 1.5))
 
-                time.sleep(0.5)
+                time.sleep(random.uniform(0.5, 1.5))
             except Exception as e:
                 logger.error(f"转发消息时出错: {e}")
                 time.sleep(1)
@@ -124,6 +112,6 @@ class MessageBridge:
 
         wechat_thread.join()
         forward_thread.join()
-        # forward_thread.join()
+
         logger.info("程序已退出")
 

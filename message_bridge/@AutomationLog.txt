@@ -1,0 +1,3 @@
+2024-11-29 20:04:17.993 get_wechat_control.py[221] <module> -> Find Control Timeout(10s): {ControlType: TextControl}
+2024-11-29 20:16:13.765 wechat_handler.py[97] switch_to_session -> Can not move cursor. ListItemControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ListItemControl}
+2024-11-29 20:49:45.575 wechat_handler.py[97] switch_to_session -> Can not move cursor. ListItemControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ListItemControl}

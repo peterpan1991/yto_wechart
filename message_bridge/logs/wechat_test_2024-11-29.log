@@ -1,0 +1,287 @@
+2024-11-29 19:21:34,766 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-11-29 19:21:34,767 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-11-29 19:21:35,031 - INFO - 微信窗口初始化成功
+2024-11-29 19:21:35,058 - INFO - 会话列表初始化成功
+2024-11-29 19:21:35,787 - INFO - 浏览器初始化成功
+2024-11-29 19:22:15,086 - INFO - 从群 1 提取到订单号: ['YT1900126038145']
+2024-11-29 19:22:15,087 - INFO - 消息已加入微信队列: YT1900126038145 拦截
+2024-11-29 19:22:16,121 - INFO - 消息已发送到圆通系统: YT1900126038145 拦截
+2024-11-29 19:22:27,905 - INFO - 获取到yto消息: YT1900126038145 test
+2024-11-29 19:22:34,995 - INFO - 微信消息已发送到群 1: YT1900126038145 test
+2024-11-29 19:23:08,403 - INFO - 从群 1 提取到订单号: ['YT1900126038146', 'YT1900126038147']
+2024-11-29 19:23:08,404 - INFO - 消息已加入微信队列: YT1900126038146
+YT1900126038147 拦截
+2024-11-29 19:23:09,996 - INFO - 消息已发送到圆通系统: YT1900126038146
+YT1900126038147 拦截
+2024-11-29 19:23:16,044 - INFO - 获取到yto消息: YT1900126038146
+2024-11-29 19:23:23,084 - INFO - 微信消息已发送到群 1: YT1900126038146
+2024-11-29 19:23:39,723 - INFO - 接收到退出信号，正在关闭...
+2024-11-29 19:24:05,757 - INFO - 程序已退出
+2024-11-29 19:29:22,154 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-11-29 19:29:22,155 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-11-29 19:29:22,806 - INFO - 微信窗口初始化成功
+2024-11-29 19:29:22,831 - INFO - 会话列表初始化成功
+2024-11-29 19:29:23,407 - INFO - 浏览器初始化成功
+2024-11-29 19:29:46,536 - INFO - 从群 1 提取到订单号: ['YT1900126038147', 'YT1900126038148']
+2024-11-29 19:29:46,536 - INFO - 消息已加入微信队列: YT1900126038147
+YT1900126038148 拦截
+2024-11-29 19:29:52,170 - INFO - 消息已发送到圆通系统: YT1900126038147
+YT1900126038148 拦截
+2024-11-29 19:30:09,618 - INFO - 获取到yto消息: YT1900126038147
+YT1900126038148 已拦截
+2024-11-29 19:30:16,867 - INFO - 微信消息已发送到群 1: YT1900126038147
+YT1900126038148 已拦截
+2024-11-29 19:30:27,515 - INFO - 接收到退出信号，正在关闭...
+2024-11-29 19:30:43,863 - INFO - 程序已退出
+2024-11-29 19:35:22,686 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-11-29 19:35:22,686 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-11-29 19:35:23,317 - INFO - 微信窗口初始化成功
+2024-11-29 19:35:23,335 - INFO - 会话列表初始化成功
+2024-11-29 19:35:23,918 - INFO - 浏览器初始化成功
+2024-11-29 19:35:48,692 - INFO - 从群 1 提取到订单号: ['YT1900126038149', 'YT19001260381410']
+2024-11-29 19:35:48,692 - INFO - 消息已加入微信队列: YT1900126038149
+YT19001260381410 拦截
+2024-11-29 19:35:53,739 - INFO - 消息已发送到圆通系统: YT1900126038149
+YT19001260381410 拦截
+2024-11-29 19:36:06,032 - INFO - 获取到yto消息: YT1900126038149
+YT19001260381410 已拦截
+2024-11-29 19:36:13,300 - INFO - 微信消息已发送到群 1: YT1900126038149
+YT19001260381410 已拦截
+2024-11-29 19:36:51,194 - INFO - 接收到退出信号，正在关闭...
+2024-11-29 19:37:14,226 - INFO - 程序已退出
+2024-11-29 19:41:54,471 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-11-29 19:41:54,471 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-11-29 19:41:55,124 - INFO - 微信窗口初始化成功
+2024-11-29 19:41:55,149 - INFO - 会话列表初始化成功
+2024-11-29 19:41:55,740 - INFO - 浏览器初始化成功
+2024-11-29 19:42:52,706 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-11-29 19:42:52,706 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-11-29 19:42:53,375 - INFO - 微信窗口初始化成功
+2024-11-29 19:42:53,400 - INFO - 会话列表初始化成功
+2024-11-29 19:42:53,977 - INFO - 浏览器初始化成功
+2024-11-29 19:43:24,757 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-11-29 19:43:24,758 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-11-29 19:43:25,392 - INFO - 微信窗口初始化成功
+2024-11-29 19:43:25,417 - INFO - 会话列表初始化成功
+2024-11-29 19:43:25,995 - INFO - 浏览器初始化成功
+2024-11-29 19:43:31,252 - ERROR - 找不到输入框
+2024-11-29 19:45:53,106 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-11-29 19:45:53,107 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-11-29 19:45:53,773 - INFO - 微信窗口初始化成功
+2024-11-29 19:45:53,796 - INFO - 会话列表初始化成功
+2024-11-29 19:45:54,382 - INFO - 浏览器初始化成功
+2024-11-29 19:45:54,628 - ERROR - 发送微信消息失败: 'EditControl' object has no attribute 'SetValue'
+2024-11-29 19:48:06,641 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-11-29 19:48:06,641 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-11-29 19:48:07,343 - INFO - 微信窗口初始化成功
+2024-11-29 19:48:07,364 - INFO - 会话列表初始化成功
+2024-11-29 19:48:07,943 - INFO - 浏览器初始化成功
+2024-11-29 19:48:08,202 - ERROR - 发送微信消息失败: 'EditControl' object has no attribute 'SetText'
+2024-11-29 19:52:16,289 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-11-29 19:52:16,289 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-11-29 19:52:16,942 - INFO - 微信窗口初始化成功
+2024-11-29 19:52:16,971 - INFO - 会话列表初始化成功
+2024-11-29 19:52:17,552 - INFO - 浏览器初始化成功
+2024-11-29 19:52:18,997 - INFO - 微信消息已发送到群 1: YT12312323456
+YT12312323456 拦截
+2024-11-29 19:55:01,847 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-11-29 19:55:01,848 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-11-29 19:55:02,543 - INFO - 微信窗口初始化成功
+2024-11-29 19:55:02,570 - INFO - 会话列表初始化成功
+2024-11-29 19:55:03,165 - INFO - 浏览器初始化成功
+2024-11-29 19:55:09,615 - INFO - 微信消息已发送到群 1: YT12312323456
+YT12312323456 拦截
+2024-11-29 19:56:39,513 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-11-29 19:56:39,514 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-11-29 19:56:40,168 - INFO - 微信窗口初始化成功
+2024-11-29 19:56:40,196 - INFO - 会话列表初始化成功
+2024-11-29 19:56:40,769 - INFO - 浏览器初始化成功
+2024-11-29 19:57:25,448 - INFO - 从群 1 提取到订单号: ['YT1900126038150', 'YT1900126038151']
+2024-11-29 19:57:25,449 - INFO - 消息已加入微信队列: YT1900126038150
+YT1900126038151 拦截
+2024-11-29 19:57:28,408 - INFO - 消息已发送到圆通系统: YT1900126038150
+YT1900126038151 拦截
+2024-11-29 19:57:46,520 - INFO - 获取到yto消息: YT1900126038150
+YT1900126038151 已拦截
+2024-11-29 19:57:53,767 - INFO - 微信消息已发送到群 1: YT1900126038150
+YT1900126038151 已拦截
+2024-11-29 19:57:58,086 - INFO - 接收到退出信号，正在关闭...
+2024-11-29 19:58:22,787 - INFO - 程序已退出
+2024-11-29 20:00:23,085 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-11-29 20:00:23,086 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-11-29 20:00:23,784 - INFO - 微信窗口初始化成功
+2024-11-29 20:00:23,806 - INFO - 会话列表初始化成功
+2024-11-29 20:00:24,380 - INFO - 浏览器初始化成功
+2024-11-29 20:00:44,551 - INFO - 从群 1 提取到订单号: ['YT1900126038152', 'YT1900126038153']
+2024-11-29 20:00:44,552 - INFO - 消息已加入微信队列: YT1900126038152
+YT1900126038153 拦截
+2024-11-29 20:00:48,156 - INFO - 消息已发送到圆通系统: YT1900126038152
+YT1900126038153 拦截
+2024-11-29 20:01:00,439 - INFO - 获取到yto消息: YT1900126038152
+YT1900126038153 已拦截
+2024-11-29 20:01:07,692 - INFO - 微信消息已发送到群 1: YT1900126038152
+YT1900126038153 已拦截
+2024-11-29 20:01:15,291 - INFO - 接收到退出信号，正在关闭...
+2024-11-29 20:01:41,911 - INFO - 程序已退出
+2024-11-29 20:11:42,447 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-11-29 20:11:42,447 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-11-29 20:11:43,143 - INFO - 微信窗口初始化成功
+2024-11-29 20:11:43,171 - INFO - 会话列表初始化成功
+2024-11-29 20:11:43,754 - INFO - 浏览器初始化成功
+2024-11-29 20:12:13,812 - INFO - 获取到yto消息: YT1900126038152
+YT1900126038153 已拦截了
+2024-11-29 20:12:19,734 - ERROR - 发送微信消息失败: ord() expected a character, but string of length 11 found
+2024-11-29 20:12:25,649 - ERROR - 发送微信消息失败: ord() expected a character, but string of length 11 found
+2024-11-29 20:12:31,569 - ERROR - 发送微信消息失败: ord() expected a character, but string of length 11 found
+2024-11-29 20:12:31,569 - ERROR - 发送消息到群 1 失败，已达到最大重试次数
+2024-11-29 20:12:33,601 - INFO - 接收到退出信号，正在关闭...
+2024-11-29 20:12:38,015 - INFO - 程序已退出
+2024-11-29 20:15:19,762 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-11-29 20:15:19,762 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-11-29 20:15:20,539 - INFO - 微信窗口初始化成功
+2024-11-29 20:15:20,563 - INFO - 会话列表初始化成功
+2024-11-29 20:15:21,150 - INFO - 浏览器初始化成功
+2024-11-29 20:15:39,470 - INFO - 获取到yto消息: YT1900126038154
+YT1900126038155 已拦截了
+2024-11-29 20:15:44,471 - WARNING - 找不到订单 YT1900126038154 对应的群
+2024-11-29 20:15:57,249 - INFO - 获取到yto消息: YT1900126038152
+YT1900126038153 已拦截了啊
+2024-11-29 20:16:03,006 - ERROR - 发送微信消息失败: "{Shift down}" is not valid
+2024-11-29 20:16:08,762 - ERROR - 发送微信消息失败: "{Shift down}" is not valid
+2024-11-29 20:16:12,233 - INFO - 接收到退出信号，正在关闭...
+2024-11-29 20:16:13,973 - ERROR - 发送微信消息失败: "{Shift down}" is not valid
+2024-11-29 20:16:13,973 - ERROR - 发送消息到群 1 失败，已达到最大重试次数
+2024-11-29 20:16:14,474 - INFO - 程序已退出
+2024-11-29 20:17:52,124 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-11-29 20:17:52,124 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-11-29 20:17:52,897 - INFO - 微信窗口初始化成功
+2024-11-29 20:17:52,923 - INFO - 会话列表初始化成功
+2024-11-29 20:17:53,498 - INFO - 浏览器初始化成功
+2024-11-29 20:18:17,639 - INFO - 获取到yto消息: YT1900126038152
+YT1900126038153 已拦截了1
+2024-11-29 20:18:24,889 - INFO - 微信消息已发送到群 1: YT1900126038152
+YT1900126038153 已拦截了1
+2024-11-29 20:18:35,973 - INFO - 接收到退出信号，正在关闭...
+2024-11-29 20:18:37,235 - INFO - 程序已退出
+2024-11-29 20:32:27,742 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-11-29 20:32:27,743 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-11-29 20:32:28,464 - INFO - 微信窗口初始化成功
+2024-11-29 20:32:28,497 - INFO - 会话列表初始化成功
+2024-11-29 20:32:29,102 - INFO - 浏览器初始化成功
+2024-11-29 20:40:44,025 - INFO - 接收到退出信号，正在关闭...
+2024-11-29 20:40:44,697 - INFO - 程序已退出
+2024-11-29 20:41:41,433 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-11-29 20:41:41,433 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-11-29 20:41:42,172 - INFO - 微信窗口初始化成功
+2024-11-29 20:41:42,200 - INFO - 会话列表初始化成功
+2024-11-29 20:41:42,808 - INFO - 浏览器初始化成功
+2024-11-29 20:43:09,775 - INFO - 接收到退出信号，正在关闭...
+2024-11-29 20:43:10,918 - INFO - 程序已退出
+2024-11-29 20:43:28,082 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-11-29 20:43:28,083 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-11-29 20:43:28,870 - INFO - 微信窗口初始化成功
+2024-11-29 20:43:28,896 - INFO - 会话列表初始化成功
+2024-11-29 20:43:29,488 - INFO - 浏览器初始化成功
+2024-11-29 20:43:29,495 - INFO - 获取到圆通系统消息: []
+2024-11-29 20:43:35,001 - INFO - 获取到圆通系统消息: []
+2024-11-29 20:43:40,506 - INFO - 获取到圆通系统消息: []
+2024-11-29 20:43:43,710 - INFO - 接收到退出信号，正在关闭...
+2024-11-29 20:43:46,007 - INFO - 程序已退出
+2024-11-29 20:44:55,748 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-11-29 20:44:55,748 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-11-29 20:44:56,509 - INFO - 微信窗口初始化成功
+2024-11-29 20:44:56,533 - INFO - 会话列表初始化成功
+2024-11-29 20:44:57,120 - INFO - 浏览器初始化成功
+2024-11-29 20:44:57,126 - ERROR - 获取圆通消息失败: list index out of range
+2024-11-29 20:45:01,913 - INFO - 接收到退出信号，正在关闭...
+2024-11-29 20:45:02,627 - INFO - 程序已退出
+2024-11-29 20:47:06,624 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-11-29 20:47:06,624 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-11-29 20:47:07,385 - INFO - 微信窗口初始化成功
+2024-11-29 20:47:07,416 - INFO - 会话列表初始化成功
+2024-11-29 20:47:08,011 - INFO - 浏览器初始化成功
+2024-11-29 20:47:08,019 - INFO - 获取到圆通系统消息: []
+2024-11-29 20:47:11,661 - INFO - 接收到退出信号，正在关闭...
+2024-11-29 20:47:13,521 - INFO - 程序已退出
+2024-11-29 20:48:16,780 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-11-29 20:48:16,780 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-11-29 20:48:17,520 - INFO - 微信窗口初始化成功
+2024-11-29 20:48:17,548 - INFO - 会话列表初始化成功
+2024-11-29 20:48:18,129 - INFO - 浏览器初始化成功
+2024-11-29 20:48:18,140 - INFO - 获取到圆通系统消息: [<selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.59")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.60")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.61")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.62")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.63")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.64")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.65")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.66")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.67")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.68")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.69")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.70")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.71")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.72")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.73")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.74")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.75")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.76")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.77")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.78")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.79")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.80")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.81")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.82")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.83")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.84")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.85")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.86")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.87")>]
+2024-11-29 20:48:18,208 - INFO - 获取到yto消息: YT1900126038152
+YT1900126038153 已拦截
+2024-11-29 20:48:26,466 - INFO - 微信消息已发送到群 1: YT1900126038152
+YT1900126038153 已拦截
+2024-11-29 20:48:26,972 - INFO - 获取到圆通系统消息: [<selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.59")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.60")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.61")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.62")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.63")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.64")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.65")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.66")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.67")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.68")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.69")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.70")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.71")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.72")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.73")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.74")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.75")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.76")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.77")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.78")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.79")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.80")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.81")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.82")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.83")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.84")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.85")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.86")>, <selenium.webdriver.remote.webelement.WebElement (session="f121809587c105d2482f1c9e9d46f6cd", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.87")>]
+2024-11-29 20:48:27,049 - INFO - 获取到yto消息: YT1900126038152
+YT1900126038153 已拦截了
+2024-11-29 20:48:30,200 - INFO - 接收到退出信号，正在关闭...
+2024-11-29 20:48:35,304 - INFO - 微信消息已发送到群 1: YT1900126038152
+YT1900126038153 已拦截了
+2024-11-29 20:48:35,805 - INFO - 程序已退出
+2024-11-29 20:49:24,522 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-11-29 20:49:24,523 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-11-29 20:49:25,304 - INFO - 微信窗口初始化成功
+2024-11-29 20:49:25,332 - INFO - 会话列表初始化成功
+2024-11-29 20:49:25,917 - INFO - 浏览器初始化成功
+2024-11-29 20:49:25,923 - INFO - 获取到圆通系统消息: [<selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.59")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.60")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.61")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.62")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.63")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.64")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.65")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.66")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.67")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.68")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.69")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.70")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.71")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.72")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.73")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.74")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.75")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.76")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.77")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.78")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.79")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.80")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.81")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.82")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.83")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.84")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.85")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.86")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.87")>]
+2024-11-29 20:49:26,030 - INFO - 获取到yto消息: YT1900126038154
+YT1900126038155 已拦截了
+2024-11-29 20:49:31,031 - WARNING - 找不到订单 YT1900126038154 对应的群
+2024-11-29 20:49:31,537 - INFO - 获取到圆通系统消息: [<selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.59")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.60")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.61")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.62")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.63")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.64")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.65")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.66")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.67")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.68")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.69")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.70")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.71")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.72")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.73")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.74")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.75")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.76")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.77")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.78")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.79")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.80")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.81")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.82")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.83")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.84")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.85")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.86")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.87")>]
+2024-11-29 20:49:31,659 - INFO - 获取到yto消息: YT1900126038152
+YT1900126038153 已拦截了啊
+2024-11-29 20:49:39,925 - INFO - 微信消息已发送到群 1: YT1900126038152
+YT1900126038153 已拦截了啊
+2024-11-29 20:49:40,432 - INFO - 获取到圆通系统消息: [<selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.59")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.60")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.61")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.62")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.63")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.64")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.65")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.66")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.67")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.68")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.69")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.70")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.71")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.72")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.73")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.74")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.75")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.76")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.77")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.78")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.79")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.80")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.81")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.82")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.83")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.84")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.85")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.86")>, <selenium.webdriver.remote.webelement.WebElement (session="e6fde6513b69e40233522e865875edfe", element="f.06AA18DEC356FCA5DDCF614B6F35E868.d.FEE829FC333EFA11E421FB35ACF59D7E.e.87")>]
+2024-11-29 20:49:40,572 - INFO - 获取到yto消息: YT1900126038152
+YT1900126038153 已拦截了1
+2024-11-29 20:49:41,982 - INFO - 接收到退出信号，正在关闭...
+2024-11-29 20:49:48,290 - INFO - 微信消息已发送到群 1: YT1900126038152
+YT1900126038153 已拦截了1
+2024-11-29 20:49:48,792 - INFO - 程序已退出
+2024-11-29 20:51:10,778 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-11-29 20:51:10,779 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-11-29 20:51:12,273 - INFO - 微信窗口初始化成功
+2024-11-29 20:51:12,296 - INFO - 会话列表初始化成功
+2024-11-29 20:51:12,865 - INFO - 浏览器初始化成功
+2024-11-29 20:51:12,915 - INFO - 获取到yto消息: YT1900126038152
+YT1900126038153 test
+2024-11-29 20:51:21,169 - INFO - 微信消息已发送到群 1: YT1900126038152
+YT1900126038153 test
+2024-11-29 20:51:48,876 - INFO - 接收到退出信号，正在关闭...
+2024-11-29 20:51:49,329 - INFO - 程序已退出
+2024-11-29 20:53:03,339 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-11-29 20:53:03,340 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-11-29 20:53:04,050 - INFO - 微信窗口初始化成功
+2024-11-29 20:53:04,076 - INFO - 会话列表初始化成功
+2024-11-29 20:53:04,656 - INFO - 浏览器初始化成功
+2024-11-29 20:53:04,698 - INFO - 获取到yto消息: YT1900126038152
+YT1900126038153 test
+2024-11-29 20:53:15,168 - INFO - 微信消息已发送到群 1: YT1900126038152
+YT1900126038153 test
+2024-11-29 20:54:33,182 - INFO - 获取到yto消息: YT1900126038152
+YT1900126038153 test
+2024-11-29 20:54:43,646 - INFO - 微信消息已发送到群 1: YT1900126038152
+YT1900126038153 test
+2024-11-29 20:55:00,988 - INFO - 接收到退出信号，正在关闭...
+2024-11-29 20:55:06,287 - INFO - 程序已退出
+2024-11-29 21:28:42,535 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-11-29 21:28:42,536 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-11-29 21:28:43,244 - INFO - 微信窗口初始化成功
+2024-11-29 21:28:43,267 - INFO - 会话列表初始化成功
+2024-11-29 21:28:43,847 - INFO - 浏览器初始化成功
+2024-11-29 21:28:44,930 - INFO - 获取到yto消息: YT1900126038152
+YT1900126038153 已拦截了123
+2024-11-29 21:28:53,238 - INFO - 微信消息已发送到群 1: YT1900126038152
+YT1900126038153 已拦截了123
+2024-11-29 21:28:55,891 - INFO - 获取到yto消息: YT1900126038153
+YT1900126038152 已拦截了12
+2024-11-29 21:29:04,495 - INFO - 微信消息已发送到群 1: YT1900126038153
+YT1900126038152 已拦截了12
+2024-11-29 21:30:32,889 - INFO - 从群 1 提取到订单号: ['YT1900126038160']
+2024-11-29 21:30:32,890 - INFO - 消息已加入微信队列: YT1900126038160 拦截
+2024-11-29 21:30:35,765 - INFO - 消息已发送到圆通系统: YT1900126038160 拦截
+2024-11-29 21:31:39,188 - INFO - 接收到退出信号，正在关闭...
+2024-11-29 21:31:56,412 - INFO - 程序已退出

@@ -199,19 +199,27 @@ text = lastItem.TextControl(searchDepth=2)
 
 hw = wechat_window.ListControl(Name="会话")
 
-child =  wechat_window.ListControl(Name='消息').GetChildren()
-print(f"child: {len(child)}")
-exit()
+# child =  wechat_window.ListControl(Name='消息').GetChildren()
+# print(f"child: {len(child)}")
+# exit()
 
-while True:
-    we = hw.TextControl(searchDepth=3)
-    while not we.Exists():
-        pass
-    print(f"we: {we.Name}")
-    wechat_window.SetActive()
-    we.Click(simulateMove=False)
-    # 读取最后一条消息
-    last_msg = wechat_window.ListControl(Name='消息').GetChildren()[-1].Name
-    print(f"last msg: {last_msg}")
-    # firstItem.Click(simulateMove=False)
-    time.sleep(2)
+# while True:
+#     we = hw.TextControl(searchDepth=3)
+#     # while not we.Exists():
+#     #     pass
+#     # print(f"we: {we.Name}")
+#     wechat_window.SetActive()
+#     we.Click(simulateMove=False)
+#     # 读取最后一条消息
+#     # last_msg = wechat_window.ListControl(Name='消息').GetChildren()[-1].Name
+#     # print(f"last msg: {last_msg}")
+#     # firstItem.Click(simulateMove=False)
+#     time.sleep(2)
+
+child =  wechat_window.ListControl(Name='消息').GetChildren()
+wechat_window.SetActive()
+child[0].Click(simulateMove=False)
+message="YT123456\nYT123456 拦截"
+# formated_message = message.replace('\n', '{Shift+Enter}')
+time.sleep(3)
+child[0].SendKeys(message+'{Enter}', waitTime=1)

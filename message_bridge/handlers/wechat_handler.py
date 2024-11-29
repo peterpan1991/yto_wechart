@@ -1,4 +1,5 @@
 from datetime import datetime
+import random
 from logger import logger
 import uiautomation as auto
 import time
@@ -9,7 +10,7 @@ from models.message import MessageSource
 from models.redis_queue import RedisQueue
 from collections import deque
 import re
-from config import CUSTOME_SERVICE_PATTERNS, WECHAT_MESSAGE_FORMATS, MONITORED_GROUPS
+from config import CUSTOME_SERVICE_PATTERNS, WECHAT_MESSAGE_FORMATS, MONITORED_GROUPS, NEW_WECHAT_MESSAGE_COUNT
 
 class WeChatHandler:
     def __init__(self):
@@ -20,9 +21,9 @@ class WeChatHandler:
         self.max_retries = 3
         self.retry_delay = 0.5
         self.buffer = {}
-        self.max_processed_count = 10
+        self.buffer_size = 10
         self.new_message = None
-        self.last_message_count = 3
+        self.last_message_count = NEW_WECHAT_MESSAGE_COUNT
         self.monitoring_groups: Dict[str, str] = {}
         self.redis_queue = RedisQueue()
         
@@ -150,7 +151,7 @@ class WeChatHandler:
                         if session_id is not None and session_id in self.group_cache:                                                        
                             
                             if session_id not in self.buffer:
-                                self.buffer[session_id] = deque(maxlen=self.max_processed_count)  # 确保 buffer 中存在 session_id
+                                self.buffer[session_id] = deque(maxlen=self.buffer_size)  # 确保 buffer 中存在 session_id
 
                             msg_list = self.wx.ListControl(Name='消息')
                             if msg_list.Exists():
@@ -216,7 +217,7 @@ class WeChatHandler:
                 )
                 messages.append(message)
         
-        time.sleep(0.5)  # 适当的循环间隔        
+        time.sleep(0.5)  # 适当的循环间隔
             
         return messages
 
@@ -226,7 +227,13 @@ class WeChatHandler:
             if not self.switch_to_session(session_id):
                 return False
             
-            self.wx.SendKeys(message+'{Enter}', waitTime=1)
+            time.sleep(random.uniform(0.5, 1.5))
+            formated_message = message.replace('\n', ' ')
+            self.wx.SendKeys(formated_message+'{Enter}', waitTime=1.2)
+
+            # 将微信快捷键设置成ctrl+enter发送消息
+            # formated_message = message.replace('\n', '{Enter}')
+            # self.wx.SendKeys(formated_message, waitTime=2)
 
             # edit_box = self.wx.EditControl(Name="输入")
             # if not edit_box.Exists():
@@ -234,14 +241,14 @@ class WeChatHandler:
             #     return False
                 
             # edit_box.SetValue(message)
-            time.sleep(0.1)
+            # time.sleep(0.5)
             
             # send_button = self.wx.ButtonControl(Name="发送(S)")
             # if not send_button.Exists():
             #     logger.error("找不到发送按钮")
             #     return False
                 
-            # send_button.Click()
+            # send_button.Click(simulateMove=False)
             logger.info(f"微信消息已发送到群 {session_id}: {message}")
             return True
             

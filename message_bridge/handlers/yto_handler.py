@@ -1,3 +1,4 @@
+import random
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -13,7 +14,7 @@ from models.redis_queue import RedisQueue
 from collections import deque
 import time
 import re
-from config import YTO_MESSAGE_FORMATS
+from config import YTO_MESSAGE_FORMATS, YTO_SERVICE_ID, NEW_YTO_MESSAGE_COUNT
 
 class YtoHandler:
     def __init__(self):
@@ -56,13 +57,16 @@ class YtoHandler:
             message_input = self.driver.find_element(By.ID, "edit-content")
             # 清除输入框，输入框不是input或textarea元素，而是div，contenteditable="true"
             message_input.send_keys(Keys.CONTROL + "a")  # 全选
-            message_input.send_keys(Keys.DELETE) 
-            # 输入消息
-            message_input.send_keys(message)
+            message_input.send_keys(Keys.DELETE)
+            # 使用 execute_script 方法将消息插入到输入框中
+            self.driver.execute_script("arguments[0].innerText = arguments[1];", message_input, message)
+            # # 输入消息 换行符会被截断
+            # message_input.send_keys(message)
             
+            # time.sleep(random.uniform(0.5, 1.5))
             # # 点击发送按钮
-            # send_button = self.driver.find_element(By.ID, "button-violet")
-            # send_button.click()
+            send_button = self.driver.find_element(By.ID, "button-violet")
+            send_button.click()
             
             logger.info(f"消息已发送到圆通系统: {message}")
             return True
@@ -79,7 +83,7 @@ class YtoHandler:
             message_elements = self.driver.find_elements(By.CSS_SELECTOR, ".news-box")
 
             #获取最后10条，避免数据过多
-            last_news_message_elements = message_elements[-10:]
+            last_news_message_elements = message_elements[-NEW_YTO_MESSAGE_COUNT:]
 
             for msg_item in last_news_message_elements:
                 try:
@@ -92,7 +96,7 @@ class YtoHandler:
                     send_time = self.driver.execute_script(script, send_time_span)
                     msg_content = msg_item.find_element(By.CSS_SELECTOR, ".text-content").text
 
-                    # if(sender_span.text != "小圆-总公司"):
+                    # if(sender_span.text != YTO_SERVICE_ID):
                         # logger.info(f"收到来自 {sender_span.text} 的消息: {msg_content}")
                         # continue
                     

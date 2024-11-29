@@ -46,13 +46,29 @@ def is_customer(name: str) -> bool:
                 return False
         return True
 
+def is_valid_yto_message(msg: str) -> bool:
+	"""过滤消息"""
+	# 过滤掉不符合规则的消息
+	patterns = [
+		r'YT\d{13,15}',
+		# 可以添加更多格式
+	]
+	for pattern in patterns:
+		match = re.search(pattern, msg, re.DOTALL)
+		if match:
+			return True
+	return False
+
 # test_msg = "YT7509268682028\nYT7509506091027\nYT7509506091029 催件"
+# test_msg = "YT7509268682028 拦截\nYT7509506091027\nYT7509506091029催件"
+# # test_msg = "YT7509268682028 催件"
+# print(is_valid_message(test_msg))
+
+# order_numbers = extract_order_number(test_msg)
+# print(order_numbers)
+
+# test_name = "蓝胖子"
+# print(is_customer(test_name))
+
 test_msg = "YT7509268682028 拦截\nYT7509506091027\nYT7509506091029催件"
-# test_msg = "YT7509268682028 催件"
-print(is_valid_message(test_msg))
-
-order_numbers = extract_order_number(test_msg)
-print(order_numbers)
-
-test_name = "蓝胖子"
-print(is_customer(test_name))
+print(is_valid_yto_message(test_msg))

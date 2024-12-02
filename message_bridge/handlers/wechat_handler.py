@@ -134,12 +134,6 @@ class WeChatHandler:
             session = self.wx.ListControl(Name="会话")
             self.new_message = session.TextControl(searchDepth=3)
 
-            retry_count = 0
-            
-            while not self.new_message.Exists() and retry_count < self.max_retries:
-                time.sleep(0.2)
-                retry_count += 1
-            
             if self.new_message.Exists():
                 self.new_message.Click(simulateMove=False)
                 for _ in range(self.max_retries):
@@ -166,8 +160,6 @@ class WeChatHandler:
                                     for msg_item in latest_messages:
                                         sender_name = msg_item.TextControl().Name
                                         # 过滤圆通客服
-                                        print(f"发送人: {msg_item.TextControl().Name}")
-                                        print(f"收到消息: {msg_item.Name}")
                                         if self.is_valid_message(msg_item.Name) and self.is_customer(sender_name):
                                             msg_content = msg_item.Name
                                             # 如果消息未处理过，添加到缓冲区
@@ -182,10 +174,8 @@ class WeChatHandler:
                     except Exception as e:
                         print(f"获取消息失败，重试中: {e}")
                         time.sleep(self.retry_delay)
-            else:
-                print("控件未找到，继续下一次循环")
         
-            time.sleep(0.5)  # 适当的循环间隔
+            time.sleep(1.5)  # 适当的循环间隔
         
         except Exception as e:
             print(f"发生错误: {e}")
@@ -209,7 +199,6 @@ class WeChatHandler:
                 msg = self.get_next_message()
                 if msg is None:
                     break
-                print(f"处理yto消息: {msg}")
                 message = Message(
                     content=msg,
                     source=MessageSource.WECHAT,
@@ -229,8 +218,11 @@ class WeChatHandler:
             
             time.sleep(random.uniform(0.5, 1.5))
             formated_message = message.replace('\n', ' ')
-            self.wx.SendKeys(formated_message+'{Enter}', waitTime=1.2)
+            # self.wx.SendKeys(formated_message+'{Enter}', waitTime=1.2)
 
+            #不发送
+            self.wx.SendKeys(formated_message, waitTime=1.2)
+            
             # 将微信快捷键设置成ctrl+enter发送消息
             # formated_message = message.replace('\n', '{Enter}')
             # self.wx.SendKeys(formated_message, waitTime=2)

@@ -1,9 +1,9 @@
 import random
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
+# from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException
+# from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 from logger import logger
@@ -65,8 +65,8 @@ class YtoHandler:
             
             # time.sleep(random.uniform(0.5, 1.5))
             # # 点击发送按钮
-            send_button = self.driver.find_element(By.ID, "button-violet")
-            send_button.click()
+            # send_button = self.driver.find_element(By.ID, "button-violet")
+            # send_button.click()
             
             logger.info(f"消息已发送到圆通系统: {message}")
             return True
@@ -113,6 +113,8 @@ class YtoHandler:
                 except Exception as e:
                     logger.error(f"获取消息失败: {e}")
                     continue
+            
+            time.sleep(1.5)
 
         except Exception as e:
             logger.error(f"获取圆通消息失败: {e}")
@@ -136,7 +138,6 @@ class YtoHandler:
                 msg = self.get_next_message()
                 if msg is None:
                     break
-                print(f"处理消息: {msg}")
                 message = Message(
                     content=msg,
                     source=MessageSource.YTO,

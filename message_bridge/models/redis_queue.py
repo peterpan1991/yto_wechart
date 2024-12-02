@@ -132,12 +132,14 @@ class RedisQueue:
 
     def put_orders_to_session(self, session_id: str, order_numbers: List[str]):
         """处理订单列表，将不在会话中的订单添加到会话中"""
-        for order_number in order_numbers:
-            if not self.is_order_in_session(session_id, order_number):
-                self.put_session_order(session_id, order_number)
-                print(f"Order {order_number} added to session {session_id}.")
-            else:
-                print(f"Order {order_number} already in session {session_id}.")
+        try:
+            for order_number in order_numbers:
+                if not self.is_order_in_session(session_id, order_number):
+                    self.put_session_order(session_id, order_number)
+        except Exception as e:
+            logger.error(f"将订单加入微信会话失败: {e}")
+            return False
+        
     
     def find_session_id_by_order_number(self, order_number: str) -> Optional[str]:
         """根据订单号查找对应的会话ID"""

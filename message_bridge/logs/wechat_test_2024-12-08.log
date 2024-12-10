@@ -1,0 +1,432 @@
+2024-12-08 11:01:45,880 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-08 11:01:45,881 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-08 11:01:46,148 - INFO - 微信窗口初始化成功
+2024-12-08 11:01:46,180 - INFO - 会话列表初始化成功
+2024-12-08 11:01:46,927 - INFO - 浏览器初始化成功
+2024-12-08 11:02:30,606 - INFO - 从群 1 提取到订单号: ['YT1900126038180']
+2024-12-08 11:02:30,607 - INFO - 消息已加入微信队列: YT1900126038180 查重
+2024-12-08 11:02:33,676 - INFO - 消息已发送到圆通系统: YT1900126038180 查重
+2024-12-08 11:02:49,031 - INFO - 从群 2 提取到订单号: ['YT1900126038180']
+2024-12-08 11:02:49,033 - INFO - 消息已加入微信队列: YT1900126038180 查重
+2024-12-08 11:02:54,182 - INFO - 消息已发送到圆通系统: YT1900126038180 查重
+2024-12-08 11:03:21,117 - INFO - 获取到yto消息: YT1900126038180 test
+2024-12-08 11:03:26,116 - INFO - 消息已加入圆通队列: YT1900126038180 test
+2024-12-08 11:03:36,485 - ERROR - 发送微信消息失败: WeChatHandler.filter_message() takes 1 positional argument but 2 were given
+2024-12-08 11:03:44,721 - INFO - 接收到退出信号，正在关闭...
+2024-12-08 11:03:50,925 - INFO - 程序已退出
+2024-12-08 11:05:32,673 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-08 11:05:32,674 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-08 11:05:33,335 - INFO - 微信窗口初始化成功
+2024-12-08 11:05:33,364 - INFO - 会话列表初始化成功
+2024-12-08 11:05:33,944 - INFO - 浏览器初始化成功
+2024-12-08 11:06:11,936 - INFO - 从群 1 提取到订单号: ['YT1900126038190']
+2024-12-08 11:06:11,937 - INFO - 消息已加入微信队列: YT1900126038190 查重
+2024-12-08 11:06:22,068 - INFO - 消息已发送到圆通系统: YT1900126038190 查重
+2024-12-08 11:06:31,928 - INFO - 获取到yto消息: YT1900126038190 test
+2024-12-08 11:06:36,927 - INFO - 消息已加入圆通队列: YT1900126038190 test
+2024-12-08 11:06:49,952 - INFO - 微信消息已发送到群 1: YT1900126038190 test
+2024-12-08 11:07:08,013 - INFO - 从群 2 提取到订单号: ['YT1900126038191']
+2024-12-08 11:07:08,014 - INFO - 消息已加入微信队列: YT1900126038191 查重
+2024-12-08 11:07:10,393 - INFO - 消息已发送到圆通系统: YT1900126038191 查重
+2024-12-08 11:07:18,409 - INFO - 从群 1 提取到订单号: ['YT1900126038192']
+2024-12-08 11:07:18,410 - INFO - 消息已加入微信队列: YT1900126038192 查重
+2024-12-08 11:07:19,965 - INFO - 消息已发送到圆通系统: YT1900126038192 查重
+2024-12-08 11:07:35,407 - INFO - 获取到yto消息: YT1900126038191 test
+2024-12-08 11:07:40,407 - INFO - 消息已加入圆通队列: YT1900126038191 test
+2024-12-08 11:07:41,156 - INFO - 获取到yto消息: YT1900126038192 test
+2024-12-08 11:07:46,155 - INFO - 消息已加入圆通队列: YT1900126038192 test
+2024-12-08 11:07:48,131 - INFO - 微信消息已发送到群 2: YT1900126038191 test
+2024-12-08 11:08:03,029 - INFO - 微信消息已发送到群 1: YT1900126038192 test
+2024-12-08 12:25:49,858 - INFO - 从群 1 提取到订单号: ['YT1900126038193']
+2024-12-08 12:25:49,860 - INFO - 消息已加入微信队列: YT1900126038193 催件
+2024-12-08 12:25:54,237 - INFO - 消息已发送到圆通系统: YT1900126038193 催件
+2024-12-08 12:25:54,242 - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2024-12-08 12:26:13,936 - INFO - 接收到退出信号，正在关闭...
+2024-12-08 12:26:22,463 - INFO - 程序已退出
+2024-12-08 12:52:08,286 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-08 12:52:08,286 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-08 12:52:09,158 - INFO - 微信窗口初始化成功
+2024-12-08 12:52:09,180 - INFO - 会话列表初始化成功
+2024-12-08 12:52:09,899 - INFO - 浏览器初始化成功
+2024-12-08 12:52:49,024 - INFO - 从群 1 提取到订单号: ['YT1900126038194']
+2024-12-08 12:52:49,025 - INFO - 消息已加入微信队列: YT1900126038194 催件
+2024-12-08 12:52:53,961 - INFO - 消息已发送到圆通系统: YT1900126038194 催件
+2024-12-08 12:53:44,024 - ERROR - 获取圆通消息失败: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.109)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D0B43AB5+28005]
+	(No symbol) [0x00007FF6D0AA83B0]
+	(No symbol) [0x00007FF6D094580A]
+	(No symbol) [0x00007FF6D091FA85]
+	(No symbol) [0x00007FF6D09C2AD7]
+	(No symbol) [0x00007FF6D09DB1B1]
+	(No symbol) [0x00007FF6D09BB7E3]
+	(No symbol) [0x00007FF6D09875C8]
+	(No symbol) [0x00007FF6D0988731]
+	GetHandleVerifier [0x00007FF6D0E3643D+3118829]
+	GetHandleVerifier [0x00007FF6D0E86C90+3448640]
+	GetHandleVerifier [0x00007FF6D0E7CF0D+3408317]
+	GetHandleVerifier [0x00007FF6D0C0A40B+841403]
+	(No symbol) [0x00007FF6D0AB340F]
+	(No symbol) [0x00007FF6D0AAF484]
+	(No symbol) [0x00007FF6D0AAF61D]
+	(No symbol) [0x00007FF6D0A9EB79]
+	BaseThreadInitThunk [0x00007FFEEB51259D+29]
+	RtlUserThreadStart [0x00007FFEECF8AF38+40]
+
+2024-12-08 12:53:49,527 - ERROR - 获取圆通消息失败: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.109)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D0B43AB5+28005]
+	(No symbol) [0x00007FF6D0AA83B0]
+	(No symbol) [0x00007FF6D094580A]
+	(No symbol) [0x00007FF6D091FA85]
+	(No symbol) [0x00007FF6D09C2AD7]
+	(No symbol) [0x00007FF6D09DB1B1]
+	(No symbol) [0x00007FF6D09BB7E3]
+	(No symbol) [0x00007FF6D09875C8]
+	(No symbol) [0x00007FF6D0988731]
+	GetHandleVerifier [0x00007FF6D0E3643D+3118829]
+	GetHandleVerifier [0x00007FF6D0E86C90+3448640]
+	GetHandleVerifier [0x00007FF6D0E7CF0D+3408317]
+	GetHandleVerifier [0x00007FF6D0C0A40B+841403]
+	(No symbol) [0x00007FF6D0AB340F]
+	(No symbol) [0x00007FF6D0AAF484]
+	(No symbol) [0x00007FF6D0AAF61D]
+	(No symbol) [0x00007FF6D0A9EB79]
+	BaseThreadInitThunk [0x00007FFEEB51259D+29]
+	RtlUserThreadStart [0x00007FFEECF8AF38+40]
+
+2024-12-08 12:53:55,031 - ERROR - 获取圆通消息失败: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.109)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D0B43AB5+28005]
+	(No symbol) [0x00007FF6D0AA83B0]
+	(No symbol) [0x00007FF6D094580A]
+	(No symbol) [0x00007FF6D091FA85]
+	(No symbol) [0x00007FF6D09C2AD7]
+	(No symbol) [0x00007FF6D09DB1B1]
+	(No symbol) [0x00007FF6D09BB7E3]
+	(No symbol) [0x00007FF6D09875C8]
+	(No symbol) [0x00007FF6D0988731]
+	GetHandleVerifier [0x00007FF6D0E3643D+3118829]
+	GetHandleVerifier [0x00007FF6D0E86C90+3448640]
+	GetHandleVerifier [0x00007FF6D0E7CF0D+3408317]
+	GetHandleVerifier [0x00007FF6D0C0A40B+841403]
+	(No symbol) [0x00007FF6D0AB340F]
+	(No symbol) [0x00007FF6D0AAF484]
+	(No symbol) [0x00007FF6D0AAF61D]
+	(No symbol) [0x00007FF6D0A9EB79]
+	BaseThreadInitThunk [0x00007FFEEB51259D+29]
+	RtlUserThreadStart [0x00007FFEECF8AF38+40]
+
+2024-12-08 12:54:00,535 - ERROR - 获取圆通消息失败: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.109)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D0B43AB5+28005]
+	(No symbol) [0x00007FF6D0AA83B0]
+	(No symbol) [0x00007FF6D094580A]
+	(No symbol) [0x00007FF6D091FA85]
+	(No symbol) [0x00007FF6D09C2AD7]
+	(No symbol) [0x00007FF6D09DB1B1]
+	(No symbol) [0x00007FF6D09BB7E3]
+	(No symbol) [0x00007FF6D09875C8]
+	(No symbol) [0x00007FF6D0988731]
+	GetHandleVerifier [0x00007FF6D0E3643D+3118829]
+	GetHandleVerifier [0x00007FF6D0E86C90+3448640]
+	GetHandleVerifier [0x00007FF6D0E7CF0D+3408317]
+	GetHandleVerifier [0x00007FF6D0C0A40B+841403]
+	(No symbol) [0x00007FF6D0AB340F]
+	(No symbol) [0x00007FF6D0AAF484]
+	(No symbol) [0x00007FF6D0AAF61D]
+	(No symbol) [0x00007FF6D0A9EB79]
+	BaseThreadInitThunk [0x00007FFEEB51259D+29]
+	RtlUserThreadStart [0x00007FFEECF8AF38+40]
+
+2024-12-08 12:54:06,038 - ERROR - 获取圆通消息失败: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.109)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D0B43AB5+28005]
+	(No symbol) [0x00007FF6D0AA83B0]
+	(No symbol) [0x00007FF6D094580A]
+	(No symbol) [0x00007FF6D091FA85]
+	(No symbol) [0x00007FF6D09C2AD7]
+	(No symbol) [0x00007FF6D09DB1B1]
+	(No symbol) [0x00007FF6D09BB7E3]
+	(No symbol) [0x00007FF6D09875C8]
+	(No symbol) [0x00007FF6D0988731]
+	GetHandleVerifier [0x00007FF6D0E3643D+3118829]
+	GetHandleVerifier [0x00007FF6D0E86C90+3448640]
+	GetHandleVerifier [0x00007FF6D0E7CF0D+3408317]
+	GetHandleVerifier [0x00007FF6D0C0A40B+841403]
+	(No symbol) [0x00007FF6D0AB340F]
+	(No symbol) [0x00007FF6D0AAF484]
+	(No symbol) [0x00007FF6D0AAF61D]
+	(No symbol) [0x00007FF6D0A9EB79]
+	BaseThreadInitThunk [0x00007FFEEB51259D+29]
+	RtlUserThreadStart [0x00007FFEECF8AF38+40]
+
+2024-12-08 12:54:10,130 - INFO - 接收到退出信号，正在关闭...
+2024-12-08 12:54:18,412 - INFO - 程序已退出
+2024-12-08 12:57:30,773 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-08 12:57:30,773 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-08 12:57:31,503 - INFO - 微信窗口初始化成功
+2024-12-08 12:57:31,531 - INFO - 会话列表初始化成功
+2024-12-08 12:57:32,124 - INFO - 浏览器初始化成功
+2024-12-08 12:58:18,789 - INFO - 从群 1 提取到订单号: ['YT1900126038195']
+2024-12-08 12:58:18,791 - INFO - 消息已加入微信队列: YT1900126038195 催件
+2024-12-08 12:58:20,099 - ERROR - 发送消息到圆通系统失败: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="edit-content"]"}
+  (Session info: chrome=131.0.6778.109)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D0B43AB5+28005]
+	(No symbol) [0x00007FF6D0AA83B0]
+	(No symbol) [0x00007FF6D094580A]
+	(No symbol) [0x00007FF6D0995A3E]
+	(No symbol) [0x00007FF6D0995D2C]
+	(No symbol) [0x00007FF6D09DEA97]
+	(No symbol) [0x00007FF6D09BBA7F]
+	(No symbol) [0x00007FF6D09DB8B3]
+	(No symbol) [0x00007FF6D09BB7E3]
+	(No symbol) [0x00007FF6D09875C8]
+	(No symbol) [0x00007FF6D0988731]
+	GetHandleVerifier [0x00007FF6D0E3643D+3118829]
+	GetHandleVerifier [0x00007FF6D0E86C90+3448640]
+	GetHandleVerifier [0x00007FF6D0E7CF0D+3408317]
+	GetHandleVerifier [0x00007FF6D0C0A40B+841403]
+	(No symbol) [0x00007FF6D0AB340F]
+	(No symbol) [0x00007FF6D0AAF484]
+	(No symbol) [0x00007FF6D0AAF61D]
+	(No symbol) [0x00007FF6D0A9EB79]
+	BaseThreadInitThunk [0x00007FFEEB51259D+29]
+	RtlUserThreadStart [0x00007FFEECF8AF38+40]
+
+2024-12-08 12:58:32,142 - INFO - 接收到退出信号，正在关闭...
+2024-12-08 12:58:38,303 - INFO - 程序已退出
+2024-12-08 13:02:49,306 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-08 13:02:49,307 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-08 13:02:50,201 - INFO - 微信窗口初始化成功
+2024-12-08 13:02:50,225 - INFO - 会话列表初始化成功
+2024-12-08 13:02:50,823 - INFO - 浏览器初始化成功
+2024-12-08 13:04:57,439 - INFO - 接收到退出信号，正在关闭...
+2024-12-08 13:05:05,189 - INFO - 程序已退出
+2024-12-08 13:06:11,909 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-08 13:06:11,909 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-08 13:06:12,772 - INFO - 微信窗口初始化成功
+2024-12-08 13:06:12,797 - INFO - 会话列表初始化成功
+2024-12-08 13:06:13,380 - INFO - 浏览器初始化成功
+2024-12-08 13:06:29,908 - INFO - 从群 1 提取到订单号: ['YT1900126038196']
+2024-12-08 13:06:29,909 - INFO - 消息已加入微信队列: YT1900126038196 催件
+2024-12-08 13:06:29,911 - INFO - 从群 1 提取到订单号: ['YT1900126038197']
+2024-12-08 13:06:29,911 - INFO - 消息已加入微信队列: YT1900126038197 催件
+2024-12-08 13:06:31,815 - ERROR - 发送消息到圆通系统失败: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="edit-content"]"}
+  (Session info: chrome=131.0.6778.109)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D0B43AB5+28005]
+	(No symbol) [0x00007FF6D0AA83B0]
+	(No symbol) [0x00007FF6D094580A]
+	(No symbol) [0x00007FF6D0995A3E]
+	(No symbol) [0x00007FF6D0995D2C]
+	(No symbol) [0x00007FF6D09DEA97]
+	(No symbol) [0x00007FF6D09BBA7F]
+	(No symbol) [0x00007FF6D09DB8B3]
+	(No symbol) [0x00007FF6D09BB7E3]
+	(No symbol) [0x00007FF6D09875C8]
+	(No symbol) [0x00007FF6D0988731]
+	GetHandleVerifier [0x00007FF6D0E3643D+3118829]
+	GetHandleVerifier [0x00007FF6D0E86C90+3448640]
+	GetHandleVerifier [0x00007FF6D0E7CF0D+3408317]
+	GetHandleVerifier [0x00007FF6D0C0A40B+841403]
+	(No symbol) [0x00007FF6D0AB340F]
+	(No symbol) [0x00007FF6D0AAF484]
+	(No symbol) [0x00007FF6D0AAF61D]
+	(No symbol) [0x00007FF6D0A9EB79]
+	BaseThreadInitThunk [0x00007FFEEB51259D+29]
+	RtlUserThreadStart [0x00007FFEECF8AF38+40]
+
+2024-12-08 13:06:40,552 - ERROR - 发送消息到圆通系统失败: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="edit-content"]"}
+  (Session info: chrome=131.0.6778.109)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D0B43AB5+28005]
+	(No symbol) [0x00007FF6D0AA83B0]
+	(No symbol) [0x00007FF6D094580A]
+	(No symbol) [0x00007FF6D0995A3E]
+	(No symbol) [0x00007FF6D0995D2C]
+	(No symbol) [0x00007FF6D09DEA97]
+	(No symbol) [0x00007FF6D09BBA7F]
+	(No symbol) [0x00007FF6D09DB8B3]
+	(No symbol) [0x00007FF6D09BB7E3]
+	(No symbol) [0x00007FF6D09875C8]
+	(No symbol) [0x00007FF6D0988731]
+	GetHandleVerifier [0x00007FF6D0E3643D+3118829]
+	GetHandleVerifier [0x00007FF6D0E86C90+3448640]
+	GetHandleVerifier [0x00007FF6D0E7CF0D+3408317]
+	GetHandleVerifier [0x00007FF6D0C0A40B+841403]
+	(No symbol) [0x00007FF6D0AB340F]
+	(No symbol) [0x00007FF6D0AAF484]
+	(No symbol) [0x00007FF6D0AAF61D]
+	(No symbol) [0x00007FF6D0A9EB79]
+	BaseThreadInitThunk [0x00007FFEEB51259D+29]
+	RtlUserThreadStart [0x00007FFEECF8AF38+40]
+
+2024-12-08 13:06:41,083 - INFO - 接收到退出信号，正在关闭...
+2024-12-08 13:06:49,790 - INFO - 程序已退出
+2024-12-08 13:14:21,089 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-08 13:14:21,089 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-08 13:14:26,957 - ERROR - 请先打开微信!
+2024-12-08 13:14:26,958 - ERROR - 初始化失败，程序退出
+2024-12-08 13:15:06,958 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-08 13:15:06,958 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-08 13:15:07,609 - INFO - 微信窗口初始化成功
+2024-12-08 13:15:07,637 - INFO - 会话列表初始化成功
+2024-12-08 13:15:08,246 - INFO - 浏览器初始化成功
+2024-12-08 13:15:22,279 - INFO - 从群 1 提取到订单号: ['YT1900126038198']
+2024-12-08 13:15:22,280 - INFO - 消息已加入微信队列: YT1900126038198 催件
+2024-12-08 13:15:24,618 - ERROR - 发送消息到圆通系统失败: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="edit-content"]"}
+  (Session info: chrome=131.0.6778.109)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D0B43AB5+28005]
+	(No symbol) [0x00007FF6D0AA83B0]
+	(No symbol) [0x00007FF6D094580A]
+	(No symbol) [0x00007FF6D0995A3E]
+	(No symbol) [0x00007FF6D0995D2C]
+	(No symbol) [0x00007FF6D09DEA97]
+	(No symbol) [0x00007FF6D09BBA7F]
+	(No symbol) [0x00007FF6D09DB8B3]
+	(No symbol) [0x00007FF6D09BB7E3]
+	(No symbol) [0x00007FF6D09875C8]
+	(No symbol) [0x00007FF6D0988731]
+	GetHandleVerifier [0x00007FF6D0E3643D+3118829]
+	GetHandleVerifier [0x00007FF6D0E86C90+3448640]
+	GetHandleVerifier [0x00007FF6D0E7CF0D+3408317]
+	GetHandleVerifier [0x00007FF6D0C0A40B+841403]
+	(No symbol) [0x00007FF6D0AB340F]
+	(No symbol) [0x00007FF6D0AAF484]
+	(No symbol) [0x00007FF6D0AAF61D]
+	(No symbol) [0x00007FF6D0A9EB79]
+	BaseThreadInitThunk [0x00007FFEEB51259D+29]
+	RtlUserThreadStart [0x00007FFEECF8AF38+40]
+
+2024-12-08 13:16:16,322 - INFO - 接收到退出信号，正在关闭...
+2024-12-08 13:16:19,539 - INFO - 程序已退出
+2024-12-08 13:24:11,469 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-08 13:24:11,470 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-08 13:24:12,993 - INFO - 微信窗口初始化成功
+2024-12-08 13:24:13,018 - INFO - 会话列表初始化成功
+2024-12-08 13:24:13,606 - INFO - 浏览器初始化成功
+2024-12-08 13:24:24,733 - INFO - 从群 1 提取到订单号: ['YT1900126038199']
+2024-12-08 13:24:24,734 - INFO - 消息已加入微信队列: YT1900126038199 催件
+2024-12-08 13:24:32,944 - ERROR - 发送消息到圆通系统失败: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="edit-content"]"}
+  (Session info: chrome=131.0.6778.109)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D0B43AB5+28005]
+	(No symbol) [0x00007FF6D0AA83B0]
+	(No symbol) [0x00007FF6D094580A]
+	(No symbol) [0x00007FF6D0995A3E]
+	(No symbol) [0x00007FF6D0995D2C]
+	(No symbol) [0x00007FF6D09DEA97]
+	(No symbol) [0x00007FF6D09BBA7F]
+	(No symbol) [0x00007FF6D09DB8B3]
+	(No symbol) [0x00007FF6D09BB7E3]
+	(No symbol) [0x00007FF6D09875C8]
+	(No symbol) [0x00007FF6D0988731]
+	GetHandleVerifier [0x00007FF6D0E3643D+3118829]
+	GetHandleVerifier [0x00007FF6D0E86C90+3448640]
+	GetHandleVerifier [0x00007FF6D0E7CF0D+3408317]
+	GetHandleVerifier [0x00007FF6D0C0A40B+841403]
+	(No symbol) [0x00007FF6D0AB340F]
+	(No symbol) [0x00007FF6D0AAF484]
+	(No symbol) [0x00007FF6D0AAF61D]
+	(No symbol) [0x00007FF6D0A9EB79]
+	BaseThreadInitThunk [0x00007FFEEB51259D+29]
+	RtlUserThreadStart [0x00007FFEECF8AF38+40]
+
+2024-12-08 13:24:32,946 - ERROR - 转发消息时出错: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="edit-content"]"}
+  (Session info: chrome=131.0.6778.109)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D0B43AB5+28005]
+	(No symbol) [0x00007FF6D0AA83B0]
+	(No symbol) [0x00007FF6D094580A]
+	(No symbol) [0x00007FF6D0995A3E]
+	(No symbol) [0x00007FF6D0995D2C]
+	(No symbol) [0x00007FF6D09DEA97]
+	(No symbol) [0x00007FF6D09BBA7F]
+	(No symbol) [0x00007FF6D09DB8B3]
+	(No symbol) [0x00007FF6D09BB7E3]
+	(No symbol) [0x00007FF6D09875C8]
+	(No symbol) [0x00007FF6D0988731]
+	GetHandleVerifier [0x00007FF6D0E3643D+3118829]
+	GetHandleVerifier [0x00007FF6D0E86C90+3448640]
+	GetHandleVerifier [0x00007FF6D0E7CF0D+3408317]
+	GetHandleVerifier [0x00007FF6D0C0A40B+841403]
+	(No symbol) [0x00007FF6D0AB340F]
+	(No symbol) [0x00007FF6D0AAF484]
+	(No symbol) [0x00007FF6D0AAF61D]
+	(No symbol) [0x00007FF6D0A9EB79]
+	BaseThreadInitThunk [0x00007FFEEB51259D+29]
+	RtlUserThreadStart [0x00007FFEECF8AF38+40]
+
+2024-12-08 13:25:15,974 - INFO - 接收到退出信号，正在关闭...
+2024-12-08 13:25:16,970 - INFO - 程序已退出
+2024-12-08 13:27:51,959 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-08 13:27:51,960 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-08 13:27:53,521 - INFO - 微信窗口初始化成功
+2024-12-08 13:27:53,551 - INFO - 会话列表初始化成功
+2024-12-08 13:27:54,161 - INFO - 浏览器初始化成功
+2024-12-08 13:28:10,718 - INFO - 从群 1 提取到订单号: ['YT1900126038200']
+2024-12-08 13:28:10,718 - INFO - 消息已加入微信队列: YT1900126038200 催件
+2024-12-08 13:28:11,658 - ERROR - 发送消息到圆通系统失败: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="edit-content"]"}
+  (Session info: chrome=131.0.6778.109)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D0B43AB5+28005]
+	(No symbol) [0x00007FF6D0AA83B0]
+	(No symbol) [0x00007FF6D094580A]
+	(No symbol) [0x00007FF6D0995A3E]
+	(No symbol) [0x00007FF6D0995D2C]
+	(No symbol) [0x00007FF6D09DEA97]
+	(No symbol) [0x00007FF6D09BBA7F]
+	(No symbol) [0x00007FF6D09DB8B3]
+	(No symbol) [0x00007FF6D09BB7E3]
+	(No symbol) [0x00007FF6D09875C8]
+	(No symbol) [0x00007FF6D0988731]
+	GetHandleVerifier [0x00007FF6D0E3643D+3118829]
+	GetHandleVerifier [0x00007FF6D0E86C90+3448640]
+	GetHandleVerifier [0x00007FF6D0E7CF0D+3408317]
+	GetHandleVerifier [0x00007FF6D0C0A40B+841403]
+	(No symbol) [0x00007FF6D0AB340F]
+	(No symbol) [0x00007FF6D0AAF484]
+	(No symbol) [0x00007FF6D0AAF61D]
+	(No symbol) [0x00007FF6D0A9EB79]
+	BaseThreadInitThunk [0x00007FFEEB51259D+29]
+	RtlUserThreadStart [0x00007FFEECF8AF38+40]
+
+2024-12-08 13:28:11,659 - ERROR - 转发消息时出错: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="edit-content"]"}
+  (Session info: chrome=131.0.6778.109)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D0B43AB5+28005]
+	(No symbol) [0x00007FF6D0AA83B0]
+	(No symbol) [0x00007FF6D094580A]
+	(No symbol) [0x00007FF6D0995A3E]
+	(No symbol) [0x00007FF6D0995D2C]
+	(No symbol) [0x00007FF6D09DEA97]
+	(No symbol) [0x00007FF6D09BBA7F]
+	(No symbol) [0x00007FF6D09DB8B3]
+	(No symbol) [0x00007FF6D09BB7E3]
+	(No symbol) [0x00007FF6D09875C8]
+	(No symbol) [0x00007FF6D0988731]
+	GetHandleVerifier [0x00007FF6D0E3643D+3118829]
+	GetHandleVerifier [0x00007FF6D0E86C90+3448640]
+	GetHandleVerifier [0x00007FF6D0E7CF0D+3408317]
+	GetHandleVerifier [0x00007FF6D0C0A40B+841403]
+	(No symbol) [0x00007FF6D0AB340F]
+	(No symbol) [0x00007FF6D0AAF484]
+	(No symbol) [0x00007FF6D0AAF61D]
+	(No symbol) [0x00007FF6D0A9EB79]
+	BaseThreadInitThunk [0x00007FFEEB51259D+29]
+	RtlUserThreadStart [0x00007FFEECF8AF38+40]
+
+2024-12-08 13:28:15,533 - INFO - 程序已退出

@@ -24,6 +24,7 @@ class RedisQueue:
             logger.info(f"消息已加入微信队列: {message.content}")
         except Exception as e:
             logger.error(f"添加微信消息到队列失败: {e}")
+            raise
             
     def put_wechat_processed_message(self, message: str, session_id: str):
         """将微信消息放入已处理队列"""
@@ -38,6 +39,7 @@ class RedisQueue:
                 self.redis_client.zremrangebyrank(redis_key, 0, 0)  # 删除排名最低的元素
         except Exception as e:
             logger.error(f"添加微信消息到已处理队列失败: {e}")
+            raise
 
     def get_wechat_message(self) -> Optional[dict]:
         """从队列获取微信消息"""
@@ -46,7 +48,7 @@ class RedisQueue:
             return json.loads(data) if data else None
         except Exception as e:
             logger.error(f"从队列获取微信消息失败: {e}")
-            return None
+            raise
     
     def is_message_in_wechat_processed_queue(self, message: str, session_id: str) -> bool:
         """判断消息是否在已处理队列中"""
@@ -57,7 +59,7 @@ class RedisQueue:
             return score is not None  # 如果分数不为 None，则表示消息在有序集合中
         except Exception as e:
             logger.error(f"判断消息是否在已处理队列中失败: {e}")
-            return False
+            raise
 
     def put_yto_message(self, message: Message):
         """将圆通消息放入队列"""
@@ -66,6 +68,7 @@ class RedisQueue:
             logger.info(f"消息已加入圆通队列: {message.content}")
         except Exception as e:
             logger.error(f"添加圆通消息到队列失败: {e}")
+            raise
     
     def put_yto_processed_message(self, message: str):
         """将圆通消息放入已处理队列"""
@@ -79,6 +82,7 @@ class RedisQueue:
                 self.redis_client.zremrangebyrank(self.yto_processed_queue, 0, 0)  # 删除排名最低的元素
         except Exception as e:
             logger.error(f"添加圆通消息到已处理队列失败: {e}")
+            raise
     
     def get_yto_message(self) -> Optional[dict]:
         """从队列获取圆通消息"""
@@ -87,7 +91,7 @@ class RedisQueue:
             return json.loads(data) if data else None
         except Exception as e:
             logger.error(f"从队列获取圆通消息失败: {e}")
-            return None
+            raise
     
     def is_message_in_yto_processed_queue(self, message: str) -> bool:
         """判断消息是否在已处理队列中"""
@@ -97,7 +101,7 @@ class RedisQueue:
             return score is not None  # 如果分数不为 None，则表示消息在有序集合中
         except Exception as e:
             logger.error(f"判断消息是否在已处理队列中失败: {e}")
-            return False
+            raise
     
     def is_order_in_session(self, session_id: str, order_number: str) -> bool:
         """判断消息是否在已处理队列中"""
@@ -108,7 +112,7 @@ class RedisQueue:
             return score is not None  # 如果分数不为 None，则表示消息在有序集合中
         except Exception as e:
             logger.error(f"判断消息是否在已处理队列中失败: {e}")
-            return False
+            raise
     def put_session_order(self, session_id: str, order_number: str):
         """将订单放入微信关联群"""
         try:
@@ -129,6 +133,7 @@ class RedisQueue:
                 self.redis_client.hdel(self.order_to_session_queue, removed_order)
         except Exception as e:
             logger.error(f"将订单放入微信关联群失败: {e}")
+            raise
 
     def put_orders_to_session(self, session_id: str, order_numbers: List[str]):
         """处理订单列表，将不在会话中的订单添加到会话中"""
@@ -138,7 +143,7 @@ class RedisQueue:
                     self.put_session_order(session_id, order_number)
         except Exception as e:
             logger.error(f"将订单加入微信会话失败: {e}")
-            return False
+            raise
         
     
     def find_session_id_by_order_number(self, order_number: str) -> Optional[str]:
@@ -148,4 +153,4 @@ class RedisQueue:
             return session_id if session_id else None
         except Exception as e:
             logger.error(f"查找订单号对应的会话ID失败: {e}")
-            return None
+            raise

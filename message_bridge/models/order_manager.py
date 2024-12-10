@@ -5,10 +5,10 @@ from models.redis_queue import RedisQueue
 from config import ORDER_FORMAT
 
 class OrderManager:
-    def __init__(self):
+    def __init__(self, redis_queue):
         # 订单号与群ID的映射关系
         self.order_session_map: Dict[str, str] = {}
-        self.redis_queue = RedisQueue()
+        self.redis_queue = redis_queue
         
     def extract_order_number(self, text: str) -> Optional[List[str]]:
         """从文本中提取订单号"""

@@ -11,9 +11,9 @@ import time
 class MessageBridge:
     def __init__(self):
         self.redis_queue = RedisQueue()
-        self.wechat = WeChatHandler()
-        self.yto = YtoHandler()
-        self.order_manager = OrderManager()
+        self.wechat = WeChatHandler(self.redis_queue)
+        self.yto = YtoHandler(self.redis_queue)
+        self.order_manager = OrderManager(self.redis_queue)
         self.is_running = True
         
         # 重试配置
@@ -47,7 +47,7 @@ class MessageBridge:
                 time.sleep(0.5)
             except Exception as e:
                 logger.error(f"处理微信消息时出错: {e}")
-                time.sleep(0.5)
+                self.is_running = False
     
     def process_yto_messages(self):
         """处理圆通消息的线程"""
@@ -62,7 +62,7 @@ class MessageBridge:
                 time.sleep(0.5)
             except Exception as e:
                 logger.error(f"处理微信消息时出错: {e}")
-                time.sleep(0.5)
+                self.is_running = False
 
     def process_yto_response(self, response_text: str):
         """处理圆通的回复消息"""
@@ -81,6 +81,7 @@ class MessageBridge:
                 logger.warning(f"圆通回复中没有找到订单号: {response_text}")
         except Exception as e:
             logger.error(f"处理圆通回复时出错: {e}")
+            self.is_running = False
 
     def forward_messages(self):
         """转发消息的线程"""
@@ -101,7 +102,7 @@ class MessageBridge:
                 time.sleep(random.uniform(3.5, 5.5))
             except Exception as e:
                 logger.error(f"转发消息时出错: {e}")
-                time.sleep(1)
+                self.is_running = False
 
     def run(self):
 

@@ -1,0 +1,4 @@
+2024-12-07 18:46:29,121 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\_MEI103842\\comtypes\\gen\\__init__.pyc'>
+2024-12-07 18:46:29,122 - INFO - Using writeable comtypes cache directory: 'C:\Users\ADMINI~1\AppData\Local\Temp\comtypes_cache\yto_wechart-312'
+2024-12-07 18:46:34,881 - ERROR - 请先打开微信!
+2024-12-07 18:46:34,881 - ERROR - 初始化失败，程序退出

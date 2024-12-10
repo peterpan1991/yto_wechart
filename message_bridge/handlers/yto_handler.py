@@ -17,12 +17,12 @@ import re
 from config import YTO_MESSAGE_FORMATS, YTO_SERVICE_ID, NEW_YTO_MESSAGE_COUNT
 
 class YtoHandler:
-    def __init__(self):
+    def __init__(self, redis_queue):
         self.driver = None
         self.max_processed_count = 10
         self.buffer = deque(maxlen=self.max_processed_count)
         self.current_session_id = None
-        self.redis_queue = RedisQueue()
+        self.redis_queue = redis_queue
         
     def init_browser(self):
         """初始化浏览器"""
@@ -38,7 +38,7 @@ class YtoHandler:
             return True
         except Exception as e:
             logger.error(f"初始化浏览器失败: {e}")
-            return False
+            raise  # 重新抛出异常
     def is_valid_message(self, msg: str) -> bool:
         """过滤消息"""
         # 过滤掉不符合规则的消息
@@ -60,21 +60,21 @@ class YtoHandler:
             message_input.send_keys(Keys.DELETE)
             # 使用 execute_script 方法将消息插入到输入框中
             self.driver.execute_script("arguments[0].innerText = arguments[1];", message_input, message)
+            time.sleep(random.uniform(0.5, 1.5))
+            message_input.send_keys(Keys.ENTER)
             # # 输入消息 换行符会被截断
             # message_input.send_keys(message)
-            
-            # time.sleep(random.uniform(0.5, 1.5))
+                    
             # # 点击发送按钮
-            # send_button = self.driver.find_element(By.ID, "button-violet")
-            # send_button.click()
+            send_button = self.driver.find_element(By.CLASS_NAME, "button-violet")
+            send_button.click()
             
             logger.info(f"消息已发送到圆通系统: {message}")
             return True
             
         except Exception as e:
             logger.error(f"发送消息到圆通系统失败: {e}")
-            self.is_logged_in = False  # 标记需要重新登录
-            return False
+            raise  # 重新抛出异常
     
     def try_get_message(self) -> Optional[str]:
         """尝试获取并处理消息，带重试机制"""
@@ -94,11 +94,11 @@ class YtoHandler:
                     send_time_span = first_div.find_element(By.XPATH, "./span[2]") # 获取时间
                     script = "return arguments[0].innerText;"
                     send_time = self.driver.execute_script(script, send_time_span)
-                    msg_content = msg_item.find_element(By.CSS_SELECTOR, ".text-content").text
+                    msg_content = msg_item.find_element(By.CSS_SELECTOR, ".text-content").text                    
 
-                    # if(sender_span.text != YTO_SERVICE_ID):
+                    if(sender_span.text != YTO_SERVICE_ID):
                         # logger.info(f"收到来自 {sender_span.text} 的消息: {msg_content}")
-                        # continue
+                        continue
                     
                     if self.is_valid_message(msg_content):
                         # 如果消息未处理过，添加到缓冲区
@@ -118,7 +118,7 @@ class YtoHandler:
 
         except Exception as e:
             logger.error(f"获取圆通消息失败: {e}")
-            self.is_logged_in = False
+            raise  # 重新抛出异常
             
     def get_next_message(self) -> Optional[str]:
         """从缓冲区获取下一条要处理的消息"""

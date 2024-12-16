@@ -87,8 +87,8 @@ class WeChatHandler:
     def switch_to_session(self, session_id: str) -> bool:
         """切换到指定的会话"""
         try:
-            # if self.current_session_id == session_id:
-            #     return True
+            if self.current_session_id == session_id:
+                return True
 
             if session_id in self.group_cache:
                 group_item = self.group_cache[session_id]
@@ -130,7 +130,9 @@ class WeChatHandler:
     def try_get_message(self) -> Optional[str]:
         """尝试获取并处理消息，带重试机制"""
         try:
-            # self.wx.SetActive()  # 激活微信窗口
+            # self.wx.SetActive()  # 激活微信窗口			
+            for item in self.group_cache:
+                print(item)
             session = self.wx.ListControl(Name="会话")
             self.new_message = session.TextControl(searchDepth=3)
 

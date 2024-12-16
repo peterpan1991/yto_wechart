@@ -48,3 +48,5 @@ NEW_YTO_MESSAGE_COUNT = 5
 
 MAX_RETRIES = 3
 RETRY_DELAY = 5  # 秒
+
+PROCESS_TYPE = "message_bridge"  # wechat_recieve wechat_send

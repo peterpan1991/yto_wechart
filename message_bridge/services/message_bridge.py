@@ -1,6 +1,6 @@
 import random
 from threading import Thread
-from config import REDIS_CONFIG, MONITORED_GROUPS
+from config import REDIS_CONFIG, MONITORED_GROUPS, PROCESS_TYPE
 from logger import logger
 from models.redis_queue import RedisQueue
 from handlers.wechat_handler import WeChatHandler
@@ -87,19 +87,21 @@ class MessageBridge:
         """转发消息的线程"""
         while self.is_running:
             try:
-                # 处理微信到圆通的消息
-                wechat_message = self.redis_queue.get_wechat_message()
-                if wechat_message:
-                    self.yto.send_message(wechat_message['content'])
+                if PROCESS_TYPE == "message_bridge" or PROCESS_TYPE == "wechat_recieve":
+                    # 处理微信到圆通的消息
+                    wechat_message = self.redis_queue.get_wechat_message()
+                    if wechat_message:
+                        self.yto.send_message(wechat_message['content'])
+                    
+                    time.sleep(random.uniform(3.5, 5.5))
                 
-                time.sleep(random.uniform(3.5, 5.5))
-                
-                # 处理圆通到微信的消息
-                yto_messages = self.redis_queue.get_yto_message()
-                if yto_messages:
-                    self.process_yto_response(yto_messages['content'])
+                if PROCESS_TYPE == "message_bridge" or PROCESS_TYPE == "wechat_send":
+                    # 处理圆通到微信的消息
+                    yto_messages = self.redis_queue.get_yto_message()
+                    if yto_messages:
+                        self.process_yto_response(yto_messages['content'])
 
-                time.sleep(random.uniform(3.5, 5.5))
+                    time.sleep(random.uniform(3.5, 5.5))
             except Exception as e:
                 logger.error(f"转发消息时出错: {e}")
                 self.is_running = False
@@ -112,13 +114,16 @@ class MessageBridge:
             return
 
         # 启动处理线程
-        wechat_thread = Thread(target=self.process_wechat_messages)
-        yto_thread = Thread(target=self.process_yto_messages)
-        forward_thread = Thread(target=self.forward_messages)
+        if PROCESS_TYPE == "message_bridge" or PROCESS_TYPE == "wechat_recieve":
+            wechat_thread = Thread(target=self.process_wechat_messages)
+            yto_thread = Thread(target=self.process_yto_messages)
 
-        wechat_thread.start()
-        yto_thread.start()
-        forward_thread.start()
+            wechat_thread.start()
+            yto_thread.start()
+        
+        if PROCESS_TYPE == "message_bridge" or PROCESS_TYPE == "wechat_send":
+            forward_thread = Thread(target=self.forward_messages)
+            forward_thread.start()
 
         try:
             while self.is_running:
@@ -127,9 +132,12 @@ class MessageBridge:
             logger.info("接收到退出信号，正在关闭...")
             self.is_running = False
 
-        wechat_thread.join()
-        yto_thread.join()
-        forward_thread.join()
+        if PROCESS_TYPE == "message_bridge" or PROCESS_TYPE == "wechat_recieve":
+            wechat_thread.join()
+            yto_thread.join()
+        
+        if PROCESS_TYPE == "message_bridge" or PROCESS_TYPE == "wechat_send":
+            forward_thread.join()
 
         logger.info("程序已退出")
 

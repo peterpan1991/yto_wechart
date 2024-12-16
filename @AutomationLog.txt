@@ -1,2 +1,0 @@
-2024-10-26 22:24:54.262 ytochart.py[12] <module> -> Find Control Timeout(10s): {Name: '微信', ControlType: WindowControl}
-2024-11-17 19:08:36.302 get_wechat_control.py[24] <module> -> Find Control Timeout(10s): {ControlType: TextControl}

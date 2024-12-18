@@ -34,6 +34,8 @@ class YtoHandler:
             options = Options()
             options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
             self.driver = webdriver.Chrome(options=options)
+
+            self.monitor_new_message()
             logger.info("浏览器初始化成功")
             return True
         except Exception as e:
@@ -44,15 +46,17 @@ class YtoHandler:
         script = """
 		var newItems = []; // 用于存储新增条目
 
-		var targetNode = document.querySelector('.news-box').parentNode;
+		var targetNode = document.querySelector('#msgContentRef');
 		var config = { childList: true, subtree: true };
 
 		var callback = function(mutationsList) {
 			mutationsList.forEach(mutation => {
+                console.log("test", mutation.type, mutation.addedNodes.length);
 				if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
 					mutation.addedNodes.forEach(node => {
+                        console.log("test", node);
 						if (node.nodeType === 1) { // 确保是元素节点
-							newItems.push(node.textContent.trim()); // 保存新条目
+							newItems.push(node); // 保存新条目
 						}
 					});
 				}
@@ -122,11 +126,10 @@ class YtoHandler:
             # last_news_message_elements = message_elements[-NEW_YTO_MESSAGE_COUNT:]
             
             last_news_message_elements = self.driver.execute_script("return window.getNewItems();")
-            print(last_news_message_elements)
-            exit()
-
+            
             messages = []
             for msg_item in last_news_message_elements:
+                    msg_item = msg_item.find_element(By.CSS_SELECTOR, ".news-box")
 
                     # 获取消息信息
                     first_div = msg_item.find_element(By.XPATH, "./div[1]")
@@ -137,8 +140,8 @@ class YtoHandler:
                     msg_content = msg_item.find_element(By.CSS_SELECTOR, ".text-content").text                    
 
                     # if(sender_span.text != YTO_SERVICE_ID):
-                        # logger.info(f"收到来自 {sender_span.text} 的消息: {msg_content}")
-                        # continue
+                    #     logger.info(f"收到来自 {sender_span.text} 的消息: {msg_content}")
+                    #     continue
                     
                     if self.is_valid_message(msg_content):
                         # 如果消息未处理过，添加到缓冲区

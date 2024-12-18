@@ -172,7 +172,7 @@ class MessageBridge:
                             if while_times >= max_while_times:
                                 break
 
-                    time.sleep(random.uniform(0.5, 1.5))
+                    time.sleep(random.uniform(1, 2))
             except Exception as e:
                 logger.error(f"执行出错: {e}")
                 self.is_running = False

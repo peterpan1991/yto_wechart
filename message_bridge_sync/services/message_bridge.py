@@ -111,56 +111,71 @@ class MessageBridge:
                 self.is_running = False
                 
     def process(self):
-        groups = self.wechat.get_groups_to_handle()
-        for id, group in groups:
-            logger.info(f"开始处理群 {group.Name}")
-            wechat_messages = self.wechat.handle_group_message(id, group)
-            for msg in wechat_messages:
-                if not msg.content:
+        while self.is_running:
+            try:
+                groups = self.wechat.get_groups_to_handle()
+                if not groups:
+                    # logger.warning("没有需要处理的群")
+                    time.sleep(1)
                     continue
-                
-                # 提取订单号并注册关联
-                order_numbers = self.order_manager.extract_order_number(msg.content)
-                if not order_numbers:
-                    continue
-                
-                self.order_manager.register_order(order_numbers, msg.session_id)
-                logger.info(f"从群 {msg.session_id} 提取到订单号: {order_numbers}")
-                
-                # 发送消息到圆通
-                self.yto.send_message(msg.content)
 
-                # 获取圆通消息
-                order_count = order_numbers.count()
-                retry_count = 0
-                send_times = 0
-                while True:
-                    time.sleep(random.uniform(0.5, 1))
-                    yto_messages = self.yto.get_messages()
-                    is_send = False
-                    for yto_msg in yto_messages:
-                        if not yto_msg.content:
+                for id, group in groups.items():
+                    wechat_messages = self.wechat.handle_group_message(id, group)
+                    for msg in wechat_messages:
+                        if not msg.content:
                             continue
-
-                        yto_order_numbers = self.order_manager.extract_order_number(yto_msg.content)
-                        if not yto_order_numbers or yto_order_numbers[0] not in order_numbers:
+                        
+                        # 提取订单号并注册关联
+                        order_numbers = self.order_manager.extract_order_number(msg.content)
+                        if not order_numbers:
                             continue
+                        
+                        self.order_manager.register_order(order_numbers, msg.session_id)
+                        logger.info(f"从群 {msg.session_id} 提取到订单号: {order_numbers}")
+                        
+                        # 发送消息到圆通
+                        self.yto.send_message(msg.content)
 
-                        # 将消息发送到微信
-                        self.wechat.send_message(yto_msg.content, msg.session_id)
-                        is_send = True
-                        send_times += 1
-                        time.sleep(random.uniform(0.5, 1.5))
+                        # 获取圆通消息
+                        order_count = len(order_numbers)
+                        retry_count = 0
+                        send_times = 0
+                        max_while_times = 30
+                        while_times = 0
+                        while True:
+                            while_times += 1
+                            time.sleep(random.uniform(0.5, 1))
+                            yto_messages = self.yto.get_messages()
+                            is_send = False
+                            for yto_msg in yto_messages:
+                                if not yto_msg.content:
+                                    continue
 
-                    if not is_send:
-                        retry_count += 1
-                    
-                    logger.info(f"获取圆通消息循环次数: {retry_count}, 发送次数: {send_times}")
+                                yto_order_numbers = self.order_manager.extract_order_number(yto_msg.content)
+                                if not yto_order_numbers or yto_order_numbers[0] not in order_numbers:
+                                    continue
 
-                    if retry_count >= self.max_retries or send_times >= order_count:
-                        break
+                                # 将消息发送到微信
+                                self.wechat.send_message(yto_msg.content, msg.session_id)
+                                is_send = True
+                                send_times += 1
+                                time.sleep(random.uniform(0.5, 1.5))
 
-            time.sleep(random.uniform(0.5, 1.5))
+                            if not is_send:
+                                retry_count += 1
+                            
+                            logger.info(f"获取圆通消息循环次数: {retry_count}, 发送次数: {send_times}")
+
+                            if retry_count >= self.max_retries or send_times >= order_count:
+                                break
+                                
+                            if while_times >= max_while_times:
+                                break
+
+                    time.sleep(random.uniform(0.5, 1.5))
+            except Exception as e:
+                logger.error(f"执行出错: {e}")
+                self.is_running = False
 
     def run(self):
 

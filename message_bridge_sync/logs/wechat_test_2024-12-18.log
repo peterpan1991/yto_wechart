@@ -1,0 +1,96 @@
+2024-12-18 14:42:30,845 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-18 14:42:30,845 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-18 14:42:31,449 - INFO - 微信窗口初始化成功
+2024-12-18 14:42:31,473 - INFO - 会话列表初始化成功
+2024-12-18 14:42:32,292 - INFO - 浏览器初始化成功
+2024-12-18 14:44:21,105 - INFO - 接收到退出信号，正在关闭...
+2024-12-18 14:44:21,106 - INFO - 程序已退出
+2024-12-18 14:46:53,218 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-18 14:46:53,219 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-18 14:46:53,876 - INFO - 微信窗口初始化成功
+2024-12-18 14:46:53,908 - INFO - 会话列表初始化成功
+2024-12-18 14:46:54,518 - INFO - 浏览器初始化成功
+2024-12-18 14:46:59,361 - INFO - 接收到退出信号，正在关闭...
+2024-12-18 14:46:59,362 - INFO - 程序已退出
+2024-12-18 14:51:39,307 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-18 14:51:39,308 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-18 14:51:40,158 - INFO - 微信窗口初始化成功
+2024-12-18 14:51:40,184 - INFO - 会话列表初始化成功
+2024-12-18 14:51:40,780 - INFO - 浏览器初始化成功
+2024-12-18 14:51:40,820 - INFO - 开始处理群 yto-test3群1条新消息, 3
+2024-12-18 14:51:46,763 - INFO - 接收到退出信号，正在关闭...
+2024-12-18 14:51:46,764 - INFO - 程序已退出
+2024-12-18 14:52:07,565 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-18 14:52:07,565 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-18 14:52:08,402 - INFO - 微信窗口初始化成功
+2024-12-18 14:52:08,431 - INFO - 会话列表初始化成功
+2024-12-18 14:52:09,008 - INFO - 浏览器初始化成功
+2024-12-18 14:52:09,730 - INFO - 从群 3 提取到订单号: ['YT2900126038130']
+2024-12-18 14:52:10,498 - INFO - 消息已发送到圆通系统: YT2900126038130 查重
+2024-12-18 14:52:17,462 - INFO - 接收到退出信号，正在关闭...
+2024-12-18 14:52:17,462 - INFO - 程序已退出
+2024-12-18 15:17:24,925 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-18 15:17:24,925 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-18 15:17:26,030 - INFO - 微信窗口初始化成功
+2024-12-18 15:17:26,053 - INFO - 会话列表初始化成功
+2024-12-18 15:17:26,673 - INFO - 浏览器初始化成功
+2024-12-18 15:17:31,698 - WARNING - 没有需要处理的群
+2024-12-18 15:17:37,735 - WARNING - 没有需要处理的群
+2024-12-18 15:17:43,760 - WARNING - 没有需要处理的群
+2024-12-18 15:17:46,552 - INFO - 接收到退出信号，正在关闭...
+2024-12-18 15:17:49,786 - WARNING - 没有需要处理的群
+2024-12-18 15:17:50,786 - INFO - 程序已退出
+2024-12-18 15:39:48,930 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-18 15:39:48,930 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-18 15:39:50,148 - INFO - 微信窗口初始化成功
+2024-12-18 15:39:50,186 - INFO - 会话列表初始化成功
+2024-12-18 15:39:50,814 - INFO - 浏览器初始化成功
+2024-12-18 15:40:15,642 - INFO - 从群 3 提取到订单号: ['YT2900126038131']
+2024-12-18 15:40:16,810 - INFO - 消息已发送到圆通系统:  YT2900126038131 查重
+2024-12-18 15:40:19,329 - INFO - 获取圆通消息循环次数: 1, 发送次数: 0
+2024-12-18 15:40:21,729 - INFO - 获取圆通消息循环次数: 2, 发送次数: 0
+2024-12-18 15:40:24,058 - INFO - 获取圆通消息循环次数: 3, 发送次数: 0
+2024-12-18 15:40:39,102 - INFO - 接收到退出信号，正在关闭...
+2024-12-18 15:40:43,132 - INFO - 程序已退出
+2024-12-18 15:45:07,036 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-18 15:45:07,036 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-18 15:45:08,124 - INFO - 微信窗口初始化成功
+2024-12-18 15:45:08,152 - INFO - 会话列表初始化成功
+2024-12-18 15:45:08,749 - INFO - 浏览器初始化成功
+2024-12-18 15:45:49,825 - INFO - 从群 3 提取到订单号: ['YT2900126038132']
+2024-12-18 15:45:50,624 - INFO - 消息已发送到圆通系统:  YT2900126038132 查重
+2024-12-18 15:45:53,045 - INFO - 获取圆通消息循环次数: 1, 发送次数: 0
+2024-12-18 15:45:53,774 - INFO - 获取到yto消息: YT2900126038132 test
+2024-12-18 15:45:54,757 - INFO - 获取圆通消息循环次数: 1, 发送次数: 1
+2024-12-18 15:47:18,637 - INFO - 接收到退出信号，正在关闭...
+2024-12-18 15:47:19,736 - INFO - 程序已退出
+2024-12-18 15:49:47,227 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-18 15:49:47,227 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-18 15:49:48,314 - INFO - 微信窗口初始化成功
+2024-12-18 15:49:48,339 - INFO - 会话列表初始化成功
+2024-12-18 15:49:48,976 - INFO - 浏览器初始化成功
+2024-12-18 15:50:23,006 - INFO - 从群 3 提取到订单号: ['YT2900126038133']
+2024-12-18 15:50:23,821 - INFO - 消息已发送到圆通系统:  YT2900126038133 查重
+2024-12-18 15:50:25,990 - INFO - 获取圆通消息循环次数: 1, 发送次数: 0
+2024-12-18 15:50:26,852 - INFO - 获取到yto消息: YT2900126038133 test
+2024-12-18 15:50:27,291 - INFO - 微信消息已发送到群 3: YT2900126038133 test
+2024-12-18 15:50:28,669 - INFO - 获取圆通消息循环次数: 1, 发送次数: 1
+2024-12-18 15:54:09,739 - INFO - 从群 4 提取到订单号: ['YT2900126038134']
+2024-12-18 15:54:11,108 - INFO - 消息已发送到圆通系统:  YT2900126038134 查重
+2024-12-18 15:54:13,520 - INFO - 获取圆通消息循环次数: 1, 发送次数: 0
+2024-12-18 15:54:15,813 - INFO - 获取圆通消息循环次数: 2, 发送次数: 0
+2024-12-18 15:54:16,695 - INFO - 获取到yto消息: YT2900126038134 test
+2024-12-18 15:54:17,136 - INFO - 微信消息已发送到群 4: YT2900126038134 test
+2024-12-18 15:54:18,516 - INFO - 获取圆通消息循环次数: 2, 发送次数: 1
+2024-12-18 15:54:57,314 - INFO - 从群 3 提取到订单号: ['YT2900126038135']
+2024-12-18 15:54:58,345 - INFO - 消息已发送到圆通系统:  YT2900126038135 查重
+2024-12-18 15:55:00,794 - INFO - 获取圆通消息循环次数: 1, 发送次数: 0
+2024-12-18 15:55:02,990 - INFO - 获取圆通消息循环次数: 2, 发送次数: 0
+2024-12-18 15:55:05,232 - INFO - 获取圆通消息循环次数: 3, 发送次数: 0
+2024-12-18 15:55:07,355 - INFO - 从群 3 提取到订单号: ['YT2900126038136']
+2024-12-18 15:55:08,655 - INFO - 消息已发送到圆通系统:  YT2900126038136 查重
+2024-12-18 15:55:10,854 - INFO - 获取圆通消息循环次数: 1, 发送次数: 0
+2024-12-18 15:55:13,406 - INFO - 获取圆通消息循环次数: 2, 发送次数: 0
+2024-12-18 15:55:15,708 - INFO - 获取圆通消息循环次数: 3, 发送次数: 0
+2024-12-18 15:56:27,756 - INFO - 接收到退出信号，正在关闭...
+2024-12-18 15:56:28,792 - INFO - 程序已退出

@@ -133,7 +133,7 @@ class WeChatHandler:
         try:
             session = self.wx.ListControl(Name="会话")
             self.new_message = session.TextControl(searchDepth=3)
-
+            group_handles: Dict[str, auto.WindowControl] = {}
             if self.new_message.Exists():
                 for session_item in session.GetChildren():
                     if not session_item.Exists() or not re.search(r'\d+条新消息$', session_item.Name):
@@ -144,9 +144,9 @@ class WeChatHandler:
 
                     # 判断group在监控群里面 且 在拿到的会话列表里面
                     if session_id is not None and session_id in self.group_cache:
-                        self.group_handles[session_id] = session_item
+                        group_handles[session_id] = session_item
 
-            return self.group_handles
+            return group_handles
 
         except Exception as e:
             logger.error(f"获取新消息群失败: {e}")
@@ -292,13 +292,13 @@ class WeChatHandler:
     def send_message(self, message: str, session_id: str) -> bool:
         """向指定群发送消息"""
         try:
-            if not self.switch_to_session(session_id):
-                return False
+            # if not self.switch_to_session(session_id):
+            #     return False
             
-            time.sleep(random.uniform(0.5, 1.5))
+            # time.sleep(random.uniform(0.5, 1.5))
             formated_message = self.filter_message(message)
             self.wx.SendKeys(formated_message, waitTime=0.1)
-            time.sleep(random.uniform(0.5, 1.5))
+            # time.sleep(random.uniform(0.5, 1.5))
             self.wx.SendKeys('{Enter}', waitTime=0.1)
             
             # 将微信快捷键设置成ctrl+enter发送消息

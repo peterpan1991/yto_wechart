@@ -121,9 +121,9 @@ class MessageBridge:
             wechat_thread.start()
             yto_thread.start()
         
-        if PROCESS_TYPE == "message_bridge" or PROCESS_TYPE == "wechat_send":
-            forward_thread = Thread(target=self.forward_messages)
-            forward_thread.start()
+        
+        forward_thread = Thread(target=self.forward_messages)
+        forward_thread.start()
 
         try:
             while self.is_running:
@@ -136,8 +136,7 @@ class MessageBridge:
             wechat_thread.join()
             yto_thread.join()
         
-        if PROCESS_TYPE == "message_bridge" or PROCESS_TYPE == "wechat_send":
-            forward_thread.join()
+        forward_thread.join()
 
         logger.info("程序已退出")
 

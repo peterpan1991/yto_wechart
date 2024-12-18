@@ -10,7 +10,9 @@ from models.message import MessageSource
 from models.redis_queue import RedisQueue
 from collections import deque
 import re
-from config import CUSTOME_SERVICE_PATTERNS, WECHAT_MESSAGE_FORMATS, MONITORED_GROUPS, NEW_WECHAT_MESSAGE_COUNT
+from config import CUSTOME_SERVICE_PATTERNS, WECHAT_MESSAGE_FORMATS, MONITORED_GROUPS, NEW_WECHAT_MESSAGE_COUNT, PROCESS_TYPE
+import win32api, win32con, win32gui
+from pywinauto import Application
 
 class WeChatHandler:
     def __init__(self, redis_queue):
@@ -25,12 +27,23 @@ class WeChatHandler:
         self.new_message = None
         self.last_message_count = NEW_WECHAT_MESSAGE_COUNT
         self.monitoring_groups: Dict[str, str] = {}
-        self.redis_queue = redis_queue
-        
+        self.redis_queue = redis_queue    
+
     def init_wx(self) -> bool:
         """初始化微信窗口"""
         try:
-            self.wx = auto.WindowControl(Name="微信", ClassName="WeChatMainWndForPC")
+            wx_windows = [win for win in auto.GetRootControl().GetChildren() if win.Name == "微信" and win.ClassName == "WeChatMainWndForPC"]
+
+            # 遍历窗口并输出句柄
+            for idx, win in enumerate(wx_windows):
+                print(f"窗口 {idx + 1}: 句柄={win.ProcessId}, 名称={win.Name}")
+                if PROCESS_TYPE == "wechat_recieve" and idx == 1:
+                    self.wx = win
+                if PROCESS_TYPE == "wechat_send" and idx == 0:
+                    self.wx = win
+
+            print(f"当前类别 {PROCESS_TYPE}: 句柄={self.wx.ProcessId}, 名称={self.wx.Name}")
+            # self.wx = auto.WindowControl(Name="微信", ClassName="WeChatMainWndForPC")
             if not self.wx.Exists():
                 logger.error("请先打开微信!")
                 return False
@@ -57,7 +70,7 @@ class WeChatHandler:
                 
             self.group_cache = {}
             for item in group_list.GetChildren():
-                group_name = item.Name
+                group_name = re.sub(r'\d+条新消息$', '', item.Name)
                 session_id = next((k for k, v in self.monitoring_groups.items() if v == group_name), None)
                 if group_name and session_id is not None:
                     self.group_cache[session_id] = item
@@ -130,53 +143,63 @@ class WeChatHandler:
     def try_get_message(self) -> Optional[str]:
         """尝试获取并处理消息，带重试机制"""
         try:
-            # self.wx.SetActive()  # 激活微信窗口			
-            for item in self.group_cache:
-                print(item)
+            # self.wx.SetActive()  # 激活微信窗口
             session = self.wx.ListControl(Name="会话")
             self.new_message = session.TextControl(searchDepth=3)
 
             if self.new_message.Exists():
-                self.new_message.Click(simulateMove=False)
-                try:
-                    group_name = self.get_session_id()
-                    
-                    session_id = next((k for k, v in self.monitoring_groups.items() if v == group_name), None)
-                    # 判断group在监控群里面 且 在拿到的会话列表里面
-                    if session_id is not None and session_id in self.group_cache:                                                        
+                for session_item in session.GetChildren():
+                    try:
+                        # self.new_message.Click(simulateMove=False)
                         
-                        if session_id not in self.buffer:
-                            self.buffer[session_id] = deque(maxlen=self.buffer_size)  # 确保 buffer 中存在 session_id
+                        if not session_item.Exists() or not re.search(r'\d+条新消息$', session_item.Name):
+                            continue
+                        
+                        print(f"新消息: {session_item.Name}")
 
-                        msg_list = self.wx.ListControl(Name='消息')
-                        if msg_list.Exists():
-                            children = msg_list.GetChildren()
-                            if children:
-                                # 判断需要获取的消息数量
-                                get_message_count = len(children) if len(children) < self.last_message_count else self.last_message_count
-                                # 判断当前群是否处理过消息，如果没处理过，get_message_count = 1
-                                # 获取最后几条消息
-                                latest_messages = children[-get_message_count:]  # 可以调整获取的消息数量
-                                is_processed = False
-                                for msg_item in latest_messages:
-                                    sender_name = msg_item.TextControl().Name
-                                    # 过滤圆通客服
-                                    if self.is_valid_message(msg_item.Name) and self.is_customer(sender_name):
-                                        msg_content = msg_item.Name
-                                        # 如果消息未处理过，添加到缓冲区
-                                        if msg_content and self.redis_queue.is_message_in_wechat_processed_queue(msg_content, session_id) is False:
-                                            self.buffer[session_id].append(msg_content)
-                                            self.redis_queue.put_wechat_processed_message(msg_content, session_id)
-                                            self.current_session_id = session_id
-                                            is_processed = True
-                                
-                                if is_processed:
-                                    return True
-                except Exception as e:
-                    logger.error(f"获取消息失败，重试中: {e}")
-                    raise  # 重新抛出异常
-                    # time.sleep(self.retry_delay)
-        
+                            # if group_name != re.sub(r'\d+条新消息$', '', session_item.Name):
+                        session_item.Click(simulateMove=False)
+                        time.sleep(random.uniform(3, 5))  # 适当的循环间隔
+                        
+                        group_name = self.get_session_id()
+                        session_id = next((k for k, v in self.monitoring_groups.items() if v == group_name), None)
+
+                        # 判断group在监控群里面 且 在拿到的会话列表里面
+                        if session_id is not None and session_id in self.group_cache:                                                        
+                            
+                            if session_id not in self.buffer:
+                                self.buffer[session_id] = deque(maxlen=self.buffer_size)  # 确保 buffer 中存在 session_id
+
+                            msg_list = self.wx.ListControl(Name='消息')
+                            if msg_list.Exists():
+                                children = msg_list.GetChildren()
+                                if children:
+                                    # 判断需要获取的消息数量
+                                    get_message_count = len(children) if len(children) < self.last_message_count else self.last_message_count
+                                    # 判断当前群是否处理过消息，如果没处理过，get_message_count = 1
+                                    # 获取最后几条消息
+                                    latest_messages = children[-get_message_count:]  # 可以调整获取的消息数量
+                                    is_processed = False
+                                    for msg_item in latest_messages:
+                                        sender_name = msg_item.TextControl().Name
+                                        # 过滤圆通客服
+                                        if self.is_valid_message(msg_item.Name) and self.is_customer(sender_name):
+                                            msg_content = msg_item.Name
+                                            # 如果消息未处理过，添加到缓冲区
+                                            if msg_content and self.redis_queue.is_message_in_wechat_processed_queue(msg_content, session_id) is False:
+                                                self.buffer[session_id].append(msg_content)
+                                                self.redis_queue.put_wechat_processed_message(msg_content, session_id)
+                                                self.current_session_id = session_id
+                                                is_processed = True
+                                    
+                                    if is_processed:
+                                        return True
+                    except Exception as e:
+                        logger.error(f"获取消息失败，重试中: {e}")
+                        raise  # 重新抛出异常
+                        # time.sleep(self.retry_delay)
+                    
+            # print(f"无法获取会话，继续下一次循环")
             time.sleep(random.uniform(5, 10))  # 适当的循环间隔
         
         except Exception as e:
@@ -225,9 +248,9 @@ class WeChatHandler:
             
             time.sleep(random.uniform(0.5, 1.5))
             formated_message = self.filter_message(message)
-            self.wx.SendKeys(formated_message, waitTime=random.uniform(0.5, 1.2))
+            self.wx.SendKeys(formated_message, waitTime=0.1)
             time.sleep(random.uniform(0.5, 1.5))
-            self.wx.SendKeys('{Enter}', waitTime=random.uniform(1.5, 2))
+            self.wx.SendKeys('{Enter}', waitTime=0.1)
             
             # 将微信快捷键设置成ctrl+enter发送消息
             # formated_message = message.replace('\n', '{Enter}')

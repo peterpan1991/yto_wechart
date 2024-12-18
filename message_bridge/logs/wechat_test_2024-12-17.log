@@ -1,0 +1,544 @@
+2024-12-17 10:22:45,347 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 10:22:45,347 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 10:22:45,613 - INFO - Could not import comtypes.gen._944DE083_8FB8_45CF_BCB7_C477ACB2F897_0_1_0: Typelib different than module
+2024-12-17 10:22:45,620 - INFO - # Generating comtypes.gen._944DE083_8FB8_45CF_BCB7_C477ACB2F897_0_1_0
+2024-12-17 10:22:45,652 - INFO - # Generating comtypes.gen.UIAutomationClient
+2024-12-17 10:22:45,921 - INFO - 微信窗口初始化成功
+2024-12-17 10:22:45,962 - INFO - 会话列表初始化成功
+2024-12-17 10:22:46,357 - INFO - 浏览器初始化成功
+2024-12-17 10:22:58,336 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 10:23:00,751 - INFO - 程序已退出
+2024-12-17 10:23:44,562 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 10:23:44,563 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 10:23:45,421 - INFO - 微信窗口初始化成功
+2024-12-17 10:23:45,461 - INFO - 会话列表初始化成功
+2024-12-17 10:23:46,057 - INFO - 浏览器初始化成功
+2024-12-17 10:24:08,620 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 10:24:14,776 - INFO - 程序已退出
+2024-12-17 10:31:46,362 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 10:31:46,362 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 10:31:46,956 - INFO - 微信窗口初始化成功
+2024-12-17 10:31:46,980 - INFO - 会话列表初始化成功
+2024-12-17 10:31:47,585 - INFO - 浏览器初始化成功
+2024-12-17 10:32:00,300 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 10:32:04,996 - INFO - 程序已退出
+2024-12-17 10:46:42,157 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 10:46:42,157 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 10:46:42,802 - INFO - 微信窗口初始化成功
+2024-12-17 10:46:42,826 - INFO - 会话列表初始化成功
+2024-12-17 10:46:43,417 - INFO - 浏览器初始化成功
+2024-12-17 10:47:42,414 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 10:47:49,671 - INFO - 程序已退出
+2024-12-17 10:48:01,426 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 10:48:01,426 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 10:48:02,073 - INFO - 微信窗口初始化成功
+2024-12-17 10:48:02,101 - INFO - 会话列表初始化成功
+2024-12-17 10:48:02,688 - INFO - 浏览器初始化成功
+2024-12-17 10:48:14,993 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 10:48:19,655 - INFO - 程序已退出
+2024-12-17 10:49:09,425 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 10:49:09,426 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 10:49:10,055 - INFO - 微信窗口初始化成功
+2024-12-17 10:49:10,080 - INFO - 会话列表初始化成功
+2024-12-17 10:49:10,683 - INFO - 浏览器初始化成功
+2024-12-17 10:49:14,034 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 10:49:21,361 - INFO - 程序已退出
+2024-12-17 10:49:35,558 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 10:49:35,558 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 10:49:36,190 - INFO - 微信窗口初始化成功
+2024-12-17 10:49:36,216 - INFO - 会话列表初始化成功
+2024-12-17 10:49:36,798 - INFO - 浏览器初始化成功
+2024-12-17 10:49:39,671 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 10:49:45,976 - INFO - 程序已退出
+2024-12-17 10:50:42,587 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 10:50:42,587 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 10:50:43,223 - INFO - 微信窗口初始化成功
+2024-12-17 10:50:43,248 - ERROR - 初始化会话列表失败: property 'Name' of 'ListItemControl' object has no setter
+2024-12-17 10:50:43,248 - ERROR - 初始化微信窗口失败: property 'Name' of 'ListItemControl' object has no setter
+2024-12-17 10:53:43,039 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 10:53:43,040 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 10:53:43,666 - INFO - 微信窗口初始化成功
+2024-12-17 10:53:43,693 - INFO - 会话列表初始化成功
+2024-12-17 10:53:44,309 - INFO - 浏览器初始化成功
+2024-12-17 10:53:47,743 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 10:53:52,749 - INFO - 程序已退出
+2024-12-17 10:55:44,517 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 10:55:44,517 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 10:55:45,250 - INFO - 微信窗口初始化成功
+2024-12-17 10:55:45,274 - INFO - 会话列表初始化成功
+2024-12-17 10:55:45,885 - INFO - 浏览器初始化成功
+2024-12-17 10:55:55,012 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 10:56:00,228 - INFO - 程序已退出
+2024-12-17 10:57:39,763 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 10:57:39,763 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 10:57:40,514 - INFO - 微信窗口初始化成功
+2024-12-17 10:57:40,540 - INFO - 会话列表初始化成功
+2024-12-17 10:57:41,132 - INFO - 浏览器初始化成功
+2024-12-17 11:03:02,327 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 11:03:05,049 - INFO - 程序已退出
+2024-12-17 11:03:21,690 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 11:03:21,690 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 11:03:22,422 - INFO - 微信窗口初始化成功
+2024-12-17 11:03:22,450 - INFO - 会话列表初始化成功
+2024-12-17 11:03:23,060 - INFO - 浏览器初始化成功
+2024-12-17 11:07:01,911 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 11:07:04,863 - INFO - 程序已退出
+2024-12-17 11:08:14,447 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 11:08:14,447 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 11:08:15,179 - INFO - 微信窗口初始化成功
+2024-12-17 11:08:15,211 - INFO - 会话列表初始化成功
+2024-12-17 11:08:15,823 - INFO - 浏览器初始化成功
+2024-12-17 11:09:53,376 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 11:10:16,963 - INFO - 程序已退出
+2024-12-17 11:11:19,973 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 11:11:19,973 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 11:11:20,715 - INFO - 微信窗口初始化成功
+2024-12-17 11:11:20,737 - INFO - 会话列表初始化成功
+2024-12-17 11:11:21,360 - INFO - 浏览器初始化成功
+2024-12-17 11:13:31,836 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 11:13:39,097 - INFO - 程序已退出
+2024-12-17 11:25:04,474 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 11:25:04,474 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 11:25:05,084 - INFO - 微信窗口初始化成功
+2024-12-17 11:25:05,113 - INFO - 会话列表初始化成功
+2024-12-17 11:25:05,722 - INFO - 浏览器初始化成功
+2024-12-17 11:25:45,623 - INFO - 从群 4 提取到订单号: ['YT2900126038110']
+2024-12-17 11:25:45,624 - INFO - 消息已加入微信队列: YT2900126038110 查重
+2024-12-17 11:26:06,981 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 11:26:12,147 - INFO - 程序已退出
+2024-12-17 11:26:36,585 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 11:26:36,585 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 11:26:37,213 - INFO - 微信窗口初始化成功
+2024-12-17 11:26:37,241 - INFO - 会话列表初始化成功
+2024-12-17 11:26:37,851 - INFO - 浏览器初始化成功
+2024-12-17 11:26:37,958 - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2024-12-17 11:26:39,198 - INFO - 消息已发送到圆通系统: YT2900126038110 查重
+2024-12-17 11:26:58,158 - INFO - 从群 3 提取到订单号: ['YT2900126038110']
+2024-12-17 11:26:58,160 - INFO - 消息已加入微信队列: YT2900126038110 查重
+2024-12-17 11:26:58,160 - INFO - 从群 3 提取到订单号: ['YT2900126038112']
+2024-12-17 11:26:58,160 - INFO - 消息已加入微信队列: YT2900126038112 查重
+2024-12-17 11:27:03,348 - INFO - 消息已发送到圆通系统: YT2900126038110 查重
+2024-12-17 11:27:08,562 - INFO - 消息已发送到圆通系统: YT2900126038112 查重
+2024-12-17 11:27:34,581 - INFO - 从群 3 提取到订单号: ['YT2900126038113']
+2024-12-17 11:27:34,582 - INFO - 消息已加入微信队列: YT2900126038113 查重
+2024-12-17 11:27:35,874 - INFO - 消息已发送到圆通系统: YT2900126038113 查重
+2024-12-17 11:27:38,188 - INFO - 从群 2 提取到订单号: ['YT2900126038113']
+2024-12-17 11:27:38,189 - INFO - 消息已加入微信队列: YT2900126038113 查重
+2024-12-17 11:27:40,551 - INFO - 消息已发送到圆通系统: YT2900126038113 查重
+2024-12-17 11:27:44,248 - INFO - 从群 2 提取到订单号: ['YT2900126038115']
+2024-12-17 11:27:44,249 - INFO - 消息已加入微信队列: YT2900126038115 查重
+2024-12-17 11:27:46,643 - INFO - 消息已发送到圆通系统: YT2900126038115 查重
+2024-12-17 11:28:11,556 - INFO - 从群 4 提取到订单号: ['YT2900126038115']
+2024-12-17 11:28:11,557 - INFO - 消息已加入微信队列: YT2900126038115 查重
+2024-12-17 11:28:16,913 - INFO - 消息已发送到圆通系统: YT2900126038115 查重
+2024-12-17 11:28:17,086 - INFO - 从群 4 提取到订单号: ['YT2900126038112']
+2024-12-17 11:28:17,086 - INFO - 消息已加入微信队列: YT2900126038112 查重
+2024-12-17 11:28:17,087 - INFO - 从群 4 提取到订单号: ['YT2900126038116']
+2024-12-17 11:28:17,087 - INFO - 消息已加入微信队列: YT2900126038116 查重
+2024-12-17 11:28:23,083 - INFO - 消息已发送到圆通系统: YT2900126038112 查重
+2024-12-17 11:28:28,530 - INFO - 消息已发送到圆通系统: YT2900126038116 查重
+2024-12-17 11:28:39,832 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 11:28:46,472 - INFO - 程序已退出
+2024-12-17 11:33:23,010 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 11:33:23,010 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 11:33:24,178 - INFO - 微信窗口初始化成功
+2024-12-17 11:33:24,207 - INFO - 会话列表初始化成功
+2024-12-17 11:33:24,835 - INFO - 浏览器初始化成功
+2024-12-17 11:33:58,775 - INFO - 从群 3 提取到订单号: ['YT2900126038116']
+2024-12-17 11:33:58,776 - INFO - 消息已加入微信队列: YT2900126038116 查重
+2024-12-17 11:33:58,778 - INFO - 从群 3 提取到订单号: ['YT2900126038117']
+2024-12-17 11:33:58,778 - INFO - 消息已加入微信队列: YT2900126038117 查重
+2024-12-17 11:34:02,622 - INFO - 消息已发送到圆通系统: YT2900126038116 查重
+2024-12-17 11:34:03,830 - INFO - 从群 4 提取到订单号: ['YT2900126038118']
+2024-12-17 11:34:03,831 - INFO - 消息已加入微信队列: YT2900126038118 查重
+2024-12-17 11:34:07,865 - INFO - 消息已发送到圆通系统: YT2900126038117 查重
+2024-12-17 11:34:07,870 - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2024-12-17 11:34:12,615 - INFO - 消息已发送到圆通系统: YT2900126038118 查重
+2024-12-17 11:34:44,439 - INFO - 从群 2 提取到订单号: ['YT2900126038119']
+2024-12-17 11:34:44,440 - INFO - 消息已加入微信队列: YT2900126038119 查重
+2024-12-17 11:34:47,491 - INFO - 消息已发送到圆通系统: YT2900126038119 查重
+2024-12-17 11:35:17,409 - INFO - 从群 2 提取到订单号: ['YT2900126038120']
+2024-12-17 11:35:17,409 - INFO - 消息已加入微信队列: YT2900126038120 查重
+2024-12-17 11:35:21,418 - INFO - 消息已发送到圆通系统: YT2900126038120 查重
+2024-12-17 11:35:23,005 - INFO - 从群 4 提取到订单号: ['YT2900126038121']
+2024-12-17 11:35:23,007 - INFO - 消息已加入微信队列: YT2900126038121 查重
+2024-12-17 11:35:27,680 - INFO - 消息已发送到圆通系统: YT2900126038121 查重
+2024-12-17 11:37:14,014 - INFO - 从群 2 提取到订单号: ['YT2900126038122']
+2024-12-17 11:37:14,015 - INFO - 消息已加入微信队列: YT2900126038122 查重
+2024-12-17 11:37:15,568 - INFO - 消息已发送到圆通系统: YT2900126038122 查重
+2024-12-17 11:37:21,973 - INFO - 从群 4 提取到订单号: ['YT2900126038123']
+2024-12-17 11:37:21,973 - INFO - 消息已加入微信队列: YT2900126038123 查重
+2024-12-17 11:37:26,063 - INFO - 消息已发送到圆通系统: YT2900126038123 查重
+2024-12-17 11:37:27,001 - INFO - 从群 3 提取到订单号: ['YT2900126038124']
+2024-12-17 11:37:27,003 - INFO - 消息已加入微信队列: YT2900126038124 查重
+2024-12-17 11:37:31,947 - INFO - 消息已发送到圆通系统: YT2900126038124 查重
+2024-12-17 11:37:32,635 - INFO - 从群 3 提取到订单号: ['YT2900126038125']
+2024-12-17 11:37:32,636 - INFO - 消息已加入微信队列: YT2900126038125 查重
+2024-12-17 11:37:38,009 - INFO - 消息已发送到圆通系统: YT2900126038125 查重
+2024-12-17 11:38:13,241 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 11:38:17,953 - INFO - 程序已退出
+2024-12-17 15:42:13,925 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 15:42:13,926 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 15:42:14,635 - INFO - 微信窗口初始化成功
+2024-12-17 15:42:14,663 - INFO - 会话列表初始化成功
+2024-12-17 15:42:15,399 - INFO - 浏览器初始化成功
+2024-12-17 15:42:18,718 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 15:42:19,117 - INFO - 程序已退出
+2024-12-17 15:45:26,895 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 15:45:26,896 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 15:45:27,683 - INFO - 微信窗口初始化成功
+2024-12-17 15:45:27,721 - INFO - 会话列表初始化成功
+2024-12-17 15:45:28,409 - INFO - 浏览器初始化成功
+2024-12-17 15:47:42,268 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 15:47:45,039 - INFO - 程序已退出
+2024-12-17 15:48:01,362 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 15:48:01,362 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 15:48:01,987 - INFO - 微信窗口初始化成功
+2024-12-17 15:48:02,015 - INFO - 会话列表初始化成功
+2024-12-17 15:48:02,629 - INFO - 浏览器初始化成功
+2024-12-17 15:48:02,793 - INFO - 获取到yto消息: YT2900126038125 test
+2024-12-17 15:48:07,794 - INFO - 消息已加入圆通队列: YT2900126038125 test
+2024-12-17 15:48:44,063 - INFO - 获取到yto消息: YT2900126038124 test
+2024-12-17 15:48:49,064 - INFO - 消息已加入圆通队列: YT2900126038124 test
+2024-12-17 15:49:11,057 - INFO - 获取到yto消息: YT2900126038122 test
+2024-12-17 15:49:16,059 - INFO - 消息已加入圆通队列: YT2900126038122 test
+2024-12-17 15:49:23,816 - INFO - 获取到yto消息: YT2900126038123 test
+2024-12-17 15:49:28,817 - INFO - 消息已加入圆通队列: YT2900126038123 test
+2024-12-17 15:49:29,447 - INFO - 获取到yto消息: YT2900126038120 test
+2024-12-17 15:49:34,448 - INFO - 消息已加入圆通队列: YT2900126038120 test
+2024-12-17 15:49:35,083 - INFO - 获取到yto消息: YT2900126038119 test
+2024-12-17 15:49:40,084 - INFO - 消息已加入圆通队列: YT2900126038119 test
+2024-12-17 15:49:40,698 - INFO - 获取到yto消息: YT2900126038118 test
+2024-12-17 15:49:45,699 - INFO - 消息已加入圆通队列: YT2900126038118 test
+2024-12-17 15:50:07,703 - INFO - 获取到yto消息: YT2900126038121 test
+2024-12-17 15:50:12,705 - INFO - 消息已加入圆通队列: YT2900126038121 test
+2024-12-17 15:52:27,676 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 15:52:38,929 - INFO - 程序已退出
+2024-12-17 15:57:39,898 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 15:57:39,899 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 15:57:40,531 - INFO - 微信窗口初始化成功
+2024-12-17 15:57:40,558 - INFO - 会话列表初始化成功
+2024-12-17 15:57:41,156 - INFO - 浏览器初始化成功
+2024-12-17 15:57:47,744 - INFO - 微信消息已发送到群 3: YT2900126038125 test
+2024-12-17 15:57:57,132 - INFO - 微信消息已发送到群 3: YT2900126038124 test
+2024-12-17 15:58:09,168 - INFO - 微信消息已发送到群 2: YT2900126038122 test
+2024-12-17 15:58:20,881 - INFO - 微信消息已发送到群 4: YT2900126038123 test
+2024-12-17 15:58:32,798 - INFO - 微信消息已发送到群 2: YT2900126038120 test
+2024-12-17 15:58:42,219 - INFO - 微信消息已发送到群 2: YT2900126038119 test
+2024-12-17 15:58:52,973 - INFO - 微信消息已发送到群 4: YT2900126038118 test
+2024-12-17 15:59:01,998 - INFO - 微信消息已发送到群 4: YT2900126038121 test
+2024-12-17 16:01:02,749 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 16:01:04,787 - INFO - 程序已退出
+2024-12-17 19:24:19,404 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 19:24:19,404 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 19:24:19,778 - INFO - 微信窗口初始化成功
+2024-12-17 19:24:19,827 - INFO - 会话列表初始化成功
+2024-12-17 19:24:20,613 - INFO - 浏览器初始化成功
+2024-12-17 19:26:48,476 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 19:26:51,590 - INFO - 程序已退出
+2024-12-17 19:28:00,980 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 19:28:00,981 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 19:28:01,120 - ERROR - 初始化微信窗口失败: 'WindowControl' object has no attribute 'Handle'
+2024-12-17 19:28:35,165 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 19:28:35,165 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 19:28:35,855 - INFO - 微信窗口初始化成功
+2024-12-17 19:28:36,214 - INFO - 会话列表初始化成功
+2024-12-17 19:28:36,822 - INFO - 浏览器初始化成功
+2024-12-17 19:28:52,872 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 19:29:05,573 - INFO - 程序已退出
+2024-12-17 19:35:45,475 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 19:35:45,476 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 19:35:45,591 - INFO - 微信窗口初始化成功
+2024-12-17 19:35:45,618 - INFO - 会话列表初始化成功
+2024-12-17 19:35:46,201 - INFO - 浏览器初始化成功
+2024-12-17 19:36:01,870 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 19:36:01,870 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 19:36:01,991 - INFO - 微信窗口初始化成功
+2024-12-17 19:36:02,364 - INFO - 会话列表初始化成功
+2024-12-17 19:36:02,945 - INFO - 浏览器初始化成功
+2024-12-17 19:36:25,112 - INFO - 微信消息已发送到群 4: YT2900126038123 test
+2024-12-17 19:36:44,687 - INFO - 微信消息已发送到群 4: YT2900126038118 test
+2024-12-17 19:36:52,594 - INFO - 微信消息已发送到群 4: YT2900126038121 test
+2024-12-17 19:36:52,949 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 19:36:53,901 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 19:36:57,245 - INFO - 程序已退出
+2024-12-17 19:36:58,926 - INFO - 程序已退出
+2024-12-17 20:01:25,648 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 20:01:25,648 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 20:01:25,872 - INFO - 微信窗口初始化成功
+2024-12-17 20:01:25,896 - INFO - 会话列表初始化成功
+2024-12-17 20:01:26,483 - INFO - 浏览器初始化成功
+2024-12-17 20:01:31,591 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 20:01:34,245 - INFO - 程序已退出
+2024-12-17 20:01:51,867 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 20:01:51,867 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 20:01:52,009 - INFO - 微信窗口初始化成功
+2024-12-17 20:01:52,038 - INFO - 会话列表初始化成功
+2024-12-17 20:01:52,630 - INFO - 浏览器初始化成功
+2024-12-17 20:02:04,055 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 20:02:07,507 - INFO - 程序已退出
+2024-12-17 20:02:27,029 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 20:02:27,029 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 20:02:27,182 - INFO - 微信窗口初始化成功
+2024-12-17 20:02:27,211 - INFO - 会话列表初始化成功
+2024-12-17 20:02:27,793 - INFO - 浏览器初始化成功
+2024-12-17 20:03:25,346 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 20:03:30,570 - INFO - 程序已退出
+2024-12-17 20:04:28,785 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 20:04:28,786 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 20:04:28,935 - INFO - 微信窗口初始化成功
+2024-12-17 20:04:28,964 - INFO - 会话列表初始化成功
+2024-12-17 20:04:29,563 - INFO - 浏览器初始化成功
+2024-12-17 20:04:49,056 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 20:04:56,561 - INFO - 程序已退出
+2024-12-17 20:05:59,900 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 20:05:59,901 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 20:06:00,050 - INFO - 微信窗口初始化成功
+2024-12-17 20:06:00,075 - INFO - 会话列表初始化成功
+2024-12-17 20:06:00,660 - INFO - 浏览器初始化成功
+2024-12-17 20:06:00,707 - ERROR - 获取消息失败，重试中: 'ListItemControl' object has no attribute 'IsInvokePatternAvailable'
+2024-12-17 20:06:00,707 - ERROR - 获取微信会话发生错误: 'ListItemControl' object has no attribute 'IsInvokePatternAvailable'
+2024-12-17 20:06:00,707 - ERROR - 处理微信消息时出错: 'ListItemControl' object has no attribute 'IsInvokePatternAvailable'
+2024-12-17 20:06:05,397 - INFO - 程序已退出
+2024-12-17 20:07:59,028 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 20:07:59,028 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 20:07:59,199 - INFO - 微信窗口初始化成功
+2024-12-17 20:07:59,233 - INFO - 会话列表初始化成功
+2024-12-17 20:07:59,819 - INFO - 浏览器初始化成功
+2024-12-17 20:08:06,346 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 20:08:12,241 - INFO - 程序已退出
+2024-12-17 20:08:34,412 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 20:08:34,412 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 20:08:34,564 - INFO - 微信窗口初始化成功
+2024-12-17 20:08:34,591 - INFO - 会话列表初始化成功
+2024-12-17 20:08:35,174 - INFO - 浏览器初始化成功
+2024-12-17 20:09:04,591 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 20:09:17,011 - INFO - 程序已退出
+2024-12-17 20:10:28,143 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 20:10:28,143 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 20:10:28,295 - INFO - 微信窗口初始化成功
+2024-12-17 20:10:28,333 - INFO - 会话列表初始化成功
+2024-12-17 20:10:28,924 - INFO - 浏览器初始化成功
+2024-12-17 20:10:48,052 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 20:10:52,793 - INFO - 程序已退出
+2024-12-17 20:12:05,546 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 20:12:05,546 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 20:12:05,696 - INFO - 微信窗口初始化成功
+2024-12-17 20:12:05,718 - INFO - 会话列表初始化成功
+2024-12-17 20:12:06,290 - INFO - 浏览器初始化成功
+2024-12-17 20:13:15,098 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 20:13:20,712 - INFO - 程序已退出
+2024-12-17 20:20:30,712 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 20:20:30,712 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 20:20:31,081 - INFO - 微信窗口初始化成功
+2024-12-17 20:20:31,109 - INFO - 会话列表初始化成功
+2024-12-17 20:20:31,699 - INFO - 浏览器初始化成功
+2024-12-17 20:21:46,789 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 20:36:13,702 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 20:36:13,702 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 20:36:13,935 - INFO - 微信窗口初始化成功
+2024-12-17 20:36:13,965 - INFO - 会话列表初始化成功
+2024-12-17 20:36:14,549 - INFO - 浏览器初始化成功
+2024-12-17 20:36:26,592 - ERROR - 获取消息失败，重试中: type object 'ControlType' has no attribute 'Button'
+2024-12-17 20:36:26,592 - ERROR - 获取微信会话发生错误: type object 'ControlType' has no attribute 'Button'
+2024-12-17 20:36:26,593 - ERROR - 处理微信消息时出错: type object 'ControlType' has no attribute 'Button'
+2024-12-17 20:36:29,388 - INFO - 程序已退出
+2024-12-17 20:39:27,761 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 20:39:27,761 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 20:39:27,988 - INFO - 微信窗口初始化成功
+2024-12-17 20:39:28,017 - INFO - 会话列表初始化成功
+2024-12-17 20:39:28,600 - INFO - 浏览器初始化成功
+2024-12-17 20:39:38,742 - ERROR - 获取消息失败，重试中: Find Control Timeout(10s): {Name: 'yto-test3群1条新消息', ControlType: ButtonControl}
+2024-12-17 20:39:38,742 - ERROR - 获取微信会话发生错误: Find Control Timeout(10s): {Name: 'yto-test3群1条新消息', ControlType: ButtonControl}
+2024-12-17 20:39:38,742 - ERROR - 处理微信消息时出错: Find Control Timeout(10s): {Name: 'yto-test3群1条新消息', ControlType: ButtonControl}
+2024-12-17 20:39:41,574 - INFO - 程序已退出
+2024-12-17 20:40:40,378 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 20:40:40,378 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 20:40:40,610 - INFO - 微信窗口初始化成功
+2024-12-17 20:40:40,639 - INFO - 会话列表初始化成功
+2024-12-17 20:40:41,224 - INFO - 浏览器初始化成功
+2024-12-17 20:40:45,700 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 20:40:54,731 - INFO - 程序已退出
+2024-12-17 20:41:33,649 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 20:41:33,649 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 20:41:33,894 - INFO - 微信窗口初始化成功
+2024-12-17 20:41:33,923 - INFO - 会话列表初始化成功
+2024-12-17 20:41:34,504 - INFO - 浏览器初始化成功
+2024-12-17 20:41:36,851 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 20:41:47,898 - INFO - 程序已退出
+2024-12-17 20:41:55,317 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 20:41:55,317 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 20:41:55,563 - INFO - 微信窗口初始化成功
+2024-12-17 20:41:55,590 - INFO - 会话列表初始化成功
+2024-12-17 20:41:56,161 - INFO - 浏览器初始化成功
+2024-12-17 20:42:01,495 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 20:42:07,825 - INFO - 程序已退出
+2024-12-17 20:42:32,126 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 20:42:32,126 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 20:42:32,345 - INFO - 微信窗口初始化成功
+2024-12-17 20:42:32,375 - INFO - 会话列表初始化成功
+2024-12-17 20:42:32,960 - INFO - 浏览器初始化成功
+2024-12-17 20:42:32,993 - ERROR - 获取消息失败，重试中: 'ButtonControl' object has no attribute 'Invoke'
+2024-12-17 20:42:32,994 - ERROR - 获取微信会话发生错误: 'ButtonControl' object has no attribute 'Invoke'
+2024-12-17 20:42:32,994 - ERROR - 处理微信消息时出错: 'ButtonControl' object has no attribute 'Invoke'
+2024-12-17 20:42:37,844 - INFO - 程序已退出
+2024-12-17 20:45:40,649 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 20:45:40,650 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 20:45:40,873 - INFO - 微信窗口初始化成功
+2024-12-17 20:45:40,901 - INFO - 会话列表初始化成功
+2024-12-17 20:45:41,485 - INFO - 浏览器初始化成功
+2024-12-17 20:46:05,071 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 20:46:09,065 - INFO - 程序已退出
+2024-12-17 20:57:55,914 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 20:57:55,915 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 20:57:56,168 - INFO - 微信窗口初始化成功
+2024-12-17 20:57:56,199 - INFO - 会话列表初始化成功
+2024-12-17 20:57:56,789 - INFO - 浏览器初始化成功
+2024-12-17 20:58:38,318 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 20:58:38,318 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 20:58:38,558 - INFO - 微信窗口初始化成功
+2024-12-17 20:58:38,586 - INFO - 会话列表初始化成功
+2024-12-17 20:58:39,175 - INFO - 浏览器初始化成功
+2024-12-17 20:58:44,375 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 20:58:46,739 - INFO - 程序已退出
+2024-12-17 20:59:39,488 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 20:59:39,488 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 20:59:39,747 - INFO - 微信窗口初始化成功
+2024-12-17 20:59:39,774 - INFO - 会话列表初始化成功
+2024-12-17 20:59:40,366 - INFO - 浏览器初始化成功
+2024-12-17 21:00:40,478 - INFO - 从群 4 提取到订单号: ['YT2900126038126']
+2024-12-17 21:00:40,480 - INFO - 消息已加入微信队列: YT2900126038126 查重
+2024-12-17 21:00:43,849 - ERROR - 发送消息到圆通系统失败: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="edit-content"]"}
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF78F703AB5+28005]
+	(No symbol) [0x00007FF78F6683B0]
+	(No symbol) [0x00007FF78F50580A]
+	(No symbol) [0x00007FF78F555A3E]
+	(No symbol) [0x00007FF78F555D2C]
+	(No symbol) [0x00007FF78F59EA97]
+	(No symbol) [0x00007FF78F57BA7F]
+	(No symbol) [0x00007FF78F59B8B3]
+	(No symbol) [0x00007FF78F57B7E3]
+	(No symbol) [0x00007FF78F5475C8]
+	(No symbol) [0x00007FF78F548731]
+	GetHandleVerifier [0x00007FF78F9F643D+3118829]
+	GetHandleVerifier [0x00007FF78FA46C90+3448640]
+	GetHandleVerifier [0x00007FF78FA3CF0D+3408317]
+	GetHandleVerifier [0x00007FF78F7CA40B+841403]
+	(No symbol) [0x00007FF78F67340F]
+	(No symbol) [0x00007FF78F66F484]
+	(No symbol) [0x00007FF78F66F61D]
+	(No symbol) [0x00007FF78F65EB79]
+	BaseThreadInitThunk [0x00007FFEDA41259D+29]
+	RtlUserThreadStart [0x00007FFEDB32AF38+40]
+
+2024-12-17 21:00:43,850 - ERROR - 转发消息时出错: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="edit-content"]"}
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF78F703AB5+28005]
+	(No symbol) [0x00007FF78F6683B0]
+	(No symbol) [0x00007FF78F50580A]
+	(No symbol) [0x00007FF78F555A3E]
+	(No symbol) [0x00007FF78F555D2C]
+	(No symbol) [0x00007FF78F59EA97]
+	(No symbol) [0x00007FF78F57BA7F]
+	(No symbol) [0x00007FF78F59B8B3]
+	(No symbol) [0x00007FF78F57B7E3]
+	(No symbol) [0x00007FF78F5475C8]
+	(No symbol) [0x00007FF78F548731]
+	GetHandleVerifier [0x00007FF78F9F643D+3118829]
+	GetHandleVerifier [0x00007FF78FA46C90+3448640]
+	GetHandleVerifier [0x00007FF78FA3CF0D+3408317]
+	GetHandleVerifier [0x00007FF78F7CA40B+841403]
+	(No symbol) [0x00007FF78F67340F]
+	(No symbol) [0x00007FF78F66F484]
+	(No symbol) [0x00007FF78F66F61D]
+	(No symbol) [0x00007FF78F65EB79]
+	BaseThreadInitThunk [0x00007FFEDA41259D+29]
+	RtlUserThreadStart [0x00007FFEDB32AF38+40]
+
+2024-12-17 21:00:52,767 - INFO - 程序已退出
+2024-12-17 21:01:39,236 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 21:01:39,236 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 21:01:39,459 - INFO - 微信窗口初始化成功
+2024-12-17 21:01:39,485 - INFO - 会话列表初始化成功
+2024-12-17 21:01:40,074 - INFO - 浏览器初始化成功
+2024-12-17 21:02:15,643 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 21:02:16,785 - INFO - 程序已退出
+2024-12-17 21:02:24,716 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 21:02:24,716 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 21:02:24,953 - INFO - 微信窗口初始化成功
+2024-12-17 21:02:24,984 - INFO - 会话列表初始化成功
+2024-12-17 21:02:25,559 - INFO - 浏览器初始化成功
+2024-12-17 21:02:30,241 - INFO - 从群 4 提取到订单号: ['YT2900126038127']
+2024-12-17 21:02:30,242 - INFO - 消息已加入微信队列: YT2900126038127 查重
+2024-12-17 21:02:35,397 - INFO - 消息已发送到圆通系统: YT2900126038127 查重
+2024-12-17 21:03:03,472 - INFO - 从群 4 提取到订单号: ['YT2900126038128']
+2024-12-17 21:03:03,472 - INFO - 消息已加入微信队列: YT2900126038128 查重
+2024-12-17 21:03:06,850 - INFO - 消息已发送到圆通系统: YT2900126038128 查重
+2024-12-17 21:03:26,706 - INFO - 从群 3 提取到订单号: ['YT2900126038126']
+2024-12-17 21:03:26,707 - INFO - 消息已加入微信队列: YT2900126038126 查重
+2024-12-17 21:03:26,708 - INFO - 从群 3 提取到订单号: ['YT2900126038129']
+2024-12-17 21:03:26,708 - INFO - 消息已加入微信队列: YT2900126038129 查重
+2024-12-17 21:03:29,764 - INFO - 消息已发送到圆通系统: YT2900126038126 查重
+2024-12-17 21:03:33,415 - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2024-12-17 21:03:34,812 - INFO - 消息已发送到圆通系统: YT2900126038129 查重
+2024-12-17 21:04:51,702 - INFO - 获取到yto消息: YT2900126038127 test
+2024-12-17 21:04:51,703 - INFO - 消息已加入圆通队列: YT2900126038127 test
+2024-12-17 21:04:55,393 - ERROR - 发送微信消息失败: Random.uniform() missing 1 required positional argument: 'b'
+2024-12-17 21:04:55,394 - ERROR - 处理圆通回复时出错: Random.uniform() missing 1 required positional argument: 'b'
+2024-12-17 21:04:59,190 - INFO - 程序已退出
+2024-12-17 21:05:46,916 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 21:05:46,916 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 21:05:47,173 - INFO - 微信窗口初始化成功
+2024-12-17 21:05:47,213 - INFO - 会话列表初始化成功
+2024-12-17 21:05:47,797 - INFO - 浏览器初始化成功
+2024-12-17 21:05:50,593 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 21:05:51,334 - INFO - 程序已退出
+2024-12-17 21:05:58,527 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 21:05:58,527 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 21:05:58,759 - INFO - 微信窗口初始化成功
+2024-12-17 21:05:58,788 - INFO - 会话列表初始化成功
+2024-12-17 21:05:59,372 - INFO - 浏览器初始化成功
+2024-12-17 21:06:00,454 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 21:06:04,582 - INFO - 程序已退出
+2024-12-17 21:06:11,384 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 21:06:11,384 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 21:06:11,627 - INFO - 微信窗口初始化成功
+2024-12-17 21:06:11,653 - INFO - 会话列表初始化成功
+2024-12-17 21:06:12,232 - INFO - 浏览器初始化成功
+2024-12-17 21:06:13,641 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 21:06:16,519 - INFO - 程序已退出
+2024-12-17 21:06:22,826 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 21:06:22,827 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 21:06:23,056 - INFO - 微信窗口初始化成功
+2024-12-17 21:06:23,087 - INFO - 会话列表初始化成功
+2024-12-17 21:06:23,679 - INFO - 浏览器初始化成功
+2024-12-17 21:06:24,333 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 21:06:28,575 - INFO - 程序已退出
+2024-12-17 21:06:35,072 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 21:06:35,073 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 21:06:35,298 - INFO - 微信窗口初始化成功
+2024-12-17 21:06:35,327 - INFO - 会话列表初始化成功
+2024-12-17 21:06:35,907 - INFO - 浏览器初始化成功
+2024-12-17 21:06:36,895 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 21:06:40,474 - INFO - 程序已退出
+2024-12-17 21:07:09,271 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-17 21:07:09,271 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-17 21:07:09,510 - INFO - 微信窗口初始化成功
+2024-12-17 21:07:09,540 - INFO - 会话列表初始化成功
+2024-12-17 21:07:10,118 - INFO - 浏览器初始化成功
+2024-12-17 21:07:31,758 - INFO - 获取到yto消息: YT2900126038129 test
+2024-12-17 21:07:31,758 - INFO - 消息已加入圆通队列: YT2900126038129 test
+2024-12-17 21:07:39,225 - INFO - 微信消息已发送到群 3: YT2900126038129 test
+2024-12-17 21:08:33,700 - INFO - 获取到yto消息: YT2900126038126 test
+2024-12-17 21:08:33,700 - INFO - 消息已加入圆通队列: YT2900126038126 test
+2024-12-17 21:08:38,983 - INFO - 微信消息已发送到群 3: YT2900126038126 test
+2024-12-17 21:08:40,666 - INFO - 获取到yto消息: YT2900126038128 test
+2024-12-17 21:08:40,666 - INFO - 消息已加入圆通队列: YT2900126038128 test
+2024-12-17 21:08:47,624 - INFO - 微信消息已发送到群 4: YT2900126038128 test
+2024-12-17 21:10:38,285 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 21:10:39,067 - INFO - 接收到退出信号，正在关闭...
+2024-12-17 21:10:41,236 - INFO - 程序已退出
+2024-12-17 21:10:41,867 - INFO - 程序已退出

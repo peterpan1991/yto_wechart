@@ -82,7 +82,7 @@ class YtoHandler:
             
             message_elements = self.driver.find_elements(By.CSS_SELECTOR, ".news-box")
 
-            #获取最后10条，避免数据过多
+            #获取最后几条，避免数据过多，数据被顶掉
             last_news_message_elements = message_elements[-NEW_YTO_MESSAGE_COUNT:]
 
             for msg_item in last_news_message_elements:
@@ -96,9 +96,9 @@ class YtoHandler:
                     send_time = self.driver.execute_script(script, send_time_span)
                     msg_content = msg_item.find_element(By.CSS_SELECTOR, ".text-content").text                    
 
-                    if(sender_span.text != YTO_SERVICE_ID):
+                    # if(sender_span.text != YTO_SERVICE_ID):
                         # logger.info(f"收到来自 {sender_span.text} 的消息: {msg_content}")
-                        continue
+                        # continue
                     
                     if self.is_valid_message(msg_content):
                         # 如果消息未处理过，添加到缓冲区
@@ -145,6 +145,6 @@ class YtoHandler:
                 )
                 messages.append(message)
         
-        time.sleep(5)  # 适当的循环间隔
+        # time.sleep(5)  # 适当的循环间隔
 
         return messages

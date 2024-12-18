@@ -1,0 +1,5 @@
+2024-12-13 06:29:30,540 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2024-12-13 06:29:30,540 - INFO - Using writeable comtypes cache directory: 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2024-12-13 06:29:31,503 - INFO - 微信窗口初始化成功
+2024-12-13 06:29:31,534 - INFO - 会话列表初始化成功
+2024-12-13 06:29:32,291 - INFO - 浏览器初始化成功

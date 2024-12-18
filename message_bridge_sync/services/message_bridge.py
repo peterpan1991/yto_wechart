@@ -145,7 +145,7 @@ class MessageBridge:
                         while True:
                             while_times += 1
                             time.sleep(random.uniform(0.5, 1))
-                            yto_messages = self.yto.get_messages()
+                            yto_messages = self.yto.handle_yto_message()
                             is_send = False
                             for yto_msg in yto_messages:
                                 if not yto_msg.content:

@@ -39,6 +39,43 @@ class YtoHandler:
         except Exception as e:
             logger.error(f"初始化浏览器失败: {e}")
             raise  # 重新抛出异常
+	
+    def monitor_new_message(self):
+        script = """
+		var newItems = []; // 用于存储新增条目
+
+		var targetNode = document.querySelector('.news-box').parentNode;
+		var config = { childList: true, subtree: true };
+
+		var callback = function(mutationsList) {
+			mutationsList.forEach(mutation => {
+				if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+					mutation.addedNodes.forEach(node => {
+						if (node.nodeType === 1) { // 确保是元素节点
+							newItems.push(node.textContent.trim()); // 保存新条目
+						}
+					});
+				}
+			});
+		};
+
+		var observer = new MutationObserver(callback);
+		observer.observe(targetNode, config);
+
+		// 提供一个方法来获取新条目
+		window.getNewItems = function() {
+			var items = newItems.slice(); // 复制新增条目
+			newItems.length = 0; // 清空列表
+			return items;
+		};
+
+
+		// 观察器将持续工作，直到显式调用 observer.disconnect()
+		"""
+
+		# 在页面中执行脚本
+        self.driver.execute_script(script)
+
     def is_valid_message(self, msg: str) -> bool:
         """过滤消息"""
         # 过滤掉不符合规则的消息
@@ -79,10 +116,14 @@ class YtoHandler:
     def handle_yto_message(self) -> List[Message]:
         """尝试获取并处理消息，带重试机制"""
         try:
-            message_elements = self.driver.find_elements(By.CSS_SELECTOR, ".news-box")
+            # message_elements = self.driver.find_elements(By.CSS_SELECTOR, ".news-box")
 
             #获取最后几条，避免数据过多，数据被顶掉
-            last_news_message_elements = message_elements[-NEW_YTO_MESSAGE_COUNT:]
+            # last_news_message_elements = message_elements[-NEW_YTO_MESSAGE_COUNT:]
+            
+            last_news_message_elements = self.driver.execute_script("return window.getNewItems();")
+            print(last_news_message_elements)
+            exit()
 
             messages = []
             for msg_item in last_news_message_elements:
@@ -124,7 +165,7 @@ class YtoHandler:
             message_elements = self.driver.find_elements(By.CSS_SELECTOR, ".news-box")
 
             #获取最后几条，避免数据过多，数据被顶掉
-            last_news_message_elements = message_elements[-NEW_YTO_MESSAGE_COUNT:]
+            last_news_message_elements = message_elements[-NEW_YTO_MESSAGE_COUNT:]            
 
             for msg_item in last_news_message_elements:
                 try:

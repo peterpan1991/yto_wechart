@@ -35,7 +35,7 @@ class YtoHandler:
             options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
             self.driver = webdriver.Chrome(options=options)
 
-            self.monitor_new_message()
+            # self.monitor_new_message()
             logger.info("浏览器初始化成功")
             return True
         except Exception as e:
@@ -100,7 +100,7 @@ class YtoHandler:
             message_input.send_keys(Keys.DELETE)
             # 使用 execute_script 方法将消息插入到输入框中
             self.driver.execute_script("arguments[0].innerText = arguments[1];", message_input, message)
-            time.sleep(random.uniform(0.5, 1.5))
+            # time.sleep(random.uniform(0.5, 1.5))
             message_input.send_keys(Keys.ENTER)
             # # 输入消息 换行符会被截断
             # message_input.send_keys(message)
@@ -139,7 +139,7 @@ class YtoHandler:
                     msg_content = msg_item.find_element(By.CSS_SELECTOR, ".text-content").text                    
 
                     if(sender_span.text != YTO_SERVICE_ID):
-                        logger.info(f"收到来自 {sender_span.text} 的消息: {msg_content}")
+                        # logger.info(f"收到来自 {sender_span.text} 的消息: {msg_content}")
                         continue
                     
                     if self.is_valid_message(msg_content):

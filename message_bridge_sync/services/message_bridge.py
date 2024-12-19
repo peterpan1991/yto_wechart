@@ -187,7 +187,8 @@ class MessageBridge:
         if not self.init():
             logger.error("初始化失败，程序退出")
             return
-        
+
+        time.sleep(10)
 
         # 启动处理线程
         process_thread = Thread(target=self.process)

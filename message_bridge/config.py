@@ -24,7 +24,7 @@ WECHAT_MESSAGE_FORMATS = [
 
 # 圆通消息格式
 YTO_MESSAGE_FORMATS = [
-    # r'YT\d{13,15}.*',
+    r'YT\d{13,15}.*',
 	r'YT\d{13,15}\s(test)',
 ]
 

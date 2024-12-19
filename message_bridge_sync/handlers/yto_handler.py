@@ -54,7 +54,6 @@ class YtoHandler:
                 console.log("test", mutation.type, mutation.addedNodes.length);
 				if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
 					mutation.addedNodes.forEach(node => {
-                        console.log("test", node);
 						if (node.nodeType === 1) { // 确保是元素节点
 							newItems.push(node); // 保存新条目
 						}
@@ -120,16 +119,16 @@ class YtoHandler:
     def handle_yto_message(self) -> List[Message]:
         """尝试获取并处理消息，带重试机制"""
         try:
-            # message_elements = self.driver.find_elements(By.CSS_SELECTOR, ".news-box")
+            message_elements = self.driver.find_elements(By.CSS_SELECTOR, ".news-box")
 
             #获取最后几条，避免数据过多，数据被顶掉
-            # last_news_message_elements = message_elements[-NEW_YTO_MESSAGE_COUNT:]
+            last_news_message_elements = message_elements[-NEW_YTO_MESSAGE_COUNT:]
             
-            last_news_message_elements = self.driver.execute_script("return window.getNewItems();")
-            
+            # last_news_message_elements = self.driver.execute_script("return window.getNewItems();")
+
             messages = []
             for msg_item in last_news_message_elements:
-                    msg_item = msg_item.find_element(By.CSS_SELECTOR, ".news-box")
+                    # msg_item = new_msg_item.find_element(By.CSS_SELECTOR, ".news-box")
 
                     # 获取消息信息
                     first_div = msg_item.find_element(By.XPATH, "./div[1]")
@@ -139,9 +138,9 @@ class YtoHandler:
                     send_time = self.driver.execute_script(script, send_time_span)
                     msg_content = msg_item.find_element(By.CSS_SELECTOR, ".text-content").text                    
 
-                    # if(sender_span.text != YTO_SERVICE_ID):
-                    #     logger.info(f"收到来自 {sender_span.text} 的消息: {msg_content}")
-                    #     continue
+                    if(sender_span.text != YTO_SERVICE_ID):
+                        logger.info(f"收到来自 {sender_span.text} 的消息: {msg_content}")
+                        continue
                     
                     if self.is_valid_message(msg_content):
                         # 如果消息未处理过，添加到缓冲区

@@ -1,4 +1,5 @@
 import random
+import re
 from threading import Thread
 from config import REDIS_CONFIG, MONITORED_GROUPS, PROCESS_TYPE
 from logger import logger
@@ -120,6 +121,8 @@ class MessageBridge:
                     continue
 
                 for id, group in groups.items():
+                    group_name = re.sub(r'\d+条新消息$', '', group.Name)
+                    logger.info(f"处理群: {group.Name}, {id}")
                     wechat_messages = self.wechat.handle_group_message(id, group)
                     for msg in wechat_messages:
                         if not msg.content:
@@ -156,10 +159,10 @@ class MessageBridge:
                                     continue
 
                                 # 将消息发送到微信
-                                self.wechat.send_message(yto_msg.content, msg.session_id)
+                                self.wechat.send_message(yto_msg.content, msg.session_id, group_name)
                                 is_send = True
                                 send_times += 1
-                                time.sleep(random.uniform(0.5, 1.5))
+                                time.sleep(random.uniform(1, 2))
 
                             if not is_send:
                                 retry_count += 1
@@ -173,6 +176,7 @@ class MessageBridge:
                                 break
 
                     time.sleep(random.uniform(1, 2))
+                time.sleep(random.uniform(1, 2))
             except Exception as e:
                 logger.error(f"执行出错: {e}")
                 self.is_running = False

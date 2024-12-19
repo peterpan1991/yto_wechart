@@ -155,7 +155,10 @@ class WeChatHandler:
     def handle_group_message(self, session_id: str, session_item: auto.WindowControl) -> List[Message]:
         """处理群消息"""
         try:
-            session_item.Click(simulateMove=False)
+            # if not self.current_session_id == session_id:
+            session_item.Click(simulateMove=True)
+            
+            self.current_session_id = session_id
 
             msg_list = self.wx.ListControl(Name='消息')
             messages = []
@@ -289,7 +292,7 @@ class WeChatHandler:
         msg = msg.replace('\n', ' ')
         return re.sub(r'@\w+', '', msg)
 
-    def send_message(self, message: str, session_id: str) -> bool:
+    def send_message(self, message: str, session_id: str, group_name:str) -> bool:
         """向指定群发送消息"""
         try:
             # if not self.switch_to_session(session_id):
@@ -297,20 +300,25 @@ class WeChatHandler:
             
             # time.sleep(random.uniform(0.5, 1.5))
             formated_message = self.filter_message(message)
-            self.wx.SendKeys(formated_message, waitTime=0.1)
+            # self.wx.SendKeys(formated_message, waitTime=0.1)
             # time.sleep(random.uniform(0.5, 1.5))
-            self.wx.SendKeys('{Enter}', waitTime=0.1)
+            # self.wx.SendKeys('{Enter}', waitTime=0.1)
             
             # 将微信快捷键设置成ctrl+enter发送消息
             # formated_message = message.replace('\n', '{Enter}')
             # self.wx.SendKeys(formated_message, waitTime=2)
 
-            # edit_box = self.wx.EditControl(Name="输入")
-            # if not edit_box.Exists():
-            #     logger.error("找不到输入框")
-            #     return False
-                
-            # edit_box.SetValue(message)
+            edit_box = self.wx.EditControl(Name=group_name)
+            if not edit_box.Exists():
+                logger.error("找不到输入框")
+                return False
+
+            edit_box.Click(simulateMove=True)
+            self.wx.SendKeys(formated_message, waitTime=0.1)
+            time.sleep(random.uniform(0.5, 1.5))
+            self.wx.SendKeys('{Enter}', waitTime=0.1)
+            # self.wx.SendKeys('{Enter}', waitTime=0.1)
+            # edit_box.SetValue(formated_message)
             # time.sleep(0.5)
             
             # send_button = self.wx.ButtonControl(Name="发送(S)")

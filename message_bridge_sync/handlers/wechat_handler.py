@@ -314,7 +314,7 @@ class WeChatHandler:
                 return False
 
             edit_box.Click(simulateMove=True)
-            time.sleep(random.uniform(0.5, 1.5))
+            time.sleep(random.uniform(0.5, 1))
             self.wx.SendKeys(formated_message + '{Enter}', waitTime=0.1)
             # self.wx.SendKeys('{Enter}', waitTime=0.1)
             # edit_box.SetValue(formated_message)

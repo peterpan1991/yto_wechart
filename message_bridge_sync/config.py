@@ -31,7 +31,14 @@ YTO_MESSAGE_FORMATS = [
 # 客服名称格式
 CUSTOME_SERVICE_PATTERNS = [
 	r"小圆在线.*",
-	r"蓝胖子"
+	r"蓝胖子",
+	r"何媛姐姐财务",
+	r"TTQ",
+	r"大黄",
+	r"巧儿",
+	r"佳佳",
+	r"Y",
+	r"小圆服务",
 ]
 
 # 圆通智能客服ID
@@ -51,5 +58,7 @@ MONITORED_GROUPS = {
 	"2": 'yto-test2群',
     "3": 'yto-test3群',
     "4": 'yto-test4群',
+	"5": 'AA 酷唛童 圆通镇安售后群',
+	"6": '吴宗恩-镇安圆通客服群',
 	# 可以添加更多会话"
 }
